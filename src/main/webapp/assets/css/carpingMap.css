@@ -1,0 +1,31 @@
+.textArea {
+  width: 1000px;
+  height: 100px;
+  margin: 300px 2px 10px 300px;
+  line-height: 250%;
+  float: left;
+}
+
+.Main_comment {
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.Main_comment .text-style-1 {
+  font-size: 25px;
+  font-weight: normal;
+  color: #c4c4c4;
+}
+
+.mapContent {
+  width: 1300px;
+  height: 800px;
+  margin: 430px 300px 300px 300px;
+  background-color: tomato;
+}

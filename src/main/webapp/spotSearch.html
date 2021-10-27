@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot Search</title>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/spotSearch.css">
+</head>
+
+
+<body>
+    <!-- =====================------------ Modal Search Result ------------=================-->
+    <div class="modal_wrapper" style="display: none;">
+        <div class="modal_main">
+            <div class="close_wrapper">
+                <button id="close" style="border: none; background-color: white;">
+                    <i class="fas fa-times fa-3x"></i>
+                </button>
+            </div>
+            <!-- ==================================================-->
+            <div class="ss-result-contents">
+                <div class="ss-result-left">
+                    <div class="ss-result-img-big">
+                        <img class="spot-img"
+                            src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F25763037541EE9E41C">
+                    </div>
+                    <div class="ss-result-img-small">
+                        <div class="ss-result-img-small-1">
+                            <img class="spot-img"
+                                src="https://mblogthumb-phinf.pstatic.net/MjAyMDEwMjBfMjI1/MDAxNjAzMTU3NTAwMjIx.Yhqa6KM-CK_YdHIGW13sZsu87IKGXlzNF8RlnQxdfCgg.7tDfgBQmhDtOYDopFkShyIlPEIWVVWudmVxPKk-uZJYg.JPEG.jb12mook/20201017_165620.jpg?type=w800">
+                        </div>
+                        <div class="ss-result-img-small-2">
+                            <img class="spot-img"
+                                src="https://dreamycamera.synology.me/dreamcollector/wp-content/uploads/sites/2/2019/05/20190518_193605-500x380.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="ss-result-right">
+                    <div class="ss-result-text">
+                        <div class="spot-info">
+                            <div class="spot-marker"><img src="./assets/img/spotsearch/마커.png"></div>
+                            <div class="spot-info-text">
+                                <h1>영광 백바위 해수욕장</h1>
+                                <span>전남 영광군 염산면 두우리</span>
+                                <h3>062-123-4567</h3>
+                            </div>
+                        </div>
+                        <div class="spot-option">
+                            <hr style="border: 1px dashed #c4c4c4; margin: 20px 10px;">
+                            <h1>편의시설 정보</h1>
+                            <div class="icon-option">
+                                <div class="icon-option-toilet">
+                                    <img src="./assets/img/spotsearch/화장실.png">
+                                    <span>화장실</span>
+                                </div>
+                                <div class="icon-option-electric">
+                                    <img src="./assets/img/spotsearch/전기.png">
+                                    <span>전기</span>
+                                </div>
+                                <div class="icon-option-wash">
+                                    <img src="./assets/img/spotsearch/개수대.png">
+                                    <span>개수대</span>
+                                </div>
+                                <div class="icon-option-store">
+                                    <img src="./assets/img/spotsearch/편의점.png">
+                                    <span>편의점</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spot-weather">
+                            <hr style="border: 1px dashed #c4c4c4; margin: 20px 10px;">
+                            <h1>날씨 정보</h1>
+                            <div class="weather-info">
+                                <iframe width="90%" height="245"
+                                    src="https://forecast.io/embed/#lat=35.24286&lon=126.306267&name=영광&color=&font=arial&units=si"
+                                    frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- ===================------------ (END) Modal Search Result ------===================-->
+
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <!-- ============================================================ HEADER START ============================================================ -->
+    <header>
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="main.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="spotSearch.html">SPOT SEARCH</a></li>
+                                            <li><a href="carpingMap.html">CARPING MAP</a></li>
+                                            <li><a href="community.html">COMMUNITY</a></li>
+                                            <li><a href="itemTrade.html">ITEM TRADE</a></li>
+                                            <!-- <li><a href="blog.html">Blog</a> -->
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="blog_details.html">Blog Details</a></li>
+                                                <li><a href="elements.html">Element</a></li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="login.html" class="btn header-btn">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ============================================================ HEADER END ============================================================ -->
+
+    <main>
+        <!--? slider Area Start-->
+        <div class="slider-area position-relative">
+            <div class="slider-active">
+                <div class="content">
+                    <div class="textArea">
+                        <span class="Main_comment">SPOT SEARCH<br>
+                            <span class="text-style-1">
+                                사진을 업로드하면 비슷한 분위기의 차박지를 추천합니다</span>
+                        </span>
+                    </div>
+
+
+                    <div class="imgUpload">
+                        <div class="upload">
+                            <!--이미지 업로등 화면 시작-->
+                            <button type="button" class="btn_start" onclick="init()">Start</button>
+                            <script class="jsbin"
+                                src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                            <div class="file-upload">
+                                <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+
+                                <div class="image-upload-wrap">
+                                    <input class="file-upload-input" type='file' onchange="readURL(this);"
+                                        accept="image/*" />
+                                    <div class="drag-text">
+                                        <h3>Drag and drop a file or select add Image</h3>
+                                    </div>
+                                </div>
+
+                                <div class="file-upload-content">
+                                    <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                                    <div class="image-title-wrap">
+                                        <button type="button" onclick="removeUpload()" class="remove-image">Remove
+                                            <span class="image-title">Uploaded Image</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn_predict" onclick="predict()">Predict</button>
+
+                            <div id="label-container"></div>
+                            <!--이미지업로드 화면 끝-->
+                        </div>
+                        <div class="btn_upload"></div>
+                    </div>
+
+                    <!--옵션창 시작-->
+                    <div class="filter">
+
+                        <div class="pricing">
+                            <div class="[ price-option price-option--low ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/화장실.png'></span>
+                                    <!-- <span class="price-option__type">Freeuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">화장실</a>
+                            </div>
+                            <div class="[ price-option price-option--mid ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/개수대.png'></span>
+                                    <!-- <span class="price-option__type">Poweruser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">개수대</a>
+                            </div>
+                            <div class="[ price-option price-option--high ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/전기.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">전기</a>
+                            </div>
+                            <div class="[ price-option price-option--four ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/cctv.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">cctv</a>
+                            </div>
+                            <div class="[ price-option price-option--five ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/편의점.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">편의점</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--옵션창 끝-->
+
+
+                    <div class="resultPrint">
+                        <div class="container list-article">
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more">더보기</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>영광 백바위 해수욕장</h1>
+                                        <p>전남 영광면 영산면 두우리</p>
+                                    </article>
+                                </div>
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more">더보기</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>보성 율포 해수욕장</h1>
+                                        <p>주소</p>
+                                    </article>
+                                </div>
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more">더보기</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>영광 백바위 해수욕장</h1>
+                                        <p>주소</p>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- slider Area End-->
+
+
+    </main>
+
+
+    <!-- ============================================================ FOOTER START============================================================ -->
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg03.png">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <!-- Footer Menu -->
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>COMPANY</h4>
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Company</a></li>
+                                        <li><a href="#"> Press & Blog</a></li>
+                                        <li><a href="#"> Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Open hour</h4>
+                                    <ul>
+                                        <li><a href="#">Monday 11am-7pm</a></li>
+                                        <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
+                                        <li><a href="#"> Saturday 10am-6pm</a></li>
+                                        <li><a href="#"> Sunday 11am-6pm</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>RESOURCES</h4>
+                                    <ul>
+                                        <li><a href="#">Home Insurance</a></li>
+                                        <li><a href="#">Travel Insurance</a></li>
+                                        <li><a href="#"> Car Insurance</a></li>
+                                        <li><a href="#"> Business Insurance</a></li>
+                                        <li><a href="#"> Heal Insurance</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">GThe trade war currently ensuing between te US anfd several
+                                            natxions around thdhe globe, most fiercely with.</p>
+                                    </div>
+                                </div>
+                                <!-- Footer Social -->
+                                <div class="footer-social ">
+                                    <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-lg-12">
+                            <div class="footer-copy-right text-center">
+
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================================ FOOTER END ========================================================= -->
+
+
+
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+
+    <!-- 추가한 JS 파일-->
+    <script src="./assets/js/spotSearch.js"></script>
+
+    <!--예측모델 코드-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+.textArea {
+  width: 1000px;
+  height: 100px;
+  margin: 300px 2px 10px 300px;
+  line-height: 250%;
+  float: left;
+}
+
+.Main_comment {
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.Main_comment .text-style-1 {
+  font-size: 23px;
+  font-weight: normal;
+  color: #c4c4c4;
+}
+
+.plus {
+  width: 61px;
+  height: 61px;
+  flex-grow: 0;
+  float: right;
+  margin-top: 330px;
+  margin-right: 300px;
+  color: red;
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+html {
+  background: #f5f7f8;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px 0;
+}
+
+.band {
+  width: 90%;
+  max-width: 1300px;
+  margin: 480px 300px 52px 300px;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* card */
+
+.card {
+  min-height: 90%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
+}
+
+.card:hover {
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card article {
+  padding: 20px;
+  display: flex;
+
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.card .thumb {
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card p {
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 2;
+  font-size: 12px;
+  color: #c4c4c4;
+}
+
+/* typography */
+h1 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.card span {
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+}
+
+/*----------------------------중고 물품 상세----------------------------*/
+.it-content {
+  width: 100%;
+  height: 650px;
+  margin-top: 450px;
+  background-color: white;
+}
+
+.it-content-img {
+  float: left;
+  width: 575px;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 350px;
+  border-radius: 10px;
+  border: 3px dashed black;
+  background-color: rgb(212, 212, 212);
+}
+
+.it-content-img > img {
+  width: 100%;
+}
+.it-content-txt {
+  float: left;
+  width: 575px;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.it-content-title {
+  width: 554px;
+  height: 40px;
+  margin: 10px;
+  background-color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.it-content-addr {
+  float: left;
+  width: 260px;
+  height: 30px;
+  margin-left: 10px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+.it-content-cost {
+  float: right;
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.it-content-real {
+  width: 554px;
+  height: 320px;
+  margin: 70px 10px 10px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.state-radio {
+  float: left;
+  width: 315px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+  padding: 15px 30px 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-it-talk {
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  background-color: #ffc107;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-it-talk > a {
+  color: #000;
+}
+
+.btn-it-list {
+  float: right;
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  background-color: #ffc107;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-it-list > a {
+  color: #000;
+}
+
+.it-reply {
+  width: 100%;
+  height: 600px;
+  padding-top: 30px;
+  background-color: whitesmoke;
+}
+
+.it-reply-add {
+  float: left;
+  width: 1200px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 350px;
+}
+
+.it-reply-input {
+  width: 900px;
+}
+
+.it-reply-input {
+  float: left;
+  width: 1080px;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.it-reply-add > .it-reply-input > input {
+  float: left;
+  width: 1070px;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.btn-it-reply-input {
+  float: right;
+  width: 100px;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 0;
+  border-radius: 10px;
+  background-color: #ffc107;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.it-reply-user {
+  width: 1200px;
+  height: 30px;
+  background-color: whitesmoke;
+  margin: 80px 350px 0 350px;
+}
+
+.it-reply-user > h1 {
+  float: left;
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.it-reply-user > span {
+  float: right;
+  font-size: 15px;
+}
+
+.it-reply-content {
+  width: 1200px;
+  height: 30px;
+  background-color: whitesmoke;
+  margin: 0 350px;
+  font-size: 20px;
+}
+
+.it-reply > hr {
+  border: 1px solid gray;
+  width: 1200px;
+  margin: 20px 350px;
+}
+
+/*----------------------------중고 물품 등록----------------------------*/
+.writeTable {
+  width: 100%;
+  height: 1000px;
+  margin: 450px 0 0 0;
+  background-color: white;
+}
+
+.item-write-wrap {
+  width: 1200px;
+  height: 480px;
+  margin: 450px 350px 0 350px;
+}
+
+.item-write-img {
+  float: left;
+  width: 475px;
+  height: 400px;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 3px dashed black;
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  padding-top: 100px;
+}
+
+.item-write {
+  float: right;
+  width: 650px;
+  height: 315px;
+  margin-top: 50px;
+  margin-left: 30px;
+  border-radius: 10px;
+}
+
+.col-menu {
+  width: 100px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.col-answ {
+  width: 550px;
+}
+
+.col-answ > input {
+  width: 100%;
+  font-size: 30px;
+  border-radius: 10px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+}
+
+.col-alert {
+  color: #444;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.it-w-real-content {
+  width: 1200px;
+  height: 400px;
+  margin: 0 330px 50px 330px;
+}
+
+.it-w-real-content > p > textarea {
+  width: 100%;
+  height: 390px;
+  border: 0;
+  border-radius: 10px;
+  margin: 20px;
+  border: 2px solid black;
+}
+
+.it-write-btn {
+  width: 1200px;
+  height: 60px;
+  margin: 0 350px 100px 350px;
+  text-align: center;
+}
+
+.it-write-btn > button {
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 50px 50px 0;
+  background-color: #ffc107;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.it-write-btn > button > a {
+  color: black;
+}
+
+/*----------------------------문의하기----------------------------*/
+.it-talk-wrap {
+  width: 100%;
+  height: 1000px;
+  margin: 450px 0 0 0;
+  background-color: white;
+}
+.it-talk-content {
+  display: flex;
+  width: 1200px;
+  height: 900px;
+  margin: 30px 350px;
+  background-color: wheat;
+}
+
+.talk-item-img {
+  width: 640px;
+  height: 700px;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 50px 30px;
+}
+
+.talk-dialog {
+  width: 440px;
+  height: 700px;
+  background-color: greenyellow;
+  margin: 50px 30px;
+}
