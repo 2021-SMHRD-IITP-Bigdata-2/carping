@@ -1,0 +1,125 @@
+@charset "utf-8";
+	
+    .map * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'맑은고딕',sans-serif;font-size:13px;}
+	.overlay_info {
+		border-radius: 5px;
+		margin-bottom: 0px;
+		float: left;
+		position: relative;
+		border: 0px solid rgba(204, 204, 204, 0);
+		border-bottom: 0px solid #ddd;
+		background-color: #fff;
+	}
+
+
+	.overlay_info:nth-of-type(n) {
+		border: 0px;
+		box-shadow: 0px 1px 2px rgba(136, 136, 136, 0);
+	}
+
+	.element.style {
+    padding: 10px;
+    font-size: 20px;
+    font-family: cursive;
+}
+	.overlay_info a {
+		display: block;
+		background: #0b0196 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+		text-decoration: none;
+		color: rgb(255, 255, 255);
+		padding: 12px 36px 12px 14px;
+		font-size: 13px;
+		font-weight: bold;
+		border: 0px solid rgba(204, 204, 204, 0.006);
+		border-radius: 0px 0px 0 0
+	
+	}
+		
+
+	.overlay_info a strong {
+		background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/place_icon.png) no-repeat;
+		padding-left: 30px;
+	}
+
+	.overlay_info .desc {
+		padding: 15px;
+		position: relative;
+		min-width: 400px;
+		height: 118px
+	}
+
+	.overlay_info img {
+		vertical-align: top;
+	}
+
+	.overlay_info .address {
+		font-size: 15px;
+		color: rgb(10, 10, 10);
+		position: absolute;
+		left: 200px;
+		right: 14px;
+		top: 20px;
+		white-space: normal
+	}
+
+	.overlay_info:after {
+		content: '';
+		position: absolute;
+		margin-left: -11px;
+		left: 50%;
+		bottom: -12px;
+		width: 22px;
+		height: 12px;
+		background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png) no-repeat 0 bottom;
+	}
+
+	img_m {
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
+	}
+
+
+	div{
+		position:relative; 
+		font-size: 13px;
+    	font-family: emoji;	
+    	font-weight: bold; 	
+	}
+
+	.overlay_info .title {
+		display: block;
+		text-align: left;
+		background: #080803 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+		text-decoration: none;
+		color: rgb(240, 219, 34);
+		padding: 12px 36px 12px 14px;
+		font-size: 13px;
+		font-weight: bold;
+		border: 0px solid rgba(204, 204, 204, 0.006);
+		border-radius: 6px 6px 0 0
+		
+	}
+
+       div.right {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        background: #0ff;
+    }
+
+.map-local {
+	position: relative;
+	font-size: 16px;
+	font-family: emoji;
+	font-weight: bold;
+	left: 1px;
+	display: flex;
+	width: 260px;
+	border-radius: 10px;
+	}
+.leftmap-photo{
+	left: -15px;
+	
+}	
+	
