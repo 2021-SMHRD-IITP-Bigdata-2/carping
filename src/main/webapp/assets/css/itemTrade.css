@@ -1,14 +1,14 @@
 .textArea {
-  width: 1000px;
-  height: 100px;
-  margin: 300px 2px 10px 300px;
-  line-height: 250%;
-  float: left;
+  width: 100%;
+  height: 100%;
+  margin: 250px 0px 0px -160px;
+  line-height: 200%;
+  float: none;
 }
 
 .Main_comment {
   font-family: Roboto;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -18,24 +18,23 @@
 }
 
 .Main_comment .text-style-1 {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: normal;
   color: #c4c4c4;
 }
 
 .plus {
-  width: 61px;
-  height: 61px;
-  flex-grow: 0;
-  float: right;
-  margin-top: 330px;
-  margin-right: 300px;
-  color: red;
-  font-size: 50px;
-  font-weight: bold;
-  font-style: normal;
-  text-align: center;
-  padding-bottom: 80px;
+  width: 50px;
+      height: 50px;
+      flex-grow: 0;
+      float: right;
+      margin-top: -5px;
+      margin-right: -130px;
+      color: red;
+      font-size: 50px;
+      font-weight: bold;
+      /* font-style: unset; */
+      padding-bottom: 6px;
 }
 
 html {
@@ -48,11 +47,9 @@ html {
 .band {
   width: 90%;
   max-width: 1300px;
-  margin: 480px 300px 52px 300px;
-
+  margin: 13px 55px 0px 200px;
   display: grid;
-
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-template-rows: auto;
   grid-gap: 20px;
 }
@@ -121,533 +118,324 @@ h1 {
   letter-spacing: 0.05em;
   margin: 2em 0 0 0;
 }
-
-/*----------------------------중고 물품 상세----------------------------*/
-.it-content {
-  width: 100%;
-  height: 650px;
-  margin-top: 450px;
-  background-color: white;
-}
-
-.it-content-img {
-  float: left;
-  width: 575px;
-  height: 500px;
-  margin-top: 50px;
-  margin-left: 350px;
-  border-radius: 10px;
-  border: 3px dashed black;
-  background-color: rgb(212, 212, 212);
-}
-
-.it-content-img > img {
-  width: 100%;
-}
-.it-content-txt {
-  float: left;
-  width: 575px;
-  height: 500px;
-  margin-top: 50px;
-  margin-left: 50px;
-  border-radius: 10px;
-  background-color: white;
-}
-
-.it-content-title {
-  width: 554px;
-  height: 40px;
-  margin: 10px;
-  background-color: white;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.it-content-addr {
-  float: left;
-  width: 260px;
-  height: 30px;
-  margin-left: 10px;
-  background-color: white;
-  font-size: 15px;
-  font-weight: bold;
-  color: #444;
-}
-
-.it-content-cost {
-  float: right;
-  width: 200px;
-  height: 30px;
-  margin-right: 10px;
-  background-color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: right;
-}
-
-.it-content-real {
-  width: 554px;
-  height: 320px;
-  margin: 70px 10px 10px 10px;
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid black;
-  background-color: white;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.state-radio {
-  float: left;
-  width: 315px;
-  height: 60px;
-  background-color: white;
-  border-radius: 10px;
-  margin: 0 10px 0 10px;
-  padding: 15px 30px 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.btn-it-talk {
-  width: 110px;
-  height: 60px;
-  border-radius: 10px;
-  margin: 0 10px 0 0;
-  background-color: #ffc107;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.btn-it-talk > a {
-  color: #000;
-}
-
-.btn-it-list {
-  float: right;
-  width: 110px;
-  height: 60px;
-  border-radius: 10px;
-  margin: 0 10px 0 0;
-  background-color: #ffc107;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.btn-it-list > a {
-  color: #000;
-}
-
-.it-reply {
-  width: 100%;
-  height: 600px;
-  padding-top: 30px;
-  background-color: whitesmoke;
-}
-
-.it-reply-add {
-  float: left;
-  width: 1200px;
-  height: 40px;
-  border-radius: 10px;
-  margin-left: 350px;
-}
-
-.it-reply-input {
-  width: 900px;
-}
-
-.it-reply-input {
-  float: left;
-  width: 1080px;
-  height: 40px;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.it-reply-add > .it-reply-input > input {
-  float: left;
-  width: 1070px;
-  height: 100%;
-  border: none;
-  font-size: 20px;
-  border-radius: 10px;
-  margin-left: 10px;
-}
-
-.btn-it-reply-input {
-  float: right;
-  width: 100px;
-  height: 40px;
-  margin-left: 20px;
-  margin-right: 0;
-  border-radius: 10px;
-  background-color: #ffc107;
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-  cursor: pointer;
-}
-
-.it-reply-user {
-  width: 1200px;
-  height: 30px;
-  background-color: whitesmoke;
-  margin: 80px 350px 0 350px;
-}
-
-.it-reply-user > h1 {
-  float: left;
-  margin-right: 20px;
-  font-size: 22px;
-}
-
-.it-reply-user > span {
-  float: right;
-  font-size: 15px;
-}
-
-.it-reply-content {
-  width: 1200px;
-  height: 30px;
-  background-color: whitesmoke;
-  margin: 0 350px;
-  font-size: 20px;
-}
-
-.it-reply > hr {
-  border: 1px solid gray;
-  width: 1200px;
-  margin: 20px 350px;
-}
-
-/*----------------------------중고 물품 등록----------------------------*/
 .writeTable {
-  width: 100%;
-  height: 1000px;
-  margin: 450px 0 0 0;
-  background-color: white;
+    width: 1200px;
+    height: 800px;
+    margin: -100px 0px 0px 300px;
+    background-color: #000
 }
 
-.item-write-wrap {
-  width: 1200px;
-  height: 480px;
-  margin: 450px 350px 0 350px;
+
+
+.item_wrap {
+  width: 1000px;
+  margin: 100px auto;
 }
 
-.item-write-img {
-  float: left;
-  width: 475px;
-  height: 400px;
-  margin-top: 50px;
-  border-radius: 10px;
-  border: 3px dashed black;
-  background-color: whitesmoke;
+.item_title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.bt_wrap {
+  margin-top: 30px;
   text-align: center;
-  font-size: 100px;
+  font-size: 0;
+}
+
+.on{
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 14px;
   font-weight: bold;
-  padding-top: 100px;
+  background: #ffc107;
+  color: #1f2b7b;
 }
 
-.item-write {
-  float: right;
-  width: 650px;
-  height: 315px;
-  margin-top: 50px;
-  margin-left: 30px;
-  border-radius: 10px;
-}
-
-.col-menu {
-  width: 100px;
-  font-size: 25px;
+.bt_wrap a {
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 14px;
   font-weight: bold;
-  text-align: right;
-  padding-right: 10px;
+  background: #ffc107;
+  color: #1f2b7b;
 }
 
-.col-answ {
-  width: 550px;
+
+.bt_wrap a:first-child {
+  margin-left: 0;
 }
 
-.col-answ > input {
+.bt_wrap a.on {
+  background: #000;
+  color: #fff;
+}
+
+.board_list {
   width: 100%;
-  font-size: 30px;
-  border-radius: 10px;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-top-width: 0;
-  border-bottom-width: 1;
+  border-top: 2px solid #000;
 }
 
-.col-alert {
-  color: #444;
-  font-size: 15px;
-  text-transform: uppercase;
+.board_list > div {
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
 }
 
-.it-w-real-content {
-  width: 1200px;
-  height: 400px;
-  margin: 0 330px 50px 330px;
+.board_list > div.top {
+  border-bottom: 1px solid #999;
 }
 
-.it-w-real-content > p > textarea {
-  width: 100%;
-  height: 390px;
-  border: 0;
-  border-radius: 10px;
-  margin: 20px;
-  border: 2px solid black;
+.board_list > div:last-child {
+  border-bottom: 1px solid #000;
 }
 
-.it-write-btn {
-  width: 1200px;
-  height: 60px;
-  margin: 0 350px 100px 350px;
+.board_list > div > div {
+  display: inline-block;
+  padding: 15px 0;
   text-align: center;
-}
-
-.it-write-btn > button {
-  width: 110px;
-  height: 60px;
-  border-radius: 10px;
-  margin: 0 50px 50px 0;
-  background-color: #ffc107;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.it-write-btn > button > a {
-  color: black;
-}
-
-/*----------------------------문의하기----------------------------*/
-.it-talk-wrap {
-  width: 100%;
-  height: 1000px;
-  margin: 450px 0 0 0;
-  background-color: black;
-}
-.it-talk-content {
-  display: flex;
-  width: 1200px;
-  height: 900px;
-  margin: 30px 350px;
-}
-
-.talk-item-img {
-  display: flex;
-  flex-direction: column;
-  width: 640px;
-  height: 700px;
-  border-radius: 10px;
-  border: 0.82px solid #ffc107;
-  margin: 50px 30px;
-}
-
-.talk-img {
-  width: 580px;
-  height: 500px;
-  margin: 50px 28px 10px 28px;
-  background-color: #ffc107;
-}
-
-.talk-img > img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.talk-img-detail {
-  width: 580px;
-  height: 100px;
-  margin: 10px 28px 10px 28px;
-  text-align: center;
-}
-.talk-img-detail > h1,
-.talk-img-detail > h3 {
-  font-weight: bold;
-}
-
-.talk-img-detail > h1 {
-  color: white;
-  font-size: 25px;
-}
-.talk-img-detail > span {
-  color: whitesmoke;
-  font-size: 15px;
-}
-.talk-img-detail > h3 {
-  font-size: 25px;
-  color: orange;
-  font-weight: bold;
-}
-
-.talk-dialog {
-  width: 440px;
-  height: 700px;
-  border-radius: 10px;
-  background-color: greenyellow;
-  margin: 50px 30px;
-}
-
-/* 라이브러리 */
-.con {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* 커스텀 */
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-body {
-  font-family: "Noto Sans KR", sans-serif;
-  overflow-y: hidden;
-}
-
-body,
-html {
-  height: 100%;
-}
-
-#chat-room {
-  height: 100%;
-  border-radius: 10px;
-  background-color: darkseagreen;
-  /* 임시 */
-  outline: 2px solid black;
-  position: relative;
-}
-
-#chat-room .message-box {
-  padding: 0 0.7rem;
-  overflow-y: scroll;
-  height: calc(100% - 4.4rem);
-}
-
-#chat-room .message-group::before {
-  content: attr(data-date-str);
-  display: block;
-  background-color: rgba(0, 0, 0, 0.15);
-  border-radius: 1rem;
-  text-align: center;
-  padding: 0.3rem 0;
-  color: white;
   font-size: 1.6rem;
 }
 
-#chat-room .chat-message {
-  margin-left: 3rem;
-  position: relative;
+.board_list > div.top > div {
+  font-weight: 600;
 }
 
-#chat-room .chat-message > section {
-  position: absolute;
-  top: 0;
-  left: -3rem;
+.board_list .num {
+  width: 10%;
 }
 
-#chat-room .chat-message > span {
-  display: block;
+.board_list .title {
+  width: 55%;
+  text-align: center;
 }
 
-#chat-room .chat-message > section {
-  font-size: 3rem;
+.board_list .top .title {
+  text-align: center;
 }
 
-#chat-room .chat-message::after {
-  content: "";
-  display: block;
-  clear: both;
+.board_list .writer {
+  width: 10%;
 }
 
-#chat-room .chat-message > div {
-  background-color: white;
-  float: left;
-  padding: 0.8rem;
-  border-radius: 1rem;
-  clear: both;
-  font-weight: bold;
-  font-size: 1.46rem;
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+.board_list .date {
+  width: 10%;
 }
 
-#chat-room .chat-message.mine > div {
-  background-color: #ffc107;
-  float: right;
-  box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.3);
+.board_list .count {
+  width: 10%;
 }
 
-#chat-room .chat-message.mine > span {
-  display: none;
+.board_page {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
 }
 
-#chat-room .chat-message.mine > section {
-  display: none;
-}
-
-#chat-room .input-box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-#chat-room .input-box #text-input {
-  width: 100%;
-  display: block;
-  border: 0;
-  outline: none;
-  padding-right: 8.5rem;
-  padding-left: 4.8rem;
-  padding-top: 0.1rem;
-  font-size: 1.4rem;
-  line-height: 4rem;
-  font-weight: bold;
+.board_page a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
   box-sizing: border-box;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-left: 0;
+  line-height: 100%;
 }
 
-#chat-room .input-box .btn-plus {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4rem;
-  height: 100%;
-  background-color: #d1d1d1;
+.board_page a.bt {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
 }
 
-#chat-room .input-box .btn-plus > i {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-45%);
-  color: white;
-  font-size: 3rem;
+.board_page a.num {
+  padding-top: 9px;
+  font-size: 1.4rem;
 }
 
-#chat-room .input-box .btn-submit {
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 10px;
-  background-color: #fdf01b;
-  padding: 10px;
-  color: #bfb73d;
-  border-radius: 3px;
-  font-size: 1.3rem;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-  user-select: none;
+.board_page a.num.on {
+  border-color: #000;
+  background: #000;
+  color: #fff;
 }
 
-#chat-room .input-box .btn-emo {
-  position: absolute;
-  right: 6rem;
-  top: 50%;
-  transform: translateY(-50%);
+.board_page a:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.board_view {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+
+.board_view .title {
+  padding: 20px 15px;
+  border-bottom: 1px dashed #ddd;
   font-size: 2rem;
-  color: #cbcbcb;
+}
+
+.board_view .info {
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  font-size: 0;
+}
+
+.board_view .info dl {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.board_view .info dl:first-child {
+  padding-left: 0;
+}
+
+.board_view .info dl::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 13px;
+  background: #ddd;
+}
+
+.board_view .info dl:first-child::before {
+  display: none;
+}
+
+.board_view .info dl dt,
+.board_view .info dl dd {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+
+.board_view .info dl dd {
+  margin-left: 10px;
+  color: #777;
+}
+
+.board_view .cont {
+  padding: 15px;
+  border-bottom: 1px solid #000;
+  line-height: 160%;
+  font-size: 1.4rem;
+}
+
+.item_write {
+  border-top: 2px solid #000;
+}
+
+.item_write .title,
+.item_write .info {
+  padding: 15px;
+}
+
+.item_write .info {
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+}
+
+.item_write .title dl {
+  font-size: 0;
+}
+
+.item_write .info dl {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.item_write .title dt,
+.item_write .title dd,
+.item_write .info dt,
+.item_write .info dd {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px
+}
+
+.item_write .title dt,
+.item_write .info dt {
+  width: 100px;
+  color: #fcb813;
+}
+
+.item_write .title dd {
+  width: calc(100% - 100px);
+}
+
+.item_write .title input[type="text"],
+.item_write .info input[type="text"],
+.item_write .info input[type="password"] {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px #ffc107;
+}
+
+.item_write .title input[type="text"] {
+  width: 50%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px #ffc107;
+  font-size: 15px;
+}
+.item_write .price input[type="text"] {
+  width: 30%;
+}
+.item_write .cont {
+  border-bottom: 1px solid #000;
+}
+
+.item_write .cont textarea {
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 0;
+  resize: vertical;
+  width: 100%;
+  border-top: 10px solid #ffc107;
+}
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px#ffc107;
+  box-sizing: border-box;
+  clear: inherit;
+  cursor: pointer;
+  display: block;
+  float: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
+  white-space: nowrap;
+  width: auto;
+  margin: 0px;
 }

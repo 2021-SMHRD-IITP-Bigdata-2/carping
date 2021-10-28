@@ -36,50 +36,17 @@
                 <img src="https://www.upinews.kr/data/upi/image/2020/10/22/upi202010220070.680x.0.jpg" alt="">
             </div>
             <div class="close_wrapper">
-                <button id="close" style="border: none; background-color: white;">
-                    <i class="fas fa-times fa-5x"></i>
-                </button>
+                <button id="close">닫기</button>
             </div>
             <div class="detail-content">
-                <div class="user-info-detail">
-                    <img src="./assets/img/gallery/default_profile.png">
-                    <h1>zikke</h1>
-                    <div class="detail-reply-datetime">2021.10.23.SAT. 15:22</div>
-                    <div class="detail-like"><i class="far fa-heart fa-2x"></i></div>
-                </div>
-                <div class="real-content">
-                    <article>
-                        <span> 지난 주말에 다녀온 바다 ! <br>Caring에서 장소 찾아보고 가니까 진짜 편하더라 !! <br>
-                            앞으로 차박여행 계획할 땐 묻지도 따지지도 않고 CARPING >3< </span>
-                    </article>
-                </div>
+
             </div>
             <div class="detail-reply-write">
-                <div class="reply-content">
-                    <input type="text" placeholder="댓글" style="border: none;">
-                </div>
-                <div class="btn-reply-save">
-                    <button>
-                        <p>등록</p>
-                    </button>
-                </div>
+
             </div>
             <div class="detail-reply">
-                <div class="reply-user-info">
-                    <h1>Hello</h1>
-                    <span>2021.10.23. 15:57</span>
-                </div>
-                <div class="reply-content-history">이게 무슨일이예요~~~ 사진 넘 예뿜 :0 </div>
-                <hr style="margin: 10px 10px;">
 
-                <div class="reply-user-info">
-                    <h1>Hello</h1>
-                    <span>2021.10.23. 15:57</span>
-                </div>
-                <div class="reply-content-history">이게 무슨일이예요~~~ 사진 넘 예뿜 :0 </div>
-                <hr style="margin: 10px 10px;">
             </div>
-
         </div>
     </div>
     <!---------------------------------- 게시글 상세보기 모달창 ---------------------------------->
@@ -87,35 +54,15 @@
     <!------------------------------------- 게시글쓰기 모달창 ------------------------------------>
     <div class="modal_wrapper-w" style="display: none;">
         <div class="modal_main-write">
+
             <div class="close_wrapper-w">
-                <button id="close-w" style="border: none; background-color: white;">
-                    <div class="close-icon"><i class="fas fa-times fa-5x"></i></div>
-                </button>
+                <button id="close-w">닫기</button>
             </div>
-            <div class="save_wrapper-w">
-                <button id="save-w" style="border: none; background-color: white;">
-                    <div class="save-icon">완료</div>
-                </button>
-            </div>
-            <div class="detail-img-w">
-                <!-- 이미지 추가하기 js -->
+            <div class="detail-img">
+
             </div>
             <div class="detail-write">
-                <div class="user-info">
-                    <!-- 작성자 닉네임, 작성날짜  -->
-                    <div class="profile-img"><img src="./assets/img/gallery/default_profile.png"></div>
-                    <div class="profile-txt">
-                        <h1>삐용삐용짛케짱</h1>
-                        <p>2021. 10. 23. SAT.</p>
-                    </div>
-                </div>
-                <div class="select-addresstag">
-                    <!-- 위치 태그 -->위치 추가
-                </div>
-                <div class="community-contents">
-                    <!-- 내용 작성 -->
-                    <p><textarea style="resize: none;" placeholder="내용을 작성하세요"></textarea></p>
-                </div>
+
             </div>
         </div>
     </div>
@@ -144,7 +91,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="main.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                                <a href="main.html"><img class="logo" src="assets/img/logo/logo1.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -182,21 +129,36 @@
             </div>
         </div>
     </header>
+    <div class="slider-area2">
+  
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="hero-cap hero-cap2">
+                            <div class="textArea">
+                            <span class="Main_comment">차박 사진을 업로드하세요 !<br>
+                                <span class="text-style-1">
+                                    중고거래를 성공할 때마다 포인트가 적립됩니다.
+                                    사진을 업로드 하면 포인트가 적립됩니다 :-)</span>
+                            </span>
+                            <div class="plus" ><a style="color:red" href="itemTrade-write.html" class="far fa-plus-square"></a></div>
+    
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
     <!-- ============================================================ HEADER END ============================================================ -->
 
 
     <main>
         <!--? slider Area Start-->
-        <div class="slider-area position-relative">
-            <div class="slider-active">
-                <div class="content">
-                    <div class="textArea">
-                        <span class="Main_comment">차박 사진을 업로드하세요 !
-                            <span class="text-style-1"><br>사진을 업로드 하면 포인트가 적립됩니다 :-)</span>
-                        </span>
-                    </div>
-                    <div class="content-write"><i class="far fa-plus-square"></i></div>
-
+        <div class="mainback">
                     <div class="grid">
 
                         <div class="item">
@@ -381,8 +343,10 @@
 
     <!-- ============================================================ FOOTER START============================================================ -->
     <footer>
+        
         <!--? Footer Start-->
-        <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg03.png">
+            <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg03.png">
+                
             <div class="container">
                 <div class="footer-top footer-padding">
                     <!-- Footer Menu -->
@@ -390,12 +354,12 @@
                         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>COMPANY</h4>
+                                    <h4>Registration</h4>
                                     <ul>
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">Company</a></li>
-                                        <li><a href="#"> Press & Blog</a></li>
-                                        <li><a href="#"> Privacy Policy</a></li>
+                                        <li><a href="#"> Member Join</a></li>
+                                        <li><a href="#"> Member Login</a></li>
+                                        <li><a href="#"> Member Search</a></li>
+                                        <li><a href="#"> Member Policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -403,30 +367,17 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Open hour</h4>
+                                    <h4>Category</h4>
                                     <ul>
-                                        <li><a href="#">Monday 11am-7pm</a></li>
-                                        <li><a href="#"> Tuesday-Friday 11am-8pm</a></li>
-                                        <li><a href="#"> Saturday 10am-6pm</a></li>
-                                        <li><a href="#"> Sunday 11am-6pm</a></li>
+                                        <li><a href="#"> Spot Search</a></li>
+                                        <li><a href="#"> Carping Map</a></li>
+                                        <li><a href="#"> Community</a></li>
+                                        <li><a href="#"> Item Trade</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>RESOURCES</h4>
-                                    <ul>
-                                        <li><a href="#">Home Insurance</a></li>
-                                        <li><a href="#">Travel Insurance</a></li>
-                                        <li><a href="#"> Car Insurance</a></li>
-                                        <li><a href="#"> Business Insurance</a></li>
-                                        <li><a href="#"> Heal Insurance</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                     
                         <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <!-- logo -->
@@ -450,20 +401,10 @@
                         </div>
                     </div>
                 </div>
-                <!-- Footer Bottom -->
-                <div class="footer-bottom">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-lg-12">
-                            <div class="footer-copy-right text-center">
-
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+       
+     
+    </footer>
     </footer>
     <!-- ============================================================ FOOTER END ========================================================= -->
 

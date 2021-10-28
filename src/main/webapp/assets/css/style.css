@@ -2389,26 +2389,7 @@ hr {
         -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
         animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite
 }
-@-webkit-keyframes btnIconRipple {
-    0% {
-        border-width: 4px;
-        -webkit-transform: scale(1);
-        transform: scale(1)
-    }
-    50% {
-        border-width: 1px;
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5)
-    }
-    80% {
-        border-width: 1px;
-        -webkit-transform: scale(1.9);
-        transform: scale(1.9)
-    }
-    100% {
-        opacity: 0
-    }
-}
+
 .slider-area .video-icon a.btn-icon:hover {
     background: #fff;
     color: #ff1313
@@ -6165,10 +6146,12 @@ position: relative;
         font-weight: bold;
         color: #fcb813;
     }
-.modal_info p{
+.modal_contents{
         color: white;
         font-size: 1.5em;
         font-family: 'fancy';
+        width: 100%;
+        height: 100%;
     }
 .close_wrapper {
         position: absolute;
@@ -6204,7 +6187,8 @@ position: relative;
     height: 50%;
 }
 .mainback{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    margin-top: -15px;
 }
 .weathercontents{
     position: relative;
@@ -6352,4 +6336,49 @@ video {
 
 .custom-shape-divider-top-1635236953 .shape-fill {
     fill: #FFFFFF;
+}
+.modal_img {
+    position: relative;
+    display: block;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border: 5px #fcb813;
+}
+.modal_address{
+    font-size: 1em;
+    color: #fcb813;
+    border-top: 4px solid #fcb813;
+}
+.modal_tell{
+    font-size: 1em;
+    color: #ffffff;
+
+}
+.modal_details p{
+    border-top:  4px solid #fcb813;
+    margin-bottom: 30px;
+    color: white; 
+}
+.facilities_list{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content: space-between;
+    align-content: center;
+}
+.facilities_list img{
+    margin-block: -20px;
+    max-width: 50px;
+    max-height: 50px;
+    filter: invert(100%);
+    padding: 5px;
+}
+.facilities_list .f_name{
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    width:auto;
+    
 }
