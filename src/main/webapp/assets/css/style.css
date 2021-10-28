@@ -102,7 +102,7 @@
     opacity: 0.9
 }
 body {
-    font-family: "Barlow", sans-serif;
+    font-family: "GongGothicMedium", sans-serif;
     font-weight: normal;
     font-style: normal
 }
@@ -112,7 +112,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Teko", sans-serif;
+    font-family: "GongGothicBold", sans-serif;
     color: #2c234d;
     margin-top: 0;
     font-style: normal;
@@ -121,9 +121,9 @@ h6 {
         font-size: 30px;
 }
 p {
-    font-family: "Barlow", sans-serif;
+    font-family: 'GongGothicMedium';
     color: #10285d;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 23px;
     margin-bottom: 15px;
     font-weight: normal
@@ -326,7 +326,7 @@ hr {
 }
 .btn {
     background: #fcb813;
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicBold';
     text-transform: uppercase;
     padding: 20px 30px;
     color: #000000;
@@ -1890,9 +1890,10 @@ hr {
     }
 }
 .section-tittle span {
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicBold';
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 600;
+    margin-top: 35px;
     margin-left: 72px;
     margin-bottom: 22px;
     color: #f04e3c;
@@ -1921,7 +1922,8 @@ hr {
     display: block;
     color: #2c234d;
     font-weight: 700;
-    text-transform: uppercase
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 @media only screen and(min-width: 992px) and(max-width: 1199px) {
     .section-tittle h2 {
@@ -1970,7 +1972,7 @@ hr {
     background-position: center center;
     background-attachment: fixed;
     padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 90px;
 }
 .white-bg {
     background: #ffffff
@@ -2050,7 +2052,7 @@ hr {
     transition: 0.3s;
     text-transform: capitalize;
     position: relative;
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicBold';
     font-weight: bold;
 }
 @media only screen and(min-width: 992px) and(max-width: 1199px) {
@@ -2238,7 +2240,7 @@ hr {
 }
 .slider-area .hero__caption span {
     font-size: 24px;
-    font-family: "Teko", sans-serif;
+    font-family: "GongGothicMedium";
     font-weight: 300;
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -2300,7 +2302,7 @@ hr {
 .slider-area .hero__caption p {
     font-size: 18px;
     color: #fff;
-    font-family: "Barlow", sans-serif;
+    font-family: "'GongGothicBold';", sans-serif;
     margin-bottom: 50px;
     padding-right: 35px
 }
@@ -2389,7 +2391,26 @@ hr {
         -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
         animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite
 }
-
+@-webkit-keyframes btnIconRipple {
+    0% {
+        border-width: 4px;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    50% {
+        border-width: 1px;
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5)
+    }
+    80% {
+        border-width: 1px;
+        -webkit-transform: scale(1.9);
+        transform: scale(1.9)
+    }
+    100% {
+        opacity: 0
+    }
+}
 .slider-area .video-icon a.btn-icon:hover {
     background: #fff;
     color: #ff1313
@@ -2481,7 +2502,7 @@ hr {
     width: 100%
 }
 .about-area2 .about-caption {
-    padding-left: 90px
+    padding-left: 20px
 }
 @media only screen and(min-width: 1200px) and(max-width: 1600px) {
     .about-area2 .about-caption {
@@ -2515,7 +2536,11 @@ hr {
     position: relative
 }
 .about-area2 .about-img2 img {
-    width: 100%
+    width: 100%;
+    border: 12px outset #ffc107;
+    border-radius: 5
+px;
+
 }
 .about-area2 .about-img2 .shape-qutaion {
     position: absolute;
@@ -2541,7 +2566,7 @@ hr {
     }
 }
 .services-area .single-cat {
-    padding: 61px 41px;
+    padding: 30px 30px;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;
@@ -2564,7 +2589,7 @@ hr {
     display: block
 }
 .services-area .single-cat .cat-cap h5 > a {
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicBold';
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 21px;
@@ -2595,6 +2620,7 @@ hr {
     color: #f04e3c
 }
 .services-area .single-cat .cat-cap p {
+    font-family: 'GongGothicLight';
     margin-bottom: 36px;
     color: #303133;
     font-size: 16px;
@@ -2631,7 +2657,7 @@ hr {
     transition: 0.4s
 }
 .services-area .single-cat .img-cap a {
-    font-family: "Teko", sans-serif;
+    font-family: "'GongGothicBold';", sans-serif;
     font-size: 16px;
     color: #fff;
     background: #f81f1f;
@@ -2960,7 +2986,7 @@ hr {
     color: #fff;
     display: inline-block;
     font-size: 16px;
-    font-family: "Teko", sans-serif
+    font-family: 'GongGothicMedium';
 }
 .date-tabs .tab-wrapper .single-box .single-caption .caption h3 {
     color: #2c234d;
@@ -3023,7 +3049,7 @@ hr {
 }
 .date-tabs .properties__button .nav-tabs .nav-link {
     color: #2c234d;
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicMedium';
     font-size: 25px;
     border: 0;
     margin-bottom: 31px;
@@ -3180,14 +3206,15 @@ hr {
     color: #717b9b;
     line-height: 45px;
     line-height: 1.5;
-    margin-bottom: 37px
+    margin-bottom: 37px;
+    font-family: 'GongGothicLight';
 }
 .testimonial-area .rattiong-caption span {
     color: #06080a;
     font-size: 24px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: "Teko", sans-serif
+    font-family: 'GongGothicMedium';
 }
 .testimonial-area .rattiong-caption span span {
     color: #767676;
@@ -3262,7 +3289,7 @@ hr {
 .team-area .single-team .team-caption h3 {
     margin-bottom: 22px;
     line-height: 13px;
-    font-family: "Barlow", sans-serif
+    font-family: 'GongGothicMedium';
 }
 .team-area .single-team .team-caption h3 a {
     color: #fff;
@@ -3358,7 +3385,8 @@ hr {
     margin-bottom: 0px;
     padding-right: 0px;
     color: #c4c4c4;
-    font-size: 10px
+    font-size: 10px;
+    font-family: 'GongGothicLight';
 }
 @media only screen and(min-width: 992px) and(max-width: 1199px) {
     .footer-area .footer-top .single-footer-caption .footer-pera .info1 {
@@ -3382,7 +3410,7 @@ hr {
 }
 .footer-area .footer-top .single-footer-caption .footer-tittle h4 {
     color: #fff;
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicMedium';
     font-size: 18px;
     margin-bottom: 38px;
     font-weight: 700;
@@ -3565,7 +3593,7 @@ hr {
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 20px;
-    font-family: "Barlow", sans-serif;
+    font-family: 'GongGothicMedium';
     display: block
 }
 .home-blog-area .home-blog-single .blog-img-cap .blog-cap h3 a:hover {
@@ -4015,7 +4043,7 @@ hr {
     position: relative;
 }
 .blog_item_img .blog_item_date {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'GongGothicMedium';
     font-size: 1.8em;
     position: absolute;
     bottom: -20px;
@@ -4751,7 +4779,7 @@ hr {
     color: #fff;
     font-weight: 900;
     margin-bottom: 0;
-    font-family: "Teko", sans-serif;
+    font-family: 'GongGothicMedium';
     text-transform: capitalize
 }
 @media(max-width: 767px) {
@@ -4802,7 +4830,7 @@ hr {
     cursor: pointer;
     display: block;
     float: left;
-    font-family: "Barlow", sans-serif;
+    font-family: 'GongGothicMedium';
     font-weight: normal;
     width: 100% !important;
     line-height: 50px;
@@ -4837,7 +4865,7 @@ hr {
     top: 3px;
     transition: all 0.15s ease-in-out;
     width: 5px;
-    font-family: fontawesome;
+    font-family: 'GongGothicMedium';
     color: #919191;
     font-size: 15px
 }
@@ -5932,7 +5960,7 @@ del {
 
 .map-button{
     background: #fcb813;
-    font-family: emoji;
+    font-family: 'GongGothicMedium';
     text-transform: uppercase;
     padding: 20px 20px;
     color: #000000;
@@ -5981,7 +6009,7 @@ del {
 
 .search-button{
     background: #fcb813;
-    font-family: emoji;
+    font-family: 'GongGothicMedium';
     text-transform: uppercase;
     padding: 20px 20px;
     color: #000000;
@@ -6028,6 +6056,8 @@ del {
     outline: 0;
     box-shadow: none
 }
+
+
 .map-title {
    	color: #ffc107;
     cursor: pointer;
@@ -6040,7 +6070,7 @@ del {
 .map-control{
 position: relative;
     font-size: 20px;
-    font-family: emoji;
+    font-family: 'GongGothicMedium';
     left: 24px;
     display: inline-flex;
     width:390px;
@@ -6090,7 +6120,7 @@ position: relative;
 }
 
 .map-distance{
-	color: #fcb813;
+	color: #ffffff;
 	
 }
 .small_star{
@@ -6145,13 +6175,16 @@ position: relative;
         font-size: 2.0em;
         font-weight: bold;
         color: #fcb813;
+        margin: 30px
+        
     }
 .modal_contents{
         color: white;
         font-size: 1.5em;
-        font-family: 'fancy';
+        font-family: 'GongGothicMedium';
         width: 100%;
         height: 100%;
+        padding: 0px 35px 0px 35px;
     }
 .close_wrapper {
         position: absolute;
@@ -6192,7 +6225,9 @@ position: relative;
 }
 .weathercontents{
     position: relative;
-    color: white;   
+    color: white; 
+    margin-bottom: -50px;
+      
 }
 .jb-box{
 width: 100%; 
@@ -6215,10 +6250,10 @@ video {
 .jb-text p {     
     margin-top: -80px;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2.1em;
         color: #ffffff;
         font-style: inherit;
-        font-family: fantasy;
+        font-family: 'GongGothicBold';
         color: #ffc107;
         text-shadow: 1px 1px 5px #000;
         position: absolute; 
@@ -6249,8 +6284,8 @@ video {
     fill: #FFFFFF;
 }
 .hero__caption span {
-    font-size: 1.5em;
-    font-family: fantasy;
+    font-size: 1.2em;
+    font-family: 'GongGothicBold';
     font-weight: 300;
     margin-top: -150px;
     text-transform: uppercase;
@@ -6381,4 +6416,22 @@ video {
     font-weight: bold;
     width:auto;
     
+}
+@font-face {
+    font-family: 'GongGothicBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GongGothicLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
