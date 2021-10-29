@@ -1,13 +1,13 @@
 .textArea {
   width: 100%;
   height: 100%;
-  margin: 250px 0px 0px -160px;
+  margin: 300px 0px 100px -160px;
   line-height: 200%;
   float: none;
 }
 
 .Main_comment {
-  font-family: Roboto;
+  font-family: "GongGothicBold";
   font-size: 50px;
   font-weight: bold;
   font-stretch: normal;
@@ -18,6 +18,7 @@
 }
 
 .Main_comment .text-style-1 {
+  font-family: "GongGothicMedium";
   font-size: 20px;
   font-weight: normal;
   color: #c4c4c4;
@@ -25,16 +26,14 @@
 
 .plus {
   width: 50px;
-      height: 50px;
-      flex-grow: 0;
-      float: right;
-      margin-top: -5px;
-      margin-right: -130px;
-      color: red;
-      font-size: 50px;
-      font-weight: bold;
-      /* font-style: unset; */
-      padding-bottom: 6px;
+  height: 50px;
+  flex-grow: 0;
+  float: right;
+  margin-top: -5px;
+  margin-right: -304px;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 6px;
 }
 
 html {
@@ -45,11 +44,12 @@ html {
 }
 
 .band {
-  width: 90%;
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1480px;
   margin: 13px 55px 0px 200px;
+  padding-bottom: 100px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-gap: 20px;
 }
@@ -98,7 +98,7 @@ html {
   flex: 1; /* make p grow to fill available space*/
   line-height: 2;
   font-size: 12px;
-  color: #c4c4c4;
+  color: #777;
 }
 
 /* typography */
@@ -119,13 +119,11 @@ h1 {
   margin: 2em 0 0 0;
 }
 .writeTable {
-    width: 1200px;
-    height: 800px;
-    margin: -100px 0px 0px 300px;
-    background-color: #000
+  width: 1200px;
+  height: 800px;
+  margin: -100px 0px 0px 300px;
+  background-color: #000;
 }
-
-
 
 .item_wrap {
   width: 1000px;
@@ -133,10 +131,10 @@ h1 {
 }
 
 .item_title {
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: bold;
-    color: aliceblue;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: aliceblue;
 }
 
 .bt_wrap {
@@ -145,7 +143,7 @@ h1 {
   font-size: 0;
 }
 
-.on{
+.on {
   display: inline-block;
   min-width: 80px;
   margin-left: 10px;
@@ -166,7 +164,6 @@ h1 {
   background: #ffc107;
   color: #1f2b7b;
 }
-
 
 .bt_wrap a:first-child {
   margin-left: 0;
@@ -317,7 +314,6 @@ h1 {
   font-size: 1.4rem;
 }
 
-
 .board_view .info dl dd {
   margin-left: 10px;
   color: #777;
@@ -361,7 +357,7 @@ h1 {
 .item_write .info dd {
   display: inline-block;
   vertical-align: middle;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .item_write .title dt,
