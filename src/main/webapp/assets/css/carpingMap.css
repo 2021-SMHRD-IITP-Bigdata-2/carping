@@ -15,6 +15,7 @@
   letter-spacing: normal;
   text-align: left;
   color: #fff;
+  
 }
 
 .Main_comment .text-style-1 {
@@ -26,16 +27,18 @@
 
 .mapContent {
   width: 100vh;
-  height: 1000px;
-  margin: 0px 0px 480px 900px;
+  height: 100vh;
+  margin: 70px 0px 480px 900px;
   background-color: black;
   
 }
 .mapList {
   width: 630px;
     height: 1160px;
-    margin: -1450px 0px 0px 170px;
+    margin: -1550px 0px 0px 170px;
     background-color: black;
+    
+  
 }
 .overlay_info {
   border-radius: 5px;
@@ -109,7 +112,7 @@
   background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png) no-repeat 0 bottom;
 }
 
-img_m {
+.img_m {
   width: 60px;
   height: 60px;
   object-fit: cover;
@@ -137,12 +140,6 @@ div{
   
 }
 
-     div.right {
-      width: 50%;
-      float: right;
-      box-sizing: border-box;
-      background: #0ff;
-  }
 
 .map-local {
 position: relative;
@@ -153,7 +150,19 @@ left: 1px;
 display: flex;
 width: 260px;
 border-radius: 10px;
+
 }
+.map-local2 {
+  position: relative;
+  font-size: 16px;
+  font-family: 'GongGothicLight';
+  font-weight: bold;
+  left: 1px;
+  display: flex;
+  width: 260px;
+  border-radius: 10px;
+  border: 3px outset #ffc107;
+  }
 .leftmap-photo{
 left: -15px;
 

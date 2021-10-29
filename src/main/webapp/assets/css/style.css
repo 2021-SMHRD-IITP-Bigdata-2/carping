@@ -35,7 +35,7 @@
 }
 .boxed-btn {
     background: #ffc107;
-    color: rgb(0, 0, 1) !important;
+    color: rgb(0, 0, 0) !important;
     display: inline-block;
     padding: 18px 44px;
     font-family: "Teko", sans-serif;
@@ -2207,6 +2207,13 @@ hr {
     background-position: top center;
     background-size: cover
 }
+.slider-meddle {
+    background-image: url('../img/gallery/section_bg22.png');
+    background-size: initial;
+    background-position: top center;
+    margin-top:-30px;
+    
+}
 .slider-area {
     margin-top:-10px;
     background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(48, 45, 45, 0.8)), url('../img/hero/mainb.png');
@@ -2537,7 +2544,7 @@ hr {
 }
 .about-area2 .about-img2 img {
     width: 100%;
-    border: 12px outset #ffc107;
+    border: 8px outset #ffc107;
     border-radius: 5
 px;
 
@@ -2657,10 +2664,10 @@ px;
     transition: 0.4s
 }
 .services-area .single-cat .img-cap a {
-    font-family: "'GongGothicBold';", sans-serif;
+    font-family: 'GongGothicBold';
     font-size: 16px;
     color: #fff;
-    background: #f81f1f;
+    background: #f04e3c;
     font-size: 16px;
     text-transform: uppercase;
     padding: 20px 0;
@@ -5951,7 +5958,7 @@ del {
 .map-search {
 	background: black;
     color:  black;
-    margin-top: 0px;
+    margin-bottom: 15px;
     font-style: normal;
     font-weight: 500px;
     font-size: 20px;
@@ -6075,13 +6082,17 @@ position: relative;
     display: inline-flex;
     width:390px;
     border-radius: 10px;
+    border: 3px outset #ffc107;
+
 }
 .map-listwrap{
     color: #f8f9fa;
     display: block;
     height: 865px;
     overflow: scroll;
-    overflow-x: hidden
+    overflow-x: hidden;
+    border: 3px outset #ffc107;
+    padding: 15px 0px 0px 0px;
 }
 /* 스크롤바 설정*/
 .map-listwrap::-webkit-scrollbar{
@@ -6164,11 +6175,12 @@ position: relative;
 .modal_main {
         position: relative;
         width: 50em;
-        height: 50em;
+        height: 48em;
         background: rgb(0, 0, 0);
         padding: 20px 20px;
         border-radius: 50px;
         color: white;
+        border: 4px outset #ffc107;
     }
 .modal_title p{
         display: inline-block;
@@ -6185,6 +6197,7 @@ position: relative;
         width: 100%;
         height: 100%;
         padding: 0px 35px 0px 35px;
+        
     }
 .close_wrapper {
         position: absolute;
@@ -6384,17 +6397,20 @@ video {
 .modal_address{
     font-size: 1em;
     color: #fcb813;
-    border-top: 4px solid #fcb813;
+    border-top: 2px solid #fcb813;
+    margin-top: 10px;
 }
 .modal_tell{
     font-size: 1em;
     color: #ffffff;
+    margin-top: 10px;
 
 }
 .modal_details p{
-    border-top:  4px solid #fcb813;
+    border-top:  2px solid #fcb813;
     margin-bottom: 30px;
     color: white; 
+    margin-top: 10px;
 }
 .facilities_list{
     display:flex;
@@ -6402,6 +6418,7 @@ video {
     align-items:flex-start;
     justify-content: space-between;
     align-content: center;
+    margin-top: 20px;
 }
 .facilities_list img{
     margin-block: -20px;
