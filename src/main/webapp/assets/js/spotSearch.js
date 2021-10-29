@@ -65,6 +65,9 @@ function readURL(input) {
       $(".file-upload-content").show();
       $(".image-title").html(input.files[0].name);
     };
+    init().then(() => {
+      predict();
+    });
     reader.readAsDataURL(input.files[0]);
   } else {
     removeUpload();
