@@ -7,7 +7,7 @@
 }
 
 .Main_comment {
-  font-family: Roboto;
+  font-family: "GongGothicBold";
   font-size: 50px;
   font-weight: bold;
   font-stretch: normal;
@@ -18,15 +18,16 @@
 }
 
 .Main_comment .text-style-1 {
+  font-family: "GongGothicMedium";
   font-size: 20px;
   font-weight: normal;
   color: #c4c4c4;
 }
 
 .mapContent {
-  width: 900px;
-  height: 1000px;
-  margin: 5px 0px 500px 900px;
+  width: 100vh;
+  height: 100vh;
+  margin: 70px 0px 480px 900px;
   background-color: black;
 }
 .mapList {
@@ -35,9 +36,135 @@
   margin: -1500px 0px 0px 170px;
   background-color: black;
 }
+.overlay_info a {
+  display: block;
+  background: #0b0196
+    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
+    no-repeat right 14px center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 36px 12px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 0px solid rgba(204, 204, 204, 0.006);
+  border-radius: 0px 0px 0 0;
+}
 
-.modalInfoImg {
-  width: 85px;
-  height: 85px;
+.overlay_info a strong {
+  background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/place_icon.png)
+    no-repeat;
+  padding-left: 30px;
+}
+
+.overlay_info .desc {
+  padding: 15px;
+  position: relative;
+  min-width: 400px;
+  height: 118px;
+}
+
+.overlay_info img {
+  vertical-align: top;
+}
+
+.overlay_info .address {
+  font-size: 15px;
+  color: rgb(10, 10, 10);
+  position: absolute;
+  left: 200px;
+  right: 14px;
+  top: 20px;
+  white-space: normal;
+}
+
+.overlay_info:after {
+  content: "";
+  position: absolute;
+  margin-left: -11px;
+  left: 50%;
+  bottom: -12px;
+  width: 22px;
+  height: 12px;
+  background: url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png)
+    no-repeat 0 bottom;
+}
+
+.img_m {
+  width: 60px;
+  height: 60px;
   object-fit: cover;
+}
+
+div {
+  position: relative;
+  font-size: 14px;
+  font-family: "GongGothicLight";
+  font-weight: bold;
+}
+
+.overlay_info .title {
+  display: block;
+  text-align: left;
+  background: #080803
+    url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)
+    no-repeat right 14px center;
+  text-decoration: none;
+  color: rgb(240, 219, 34);
+  padding: 12px 36px 12px 14px;
+  font-size: 13px;
+  font-weight: bold;
+  border: 0px solid rgba(204, 204, 204, 0.006);
+  border-radius: 6px 6px 0 0;
+}
+
+.map-local {
+  position: relative;
+  font-size: 16px;
+  font-family: "GongGothicLight";
+  font-weight: bold;
+  left: 1px;
+  display: flex;
+  width: 260px;
+  border-radius: 10px;
+}
+.map-local2 {
+  position: relative;
+  font-size: 16px;
+  font-family: "GongGothicLight";
+  font-weight: bold;
+  left: 1px;
+  display: flex;
+  width: 260px;
+  border-radius: 10px;
+  border: 3px outset #ffc107;
+}
+.leftmap-photo {
+  left: -15px;
+}
+.subject {
+  font-size: 15px;
+  font-family: "GongGothicLight";
+  color: #fcb813;
+}
+
+.subject a {
+  font-size: 15px;
+  font-family: "GongGothicLight";
+  color: #fcb813;
+}
+.location {
+  font-family: "GongGothicMedium";
+  color: #10285d;
+  font-size: 14px;
+  line-height: 23px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.cont p {
+  font-family: "GongGothicMedium";
+  color: #10285d;
+  font-size: 14px;
+  line-height: 0px;
+  margin-bottom: 15px;
+  font-weight: normal;
 }

@@ -130,20 +130,35 @@ const filter = () => {
 
               const close = document.getElementById("close");
               const modal = document.querySelector(".modal_wrapper");
-              const content = document.querySelector(".modal_content");
+              const dataname = document.querySelector(".dataname");
+              const modalInnerImg = document.querySelector(
+                ".modal_img.rounded-0"
+              );
+              const addr = document.querySelector(".modal_address");
+              const phone = document.querySelector(".modal_tell");
+              const facilLists = document.querySelectorAll(".facilities_list");
 
+              //test
+              const mnt = document.querySelector(".f_name.place.mountain");
+
+              // console.log(modalInnerImg);
               (function (marker, text) {
                 kakao.maps.event.addListener(marker, "click", () => {
                   modal.style.display = "flex";
-                  content.innerText = text;
+                  dataname.innerText = text.S_NAME;
+                  modalInnerImg.src = text.S_IMG;
+                  addr.innerText = text.S_ADDR;
+                  phone.innerText = text.S_PHONE;
 
-                  console.log(text);
+                  // var stringVal = text.S_AMENITY,
+                  //   substring = "산";
+
+                  // console.log(text);
                 });
-              })(marker, mapLists[i].S_NAME);
+              })(marker, mapLists[i]);
 
               close.addEventListener("click", function () {
                 modal.style.display = "none";
-                content.innerText = "";
               });
 
               carpingList(i, mapLists);
