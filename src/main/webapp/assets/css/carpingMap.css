@@ -168,3 +168,9 @@ div {
   margin-bottom: 15px;
   font-weight: normal;
 }
+
+.modalInfoImg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
