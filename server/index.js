@@ -75,11 +75,13 @@ app.get("/session", (req, res) => {
 
 app.get("/", (req, res) => {
   // sql쿼리문
-  const sqlSelect = "SELECT * FROM posts ";
+  const sqlSelect = "SELECT * FROM posts";
   db.query(sqlSelect, (err, result) => {
+    if (err) console.log(err)
     console.log(result);
-    res.json(result[0].movieReview);
+    res.json(result);
   });
+  
 });
 // ============================================================ 간단한 테스트공간 END ============================================================
 
