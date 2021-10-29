@@ -134,6 +134,16 @@ app.post("/join", (req, res) => {
     console.log(result);
   });
 });
+// // 카카오맵
+// app.get("/kakaoMap", (req, res) => {
+//   // sql쿼리문
+//   const sqlSelect = "SELECT * FROM SPOTS ";
+//   db.query(sqlSelect, (err, result) => {
+//     console.log(result);
+//     res.json(result);
+//   });
+// });
+
 //========================================================= 라우터에 복붙할 부분들 END ===================================================
 
 app.listen(3001, () => {
