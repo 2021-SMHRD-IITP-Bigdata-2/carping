@@ -35,9 +35,10 @@ async function init() {
     labelContainer.appendChild(document.createElement("div"));
   }
 }
-
+// ====================================================================== 여기가 1번 START ======================================================================
 //예측 코드
 // run the webcam image through the image model
+var spots;
 async function predict() {
   // predict can take in an image, video or canvas html element
   var image = document.getElementById("face-image");
@@ -52,9 +53,19 @@ async function predict() {
   }
   console.log(maxpre);
   const max = maxpre.indexOf(Math.max(...maxpre));
+  const spotList = ["산", "바다", "물", "노지", "야영장"];
   console.log(max);
-  labelContainer.innerHTML = prediction[max].className;
+  console.log(spotList[max]);
+  await axios
+    .post("http://localhost:3001/SPOTS/predSpot", { predSpot: spotList[max] })
+    .then((response) => {
+      console.log(response.data[0]);
+      spots = response.data;
+      // putSpots(spots);
+      return spots; // spots 밖에서도 사용 가능
+    });
 }
+// ====================================================================== 여기가 1번 END ======================================================================
 
 function readURL(input) {
   if (input.files && input.files[0]) {
@@ -95,3 +106,80 @@ $(function () {
     $(".article-wrapper").toggleClass("bloc col-xs-12 col-xs-4");
   });
 });
+
+// console.log(spotName.innerText);
+
+// ================================================== #3번 3개 리스트 올리기 기능 START ==================================================
+const putSpots = () => {
+  const spotName = document.querySelectorAll(
+    ".col-xs-12.article-wrapper h1"
+  )[0];
+  const spotAddr = document.querySelectorAll(".col-xs-12.article-wrapper p")[0];
+  // const celly = document.querySelectorAll(".col-xs-12.article-wrapper h1")[0];
+  console.log(spotName.textContent);
+  console.log(spotAddr.innerText);
+  // 필터 클릭할 때마다 for문 돌려야 할 듯
+  // and or 방식으로 a and b and c and d and e 전부 선택한 경우
+  // if (a and !b and c and d and e){for~~~} b는 없는곳 이렇게
+  spotName.innerText = spots[0].S_ADDR;
+  spotAddr.innerText = spots[0].S_NAME;
+  celly.innerText = spots[0].S_PHONE;
+};
+// ================================================== #3번3개 리스트 올리기 기능 END ==================================================
+
+//================================================== #2번 필터링 알고리즘 완료 START ==================================================
+var filteredSpots;
+// 클릭하면 그 값이 리스트에 들어가고 빠지는 기능
+const makeOption = () => {
+  var filtered = [];
+
+  const filterValues = document.querySelectorAll(".pricing > div");
+  //짝수면 미포함 필터에
+  var index;
+  filterValues.forEach((v) => {
+    v.addEventListener("click", () => {
+      console.log(spots);
+      console.log(v.innerText);
+      if (filtered.includes(v.innerText)) {
+        index = filtered.indexOf(v.innerText);
+        filtered.splice(index, 1);
+        // v.innerText.
+      } else {
+        filtered.push(v.innerText);
+      }
+      //값이 이제 filtered에 들어감
+
+      // 여기서 약간 문제
+      console.log(filtered); //['개수대', '화장실', 'CCTV', '편의점'] 이렇게 뽑힘 계속 동적으로 바뀜
+      // console.log(spots);
+
+      filteredSpots = spots.filter((spot) =>
+        filtered.every((v) => spot.S_AMENITY.includes(v))
+      );
+
+      console.log(filteredSpots);
+      putSpots();
+      // OK DONE
+    });
+  });
+};
+makeOption();
+
+//================================================== #2번 필터링 알고리즘 완료 END ==================================================
+// 지우지 말것 바탕화면에서 퍼실리티들 뽑아오는 코드
+// filterValues.forEach((value) => {
+//   console.log(value.textContent);
+//   facilList.push(value.textContent);
+// });
+// const filter = (filtered) => {
+//   // filtered 여기에 들어감
+//   // console.log(spots.S_AMENITY);
+//   // const filtered = spots.filter((spot) => spot.S_AMENITY.includes("화장실")); //트루면 가져와져
+//   console.log(spots);
+//   filteredSpots = spots.filter((spot) =>
+//     filtered.every((v) => spot.S_AMENITY.includes(v))
+//   );
+
+//   console.log(filteredSpots);
+// };
+// ================================================== 필터링 END ==================================================

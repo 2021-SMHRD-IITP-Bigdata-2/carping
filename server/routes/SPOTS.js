@@ -121,6 +121,20 @@ router.post("/kakaoMap/SPOT", (req, res) => {
 });
 // ======================================== 카카오맵 SPOT 선택 END ========================================
 
+// ======================================== 장소예측한 값 불러오기 START ========================================
+router.post("/predSpot", (req, res) => {
+  console.log(req.body);
+  const predSpot = req.body.predSpot;
+
+  const sqlSelect = "SELECT * FROM SPOTS WHERE S_CATEGORY = ?";
+  db.query(sqlSelect, predSpot, (err, result) => {
+    if (err) console.log(err);
+    // console.log(result.length);
+    res.json(result);
+  });
+});
+// ======================================== 장소예측한 값 불러오기 END ========================================
+
 //
 
 // db에 정보 넣기
