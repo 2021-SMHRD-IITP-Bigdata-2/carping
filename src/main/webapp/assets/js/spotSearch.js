@@ -11,12 +11,12 @@ close.addEventListener("click", function () {
   modal.style.display = "none";
 });
 
-const predRows = document.querySelectorAll(".col-xs-12.article-wrapper");
-predRows.forEach((row) => {
-  row.addEventListener("click", () => {
-    modal.style.display = "flex";
-  });
-});
+// const predRows = document.querySelectorAll(".col-xs-12.article-wrapper");
+// predRows.forEach((row) => {
+//   row.addEventListener("click", () => {
+//     modal.style.display = "flex";
+//   });
+// });
 
 // --------------------------------------------------------------------------예측 모델
 
@@ -202,11 +202,38 @@ const InitPutSpots = () => {
   function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  var indexList = [];
 
-  recomends3.forEach((recomend) => {
+  recomends3.forEach((recomend, i) => {
     // 무작위 숫자 길이 만큼
     index = rand(0, spots.length - 1);
+    indexList.push(index);
     recomend.querySelector("h1").textContent = spots[index].S_NAME;
     recomend.querySelector("p").textContent = spots[index].S_ADDR;
+    recomend.addEventListener("click", () => {
+      modal.style.display = "flex";
+      document.querySelector(".spot-info-text>h1").innerText =
+        spots[indexList[i]].S_NAME; // 이름
+    });
+    // document.querySelector(".spot-info-text>h1").innerText =
+    //   spots[index].S_NAME; // 이름
+    // document.querySelector(".spot-info-text > span").innerText =
+    //   spots[index].S_NAME; // 주소
+    // document.querySelector(".spot-info-text > h3").innerText =
+    //   spots[index].S_NAME; // 번호
+    // document.querySelector(".spot-img").src = spots[index].S_NAME; // 이미지
+    // // 모달 클릭
   });
+  recomends3.forEach((recomend) => {});
+
+  // for (var i = 0; i < 3; i++) {
+  //   (function (indexList) {
+  //     console.log(indexList);
+  //     recomends3[i].addEventListener("click", () => {
+  //       modal.style.display = "flex";
+  //       document.querySelector(".spot-info-text>h1").innerText =
+  //         spots[indexList[i]].S_NAME; // 이름
+  //     });
+  //   })(indexList);
+  // }
 };

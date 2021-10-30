@@ -77,11 +77,10 @@ app.get("/", (req, res) => {
   // sql쿼리문
   const sqlSelect = "SELECT * FROM posts";
   db.query(sqlSelect, (err, result) => {
-    if (err) console.log(err)
+    if (err) console.log(err);
     console.log(result);
     res.json(result);
   });
-  
 });
 // ============================================================ 간단한 테스트공간 END ============================================================
 
@@ -136,6 +135,7 @@ app.post("/join", (req, res) => {
     console.log(result);
   });
 });
+
 // // 카카오맵
 // app.get("/kakaoMap", (req, res) => {
 //   // sql쿼리문
