@@ -119,12 +119,14 @@ $(function () {
 
 // ================================================== #3번 3개 리스트 올리기 기능 START ==================================================
 const putSpots = () => {
+  var indexPutSpots = [];
+
   const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
   function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  recomends3.forEach((recomend) => {
+  recomends3.forEach((recomend, i) => {
     // 무작위 숫자 길이 만큼
     if (filteredSpots == 0) {
       recomend.querySelector("h1").textContent = "결과가 존재하지 않습니다...";
@@ -132,11 +134,42 @@ const putSpots = () => {
         "(っ °Д °;)っ(っ °Д °;)っ(っ °Д °;)っ";
     } else {
       index = rand(0, filteredSpots.length - 2);
+      indexPutSpots.push(index);
+      // console.log(indexPutSpots);
       recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
       recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
+      recomend.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.querySelector(".spot-info-text>h1").innerText =
+          filteredSpots[indexPutSpots[i]].S_NAME; // 이름
+        document.querySelector(".spot-info-text > span").innerText =
+          filteredSpots[indexPutSpots[i]].S_ADDR; // 주소
+        document.querySelector(".spot-info-text > h3").innerText =
+          filteredSpots[indexPutSpots[i]].S_PHONE; // 번호
+        document.querySelector(".spot-img").src =
+          filteredSpots[indexPutSpots[i]].S_IMG; // 이미지
+      });
     }
   });
 };
+
+// recomends3.forEach((recomend, i) => {
+//   // 무작위 숫자 길이 만큼
+//   index = rand(0, spots.length - 1);
+//   indexList.push(index);
+//   recomend.querySelector("h1").textContent = spots[index].S_NAME;
+//   recomend.querySelector("p").textContent = spots[index].S_ADDR;
+//   recomend.addEventListener("click", () => {
+//     modal.style.display = "flex";
+//     document.querySelector(".spot-info-text>h1").innerText =
+//       spots[indexList[i]].S_NAME; // 이름
+//     document.querySelector(".spot-info-text > span").innerText =
+//       spots[indexList[i]].S_ADDR; // 주소
+//     document.querySelector(".spot-info-text > h3").innerText =
+//       spots[indexList[i]].S_NAME; // 번호
+//     document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
+//   });
+// });
 // ================================================== #3번3개 리스트 올리기 기능 END ==================================================
 
 //================================================== #2번 필터링 알고리즘 완료 START ==================================================
@@ -214,6 +247,11 @@ const InitPutSpots = () => {
       modal.style.display = "flex";
       document.querySelector(".spot-info-text>h1").innerText =
         spots[indexList[i]].S_NAME; // 이름
+      document.querySelector(".spot-info-text > span").innerText =
+        spots[indexList[i]].S_ADDR; // 주소
+      document.querySelector(".spot-info-text > h3").innerText =
+        spots[indexList[i]].S_PHONE; // 번호
+      document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
     });
     // document.querySelector(".spot-info-text>h1").innerText =
     //   spots[index].S_NAME; // 이름
