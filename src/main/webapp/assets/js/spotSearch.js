@@ -111,19 +111,28 @@ $(function () {
 
 // ================================================== #3번 3개 리스트 올리기 기능 START ==================================================
 const putSpots = () => {
-  const spotName = document.querySelectorAll(
-    ".col-xs-12.article-wrapper h1"
-  )[0];
-  const spotAddr = document.querySelectorAll(".col-xs-12.article-wrapper p")[0];
+  const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
+  recomends3.forEach((recomend, index) => {
+    // 무작위 숫자 길이 만큼
+    recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
+    recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
+  });
+
+  //  ========================= 필요 없음 =========================
+  // const spotName = document.querySelectorAll(
+  //   ".col-xs-12.article-wrapper h1"
+  // )[0];
+  // const spotAddr = document.querySelectorAll(".col-xs-12.article-wrapper p")[0];
   // const celly = document.querySelectorAll(".col-xs-12.article-wrapper h1")[0];
-  console.log(spotName.textContent);
-  console.log(spotAddr.innerText);
+  // console.log(spotName.textContent);
+  // console.log(spotAddr.innerText);
   // 필터 클릭할 때마다 for문 돌려야 할 듯
   // and or 방식으로 a and b and c and d and e 전부 선택한 경우
   // if (a and !b and c and d and e){for~~~} b는 없는곳 이렇게
-  spotName.innerText = spots[0].S_ADDR;
-  spotAddr.innerText = spots[0].S_NAME;
-  celly.innerText = spots[0].S_PHONE;
+  // spotName.innerText = spots[0].S_ADDR;
+  // spotAddr.innerText = spots[0].S_NAME;
+  // celly.innerText = spots[0].S_PHONE;
+  //  ========================= 필요 없음 =========================
 };
 // ================================================== #3번3개 리스트 올리기 기능 END ==================================================
 
@@ -143,7 +152,7 @@ const makeOption = () => {
       if (filtered.includes(v.innerText)) {
         index = filtered.indexOf(v.innerText);
         filtered.splice(index, 1);
-        // v.innerText.
+        // modal.style
       } else {
         filtered.push(v.innerText);
       }
