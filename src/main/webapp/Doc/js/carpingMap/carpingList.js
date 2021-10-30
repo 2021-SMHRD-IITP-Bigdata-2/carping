@@ -1,115 +1,112 @@
 // 모듈화 성공
 export const carpingList = (i, mapLists) => {
-  const row = document.createElement("div");
-  row.className = "row maplist";
-  const mapListWrap = document.getElementsByClassName("map-listwrap");
-  var addr = mapLists[i].S_ADDR;
-  var addrDetail = addr.split(" ");
-  // console.log(addrDetail[0]);
+	const row = document.createElement('div');
+	row.className = 'row maplist';
+	const mapListWrap = document.getElementsByClassName('map-listwrap');
+	var addr = mapLists[i].S_ADDR;
+	var addrDetail = addr.split(' ');
+	// console.log(addrDetail[0]);
 
-  //  여기는 거리 km
-  row.innerHTML =
-    '<div class="row" >' +
-    "<!-- 1번 사진 -->" +
-    '<div class="leftmap-photo">' +
-    '<div class="map-photo">' +
-    "<a " +
-    'href="#" ' +
-    'title="광주시민의숲 야영장 페이지 이동 링크" ' +
-    ">" +
-    "<img " +
-    "src=" +
-    mapLists[i].S_IMG + // 이미지주소넣기
-    ' alt="광주시민의숲 야영장 작은 사진" ' +
-    'width="160" ' +
-    'height="90" ' +
-    'class="tm" ' +
-    "/>" +
-    "</a>" +
-    "</div>" +
-    "</div>" +
-    '<div class="contright">' +
-    "<!-- 2번 작은글씨 -->" +
-    '<div class="subject">' +
-    "<a " +
-    'href="./?c=camp&m=camping&page=view&uid=1784 "' +
-    'onclick="maplink(1784 , 35.23301873461016, 126.86633658774820);return false" ' +
-    'title="광주시민의숲 야영장 AJAX 이동 링크"' +
-    ">" +
-    mapLists[i].S_NAME + //이름넣기
-    '<span class="comment"' +
-    '><i class="fa fa-comment-o" aria-hidden="true"></i>' +
-    '<span class="commentcount"> </span' +
-    "></span>" +
-    "</a>" +
-    "</div>" +
-    "<!-- 3번 거리/도시/구/동/예약/주소/번호 -->" +
-    '<div class="cont">' +
-    '<p class="location">' +
-    '<span class="map-distance">' +
-    getDistanceFromLatLonInKm(mapLists[i].S_LAT, mapLists[i].S_LONG) +
-    "Km" +
-    "</span>" +
-    '<i class="fa fa-angle-right" aria-hidden="true"></i>' +
-    '<a href="./?c=camp&amp;m=camping&amp;cate1=광주">' +
-    addrDetail[0] +
-    "</a>" + // 문자열 넣기 addrDetail[0]
-    '<i class="fa fa-angle-right" aria-hidden="true"></i>' +
-    '<a href="./?c=camp&amp;m=camping&amp;cate1=광주&amp;cate2=북구">' +
-    addrDetail[1] +
-    "</a>" + // 문자열 넣기 addrDetail[1]
-    '<i class="fa fa-angle-right" aria-hidden="true"></i>' +
-    '<span class="map-distance">' +
-    addrDetail[2] +
-    " " +
-    "</span>" + // 문자열 넣기 addrDetail[2]
-    "<a " +
-    'href="https://camp.xticket.kr/web/main?shopEncode=0d1fe2a656f145151b3a890a13a0171d61db84b1a5dc4b35d3b1d4bd938c381d" ' +
-    'target="_blank" ' +
-    'onclick="web_link_count(1784,booking)" ' +
-    'class="map-button" ' +
-    ">" +
-    "<span>예약</span>" +
-    "</a>" +
-    "</p>" +
-    "<ul>" +
-    '<li class="address">' +
-    mapLists[i].S_ADDR +
-    " | " +
-    mapLists[i].S_PHONE +
-    "<!--(광주 북구 월출동 968)-->" +
-    "</li>" +
-    "</ul>" +
-    "</div>" +
-    "</div>" +
-    "<!--contright-->" +
-    '<div class="clear"></div>' +
-    "</div>";
+	//  여기는 거리 km
+	row.innerHTML =
+		'<div class="row" >' +
+		'<!-- 1번 사진 -->' +
+		'<div class="leftmap-photo">' +
+		'<div class="map-photo">' +
+		'<a ' +
+		'href="#" ' +
+		'title="광주시민의숲 야영장 페이지 이동 링크" ' +
+		'>' +
+		'<img ' +
+		'src=' +
+		mapLists[i].S_IMG + // 이미지주소넣기
+		' alt="광주시민의숲 야영장 작은 사진" ' +
+		'width="160" ' +
+		'height="90" ' +
+		'class="tm" ' +
+		'/>' +
+		'</a>' +
+		'</div>' +
+		'</div>' +
+		'<div class="contright">' +
+		'<!-- 2번 작은글씨 -->' +
+		'<div class="subject">' +
+		'<a ' +
+		'href="./?c=camp&m=camping&page=view&uid=1784 "' +
+		'onclick="maplink(1784 , 35.23301873461016, 126.86633658774820);return false" ' +
+		'title="광주시민의숲 야영장 AJAX 이동 링크"' +
+		'>' +
+		mapLists[i].S_NAME + //이름넣기
+		'<span class="comment"' +
+		'><i class="fa fa-comment-o" aria-hidden="true"></i>' +
+		'<span class="commentcount"> </span' +
+		'></span>' +
+		'</a>' +
+		'</div>' +
+		'<!-- 3번 거리/도시/구/동/예약/주소/번호 -->' +
+		'<div class="cont">' +
+		'<a ' +
+		'href="https://camp.xticket.kr/web/main?shopEncode=0d1fe2a656f145151b3a890a13a0171d61db84b1a5dc4b35d3b1d4bd938c381d" ' +
+		'target="_blank" ' +
+		'onclick="web_link_count(1784,booking)" ' +
+		'class="map-button" ' +
+		'>' +
+		'예약' +
+		'</a>' +
+		'<p class="location">' +
+		'<span class="map-distance">' +
+		getDistanceFromLatLonInKm(mapLists[i].S_LAT, mapLists[i].S_LONG) +
+		'Km' +
+		'</span>' +
+		'<i class="fa fa-angle-right" aria-hidden="true"></i>' +
+		'<a href="./?c=camp&amp;m=camping&amp;cate1=광주">' +
+		addrDetail[0] +
+		'</a>' + // 문자열 넣기 addrDetail[0]
+		'<i class="fa fa-angle-right" aria-hidden="true"></i>' +
+		'<a href="./?c=camp&amp;m=camping&amp;cate1=광주&amp;cate2=북구">' +
+		addrDetail[1] +
+		'</a>' + // 문자열 넣기 addrDetail[1]
+		'<i class="fa fa-angle-right" aria-hidden="true"></i>' +
+		'<span class="map-distance">' +
+		addrDetail[2] +
+		' ' +
+		'</span>' + // 문자열 넣기 addrDetail[2]
+		'</p>' +
+		'<ul>' +
+		'<li class="address">' +
+		mapLists[i].S_ADDR +
+		' | ' +
+		mapLists[i].S_PHONE +
+		'<!--(광주 북구 월출동 968)-->' +
+		'</li>' +
+		'</ul>' +
+		'</div>' +
+		'</div>' +
+		'<!--contright-->' +
+		'<div class="clear"></div>' +
+		'</div>';
 
-  mapListWrap[0].appendChild(row);
+	mapListWrap[0].appendChild(row);
 };
 
 //거리구하는 함수
 function getDistanceFromLatLonInKm(lat2, long2) {
-  var lat1 = 35.1136476;
-  var lng1 = 126.8815276;
-  var lat2 = lat2;
-  var lng2 = long2;
+	var lat1 = 35.1136476;
+	var lng1 = 126.8815276;
+	var lat2 = lat2;
+	var lng2 = long2;
 
-  function deg2rad(deg) {
-    return deg * (Math.PI / 180);
-  }
-  var r = 6371; //지구의 반지름(km)
-  var dLat = deg2rad(lat2 - lat1);
-  var dLon = deg2rad(lng2 - lng1);
-  var a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos(deg2rad(lat1)) *
-      Math.cos(deg2rad(lat2)) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  var d = r * c; // Distance in km
-  // console.log(Math.round(d));
-  return Math.round(d);
+	function deg2rad(deg) {
+		return deg * (Math.PI / 180);
+	}
+	var r = 6371; //지구의 반지름(km)
+	var dLat = deg2rad(lat2 - lat1);
+	var dLon = deg2rad(lng2 - lng1);
+	var a =
+		Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+		Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+	var d = r * c; // Distance in km
+	// console.log(Math.round(d));
+	return Math.round(d);
 }
