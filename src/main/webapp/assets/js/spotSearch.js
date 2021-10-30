@@ -66,7 +66,7 @@ async function predict() {
     });
 }
 // ====================================================================== 여기가 1번 END ======================================================================
-
+var index;
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -76,8 +76,9 @@ function readURL(input) {
       $(".file-upload-content").show();
       $(".image-title").html(input.files[0].name);
     };
-    init().then(() => {
-      predict();
+    init().then(async () => {
+      await predict();
+      InitPutSpots();
     });
     reader.readAsDataURL(input.files[0]);
   } else {
@@ -112,27 +113,22 @@ $(function () {
 // ================================================== #3번 3개 리스트 올리기 기능 START ==================================================
 const putSpots = () => {
   const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
-  recomends3.forEach((recomend, index) => {
-    // 무작위 숫자 길이 만큼
-    recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
-    recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
-  });
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-  //  ========================= 필요 없음 =========================
-  // const spotName = document.querySelectorAll(
-  //   ".col-xs-12.article-wrapper h1"
-  // )[0];
-  // const spotAddr = document.querySelectorAll(".col-xs-12.article-wrapper p")[0];
-  // const celly = document.querySelectorAll(".col-xs-12.article-wrapper h1")[0];
-  // console.log(spotName.textContent);
-  // console.log(spotAddr.innerText);
-  // 필터 클릭할 때마다 for문 돌려야 할 듯
-  // and or 방식으로 a and b and c and d and e 전부 선택한 경우
-  // if (a and !b and c and d and e){for~~~} b는 없는곳 이렇게
-  // spotName.innerText = spots[0].S_ADDR;
-  // spotAddr.innerText = spots[0].S_NAME;
-  // celly.innerText = spots[0].S_PHONE;
-  //  ========================= 필요 없음 =========================
+  recomends3.forEach((recomend) => {
+    // 무작위 숫자 길이 만큼
+    if (filteredSpots == 0) {
+      recomend.querySelector("h1").textContent = "결과가 존재하지 않습니다...";
+      recomend.querySelector("p").textContent =
+        "(っ °Д °;)っ(っ °Д °;)っ(っ °Д °;)っ";
+    } else {
+      index = rand(0, filteredSpots.length - 2);
+      recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
+      recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
+    }
+  });
 };
 // ================================================== #3번3개 리스트 올리기 기능 END ==================================================
 
@@ -144,7 +140,7 @@ const makeOption = () => {
 
   const filterValues = document.querySelectorAll(".pricing > div");
   //짝수면 미포함 필터에
-  var index;
+  index;
   filterValues.forEach((v) => {
     v.addEventListener("click", () => {
       console.log(spots);
@@ -192,3 +188,18 @@ makeOption();
 //   console.log(filteredSpots);
 // };
 // ================================================== 필터링 END ==================================================
+
+const InitPutSpots = () => {
+  console.log(spots);
+  const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  recomends3.forEach((recomend) => {
+    // 무작위 숫자 길이 만큼
+    index = rand(0, spots.length - 1);
+    recomend.querySelector("h1").textContent = spots[index].S_NAME;
+    recomend.querySelector("p").textContent = spots[index].S_ADDR;
+  });
+};
