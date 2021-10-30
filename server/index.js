@@ -73,6 +73,7 @@ app.get('/session', (req, res) => {
 
 // session test===========================================================
 
+<<<<<<< HEAD
 app.get('/', (req, res) => {
 	// sql쿼리문
 	const sqlSelect = 'SELECT * FROM posts ';
@@ -80,6 +81,17 @@ app.get('/', (req, res) => {
 		console.log(result);
 		res.json(result[0].movieReview);
 	});
+=======
+app.get("/", (req, res) => {
+  // sql쿼리문
+  const sqlSelect = "SELECT * FROM posts";
+  db.query(sqlSelect, (err, result) => {
+    if (err) console.log(err)
+    console.log(result);
+    res.json(result);
+  });
+  
+>>>>>>> 2867076e75a0ace7da6de7a86596fb6278c636fa
 });
 // ============================================================ 간단한 테스트공간 END ============================================================
 

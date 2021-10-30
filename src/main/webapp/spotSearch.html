@@ -192,7 +192,6 @@
                     <div class="imgUpload">
                         <div class="upload">
                             <!--이미지 업로등 화면 시작-->
-                            <button type="button" class="btn_start" onclick="init()">Start</button>
                             <script class="jsbin"
                                 src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
                             <div class="file-upload">
@@ -209,13 +208,10 @@
                                 <div class="file-upload-content">
                                     <img class="file-upload-image" id="face-image" src="#" alt="your image" />
                                     <div class="image-title-wrap">
-                                        <button type="button" onclick="removeUpload()" class="remove-image">Remove
-                                            <span class="image-title">Uploaded Image</span>
-                                        </button>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <button type="button" class="btn_predict" onclick="predict()">Predict</button>
 
                             <div id="label-container"></div>
                             <!--이미지업로드 화면 끝-->
@@ -443,7 +439,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-
+    
 </body>
 
 </html>
