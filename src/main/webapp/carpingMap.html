@@ -63,13 +63,7 @@
                                             <li><a href="carpingMap.html">CARPING MAP</a></li>
                                             <li><a href="community.html">COMMUNITY</a></li>
                                             <li><a href="itemTrade.html">ITEM TRADE</a></li>
-                                            <!-- <li><a href="blog.html">Blog</a> -->
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
-                                            </ul>
-                                            </li>
+                                    
                                         </ul>
                                     </nav>
                                 </div>
@@ -80,13 +74,14 @@
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-flex"></div>
+                            <div class="mobile_menu d-block d-lg-none"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    
     <div class="slider-meddle">
         <div class="container">
             <div class="row">
@@ -107,6 +102,7 @@
         <!-- ============================================================ HEADER END ============================================================ -->
         
         <!-- 여기부터 MAP-->
+        <div class="slider-area2">
         <main>
             <section class="mapContent">
                 <div class="modal_wrapper" style="display: none;">
@@ -163,7 +159,7 @@
                             type="text/css">
                     </head>
 
-                    <div id="map" style="width: 100%; height: 100vh;"></div>
+                    <div id="map" style="width: 80%; height: 100vh; margin-top:15%;  border: 4px outset chartreuse;"></div>
 
 
 
@@ -189,26 +185,26 @@
                         <fieldset>
                             <div class="map-local">
                                 <div class="map-local">
-                                    <select id="lunchBegins" class="map-local" data-live-search="true"
+                                    <select id="lunchBegins" class="map-local2" data-live-search="true"
                                         data-live-search-style="begins" title="도시 선택" name="city_name">
                                         <option>LOCAL</option>
-                                        <option>전라도</option>
                                         <option>강원도</option>
                                         <option>경기도</option>
                                         <option>경상도</option>
-                                        <option>충청도</option>
+                                        <option>전라도</option>
                                         <option>제주도</option>
+                                        <option>충청도</option>
                                     </select>
                                 </div>
                                 <div class="map-local">
-                                    <select id="lunchBegins" class="map-local" name="d_type" data-live-search="true"
+                                    <select id="lunchBegins" class="map-local2" name="d_type" data-live-search="true"
                                         data-live-search-style="begins" title="장소 타입">
                                         <option>SPOT</option>
                                         <option>바다</option>
                                         <option>산</option>
+                                        <option>물가</option>
                                         <option>노지</option>
                                         <option>야영장</option>
-                                        <option>물</option>
                                     </select>
                                 </div>
                             </div>
