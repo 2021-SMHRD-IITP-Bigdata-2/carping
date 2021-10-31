@@ -92,7 +92,7 @@ export const carpingList = (i, mapLists, map) => {
     '<div class="clear"></div>' +
     "</div>";
   //   var oneOfRows = document.querySelectorAll(".row.maplist")[i];
-  console.log(row);
+  //   console.log(row);
   row.addEventListener("click", () => {
     console.log(mapLists[i].S_NAME);
     modal.style.display = "flex";

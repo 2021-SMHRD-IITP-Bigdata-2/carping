@@ -20,6 +20,16 @@ const db = mysql.createPool({
 //     res.json(result);
 //   });
 // });
+// ======================================== 카카오맵 검색을 위한 공간 START ========================================
+router.get("/kakaoMap/search", (req, res) => {
+  const sqlSelect = "SELECT S_NAME FROM SPOTS";
+  db.query(sqlSelect, (err, result) => {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
+
+// ======================================== 카카오맵 검색을 위한 공간 END ========================================
 
 // ======================================== 카카오맵 처음 전북 전남 START ========================================
 router.get("/kakaoMap", (req, res) => {
