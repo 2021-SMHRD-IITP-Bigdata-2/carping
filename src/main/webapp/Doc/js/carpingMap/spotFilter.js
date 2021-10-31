@@ -177,7 +177,7 @@ const spotFilter = () => {
                 modal.style.display = "none";
               });
 
-              carpingList(i, mapLists);
+              carpingList(i, mapLists, map);
             }
 
             //for문 끝
