@@ -12,17 +12,17 @@ dotenv.config({ path: "./.env" });
 
 const app = express();
 
-app.use(
-  session({
-    key: "userId",
-    secret: "subscribe",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      expires: 1000 * 60 * 60 * 24,
-    },
-  })
-);
+// app.use(
+//   session({
+//     key: "userId",
+//     secret: "subscribe",
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: {
+//       expires: 1000 * 60 * 60 * 24,
+//     },
+//   })
+// );
 
 app.use(
   cors({

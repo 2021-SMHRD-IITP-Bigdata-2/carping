@@ -126,6 +126,8 @@ const putSpots = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  const InnerModalImg = document.querySelectorAll(".icon-option span");
+
   recomends3.forEach((recomend, i) => {
     // 무작위 숫자 길이 만큼
     if (filteredSpots == 0) {
@@ -148,28 +150,24 @@ const putSpots = () => {
           filteredSpots[indexPutSpots[i]].S_PHONE; // 번호
         document.querySelector(".spot-img").src =
           filteredSpots[indexPutSpots[i]].S_IMG; // 이미지
+
+        InnerModalImg.forEach((img, j) => {
+          // 화장실 편의시설 표시해주는 기능
+          if (
+            filteredSpots[indexPutSpots[i]].S_AMENITY.includes(img.innerText)
+          ) {
+            document.querySelector(".icon-option").children[j].style.display =
+              "flex";
+          } else {
+            document.querySelector(".icon-option").children[j].style.display =
+              "none";
+          }
+        });
       });
     }
   });
 };
 
-// recomends3.forEach((recomend, i) => {
-//   // 무작위 숫자 길이 만큼
-//   index = rand(0, spots.length - 1);
-//   indexList.push(index);
-//   recomend.querySelector("h1").textContent = spots[index].S_NAME;
-//   recomend.querySelector("p").textContent = spots[index].S_ADDR;
-//   recomend.addEventListener("click", () => {
-//     modal.style.display = "flex";
-//     document.querySelector(".spot-info-text>h1").innerText =
-//       spots[indexList[i]].S_NAME; // 이름
-//     document.querySelector(".spot-info-text > span").innerText =
-//       spots[indexList[i]].S_ADDR; // 주소
-//     document.querySelector(".spot-info-text > h3").innerText =
-//       spots[indexList[i]].S_NAME; // 번호
-//     document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
-//   });
-// });
 // ================================================== #3번3개 리스트 올리기 기능 END ==================================================
 
 //================================================== #2번 필터링 알고리즘 완료 START ==================================================
@@ -179,7 +177,6 @@ const makeOption = () => {
   var filtered = [];
 
   const filterValues = document.querySelectorAll(".pricing > div");
-  //짝수면 미포함 필터에
   index;
   filterValues.forEach((v) => {
     v.addEventListener("click", () => {
