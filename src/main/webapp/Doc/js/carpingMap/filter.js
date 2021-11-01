@@ -2,6 +2,10 @@ import { carpingList } from "./carpingList.js";
 
 const filter = () => {
   var mapLists;
+  const writtenSpot = document.querySelectorAll(".current")[1];
+  // const writtenCity = document.querySelectorAll(".nice-select.map-local2")[0];
+
+  // writtenCity.addEventListener("click", () => {});
   const list = document.getElementsByClassName("list")[0];
   //   console.log(list.querySelectorAll("li")[16]);
   const cityList = list.querySelectorAll("li");
@@ -10,7 +14,9 @@ const filter = () => {
   for (var i = 0; i < cityList.length; i++) {
     (function (cityList) {
       cityList.addEventListener("click", () => {
+        writtenSpot.innerText = "SPOT";
         console.log(cityList.innerText);
+
         axios
           .post("http://localhost:3001/SPOTS/kakaoMap/local", {
             local: cityList.innerText,
@@ -174,7 +180,7 @@ const filter = () => {
                 modal.style.display = "none";
               });
 
-              carpingList(i, mapLists);
+              carpingList(i, mapLists, map);
             }
 
             //for문 끝

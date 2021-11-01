@@ -20,6 +20,28 @@ const db = mysql.createPool({
 //     res.json(result);
 //   });
 // });
+// ======================================== 카카오맵 검색을 위한 공간 START ========================================
+
+// 맨 처음에 검색을 위해서 이름만 뽑아올 때
+router.get("/kakaoMap/search", (req, res) => {
+  const sqlSelect = "SELECT S_NAME FROM SPOTS WHERE S_NAME IS NOT NULL";
+  db.query(sqlSelect, (err, result) => {
+    if (err) console.log(err);
+    res.json(result);
+  });
+});
+
+// ======================================== 카카오맵 검색을 위한 공간 END ========================================
+
+// ======================================== 이제 검색에서 딱 선택한거 이름 뽑아온걸로 셀렉트 한 결과 보내기 START ========================================
+router.post("/kakaoMap/chosenOne", (req, res) => {
+  const sqlSelect = "SELECT * FROM SPOTS WHERE S_NAME = ?";
+  db.query(sqlSelect, req.body.chosenOne, (err, result) => {
+    console.log(result);
+    res.json(result);
+  });
+});
+// ======================================== 이제 검색에서 딱 선택한거 이름 뽑아온걸로 셀렉트 한 결과 보내기 END ========================================
 
 // ======================================== 카카오맵 처음 전북 전남 START ========================================
 router.get("/kakaoMap", (req, res) => {

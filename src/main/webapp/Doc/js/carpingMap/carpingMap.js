@@ -159,11 +159,11 @@ const putSpots = () => {
 
     close.addEventListener("click", function () {
       modal.style.display = "none";
-      mnt.style.display = "none";
+      //   mnt.style.display = "none";
       // content.innerText = "";
     });
 
-    carpingList(i, mapLists);
+    carpingList(i, mapLists, map);
   }
 
   //for문 끝
