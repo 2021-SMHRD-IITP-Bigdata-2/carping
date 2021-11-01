@@ -183,7 +183,17 @@ const makeOption = () => {
   const filterValues = document.querySelectorAll(".pricing > div");
   index;
   filterValues.forEach((v) => {
+    v.style.opacity = 0.6;
+
     v.addEventListener("click", () => {
+      if (v.style.opacity == 0.6) {
+        v.style.opacity = 1;
+        console.log("opa=1");
+      } else {
+        v.style.opacity = 0.6;
+        console.log("opa=0.6");
+      }
+
       console.log(spots);
       console.log(v.innerText);
       if (filtered.includes(v.innerText)) {
@@ -197,6 +207,7 @@ const makeOption = () => {
 
       // 여기서 약간 문제
       console.log(filtered); //['개수대', '화장실', 'CCTV', '편의점'] 이렇게 뽑힘 계속 동적으로 바뀜
+
       // console.log(spots);
 
       filteredSpots = spots.filter((spot) =>
