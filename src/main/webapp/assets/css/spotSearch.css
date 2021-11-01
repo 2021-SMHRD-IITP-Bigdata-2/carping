@@ -210,14 +210,17 @@ body {
 .price-option:last-child {
   margin-right: 0;
 }
+.price-option:hover {
+  cursor: pointer;
+}
 
-.pricing:hover .price-option {
+/* .pricing:hover .price-option {
   opacity: 0.6;
 }
 
 .pricing:hover .price-option:hover {
   opacity: 1;
-}
+} */
 
 .price-option__detail {
   /* padding: 2em 0; */
