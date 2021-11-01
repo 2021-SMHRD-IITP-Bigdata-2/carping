@@ -3,13 +3,20 @@ const open = document.querySelector(".more");
 const close = document.getElementById("close");
 const modal = document.querySelector(".modal_wrapper");
 
-open.addEventListener("click", function () {
-  modal.style.display = "flex";
-});
+// open.addEventListener("click", function () {
+//   modal.style.display = "flex";
+// });
 
 close.addEventListener("click", function () {
   modal.style.display = "none";
 });
+
+// const predRows = document.querySelectorAll(".col-xs-12.article-wrapper");
+// predRows.forEach((row) => {
+//   row.addEventListener("click", () => {
+//     modal.style.display = "flex";
+//   });
+// });
 
 // --------------------------------------------------------------------------예측 모델
 
@@ -66,7 +73,7 @@ async function predict() {
     });
 }
 // ====================================================================== 여기가 1번 END ======================================================================
-
+var index;
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -76,8 +83,9 @@ function readURL(input) {
       $(".file-upload-content").show();
       $(".image-title").html(input.files[0].name);
     };
-    init().then(() => {
-      predict();
+    init().then(async () => {
+      await predict();
+      InitPutSpots();
     });
     reader.readAsDataURL(input.files[0]);
   } else {
@@ -110,30 +118,60 @@ $(function () {
 // console.log(spotName.innerText);
 
 // ================================================== #3번 3개 리스트 올리기 기능 START ==================================================
-const putSpots = () => {
-  const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
-  recomends3.forEach((recomend, index) => {
-    // 무작위 숫자 길이 만큼
-    recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
-    recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
-  });
+const InnerModalImg = document.querySelectorAll(".icon-option span");
 
-  //  ========================= 필요 없음 =========================
-  // const spotName = document.querySelectorAll(
-  //   ".col-xs-12.article-wrapper h1"
-  // )[0];
-  // const spotAddr = document.querySelectorAll(".col-xs-12.article-wrapper p")[0];
-  // const celly = document.querySelectorAll(".col-xs-12.article-wrapper h1")[0];
-  // console.log(spotName.textContent);
-  // console.log(spotAddr.innerText);
-  // 필터 클릭할 때마다 for문 돌려야 할 듯
-  // and or 방식으로 a and b and c and d and e 전부 선택한 경우
-  // if (a and !b and c and d and e){for~~~} b는 없는곳 이렇게
-  // spotName.innerText = spots[0].S_ADDR;
-  // spotAddr.innerText = spots[0].S_NAME;
-  // celly.innerText = spots[0].S_PHONE;
-  //  ========================= 필요 없음 =========================
+const putSpots = () => {
+  var indexPutSpots = [];
+
+  const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  recomends3.forEach((recomend, i) => {
+    // 무작위 숫자 길이 만큼
+    if (filteredSpots == 0) {
+      recomend.querySelector("h1").textContent = "결과가 존재하지 않습니다...";
+      recomend.querySelector("p").textContent =
+        "(っ °Д °;)っ(っ °Д °;)っ(っ °Д °;)っ";
+      recomend.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+    } else {
+      index = rand(0, filteredSpots.length - 2);
+      indexPutSpots.push(index);
+      // console.log(indexPutSpots);
+      recomend.querySelector("h1").textContent = filteredSpots[index].S_NAME;
+      recomend.querySelector("p").textContent = filteredSpots[index].S_ADDR;
+      recomend.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.querySelector(".spot-info-text>h1").innerText =
+          filteredSpots[indexPutSpots[i]].S_NAME; // 이름
+        document.querySelector(".spot-info-text > span").innerText =
+          filteredSpots[indexPutSpots[i]].S_ADDR; // 주소
+        document.querySelector(".spot-info-text > h3").innerText =
+          filteredSpots[indexPutSpots[i]].S_PHONE; // 번호
+        document.querySelector(".spot-img").src =
+          filteredSpots[indexPutSpots[i]].S_IMG; // 이미지
+
+        InnerModalImg.forEach((img, j) => {
+          // 화장실 편의시설 표시해주는 기능
+          if (
+            filteredSpots[indexPutSpots[i]].S_AMENITY.includes(img.innerText)
+          ) {
+            document.querySelector(".icon-option").children[j].style.display =
+              "flex";
+            console.log(filteredSpots[indexPutSpots[i]].S_AMENITY);
+          } else {
+            document.querySelector(".icon-option").children[j].style.display =
+              "none";
+          }
+        });
+      });
+    }
+  });
 };
+
 // ================================================== #3번3개 리스트 올리기 기능 END ==================================================
 
 //================================================== #2번 필터링 알고리즘 완료 START ==================================================
@@ -143,8 +181,7 @@ const makeOption = () => {
   var filtered = [];
 
   const filterValues = document.querySelectorAll(".pricing > div");
-  //짝수면 미포함 필터에
-  var index;
+  index;
   filterValues.forEach((v) => {
     v.addEventListener("click", () => {
       console.log(spots);
@@ -192,3 +229,62 @@ makeOption();
 //   console.log(filteredSpots);
 // };
 // ================================================== 필터링 END ==================================================
+
+const InitPutSpots = () => {
+  console.log(spots);
+  const recomends3 = document.querySelectorAll(".col-xs-12.article-wrapper");
+  function rand(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  var indexList = [];
+
+  recomends3.forEach((recomend, i) => {
+    // 무작위 숫자 길이 만큼
+    index = rand(0, spots.length - 1);
+    indexList.push(index);
+    recomend.querySelector("h1").textContent = spots[index].S_NAME;
+    recomend.querySelector("p").textContent = spots[index].S_ADDR;
+    recomend.addEventListener("click", () => {
+      modal.style.display = "flex";
+      document.querySelector(".spot-info-text>h1").innerText =
+        spots[indexList[i]].S_NAME; // 이름
+      document.querySelector(".spot-info-text > span").innerText =
+        spots[indexList[i]].S_ADDR; // 주소
+      document.querySelector(".spot-info-text > h3").innerText =
+        spots[indexList[i]].S_PHONE; // 번호
+      document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
+
+      InnerModalImg.forEach((img, j) => {
+        // 화장실 편의시설 표시해주는 기능
+        if (spots[indexList[i]].S_AMENITY.includes(img.innerText)) {
+          document.querySelector(".icon-option").children[j].style.display =
+            "flex";
+          console.log(spots[indexList[i]].S_AMENITY);
+        } else {
+          document.querySelector(".icon-option").children[j].style.display =
+            "none";
+        }
+      });
+    });
+    // document.querySelector(".spot-info-text>h1").innerText =
+    //   spots[index].S_NAME; // 이름
+    // document.querySelector(".spot-info-text > span").innerText =
+    //   spots[index].S_NAME; // 주소
+    // document.querySelector(".spot-info-text > h3").innerText =
+    //   spots[index].S_NAME; // 번호
+    // document.querySelector(".spot-img").src = spots[index].S_NAME; // 이미지
+    // // 모달 클릭
+  });
+  recomends3.forEach((recomend) => {});
+
+  // for (var i = 0; i < 3; i++) {
+  //   (function (indexList) {
+  //     console.log(indexList);
+  //     recomends3[i].addEventListener("click", () => {
+  //       modal.style.display = "flex";
+  //       document.querySelector(".spot-info-text>h1").innerText =
+  //         spots[indexList[i]].S_NAME; // 이름
+  //     });
+  //   })(indexList);
+  // }
+};
