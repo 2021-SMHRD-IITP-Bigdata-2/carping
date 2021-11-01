@@ -1,13 +1,13 @@
 .textArea {
   width: 100%;
   height: 100%;
-  margin: 250px 0px 0px -160px;
+  margin: 300px 0px 100px -160px;
   line-height: 200%;
   float: none;
 }
 
 .Main_comment {
-  font-family: Roboto;
+  font-family: "GongGothicBold";
   font-size: 50px;
   font-weight: bold;
   font-stretch: normal;
@@ -18,7 +18,8 @@
 }
 
 .Main_comment .text-style-1 {
-  font-size: 25px;
+  font-family: "GongGothicMedium";
+  font-size: 20px;
   font-weight: normal;
   color: #c4c4c4;
 }
@@ -225,24 +226,37 @@ body {
 }
 
 .price-option--low .price-option__detail {
+  background: #a7d155;
   border-radius: 0.25em 0 0 0;
 }
 
 .price-option--mid .price-option__detail {
   /* padding: 2.3em 0; */
+  background: #eada42;
   border-radius: 0.25em 0.25em 0 0;
 }
 
 .price-option--high .price-option__detail {
+  background: #e54e4b;
   border-radius: 0 0.25em 0 0;
 }
 
 .price-option--four .price-option__detail {
+  background: #5d5bdd;
   border-radius: 0 0.25em 0 0;
 }
 
 .price-option--five .price-option__detail {
+  background: turquoise;
   border-radius: 0 0.25em 0 0;
+}
+
+.price-option--low > a,
+.price-option--mid > a,
+.price-option--high > a,
+.price-option--four > a,
+.price-option--five > a {
+  font-family: "GongGothicBold";
 }
 
 .price-option__cost,
@@ -253,6 +267,7 @@ body {
 .price-option__cost {
   /* font-size: 1.5em; */
   color: #383838;
+  background-color: white;
 }
 
 .price-option__type {
@@ -266,7 +281,7 @@ body {
   display: block;
   padding: 0.6em;
   font-size: 0.875em;
-  font-weight: bold;
+  font-family: "GongGothic";
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -280,22 +295,22 @@ body {
 
 .price-option--mid .price-option__purchase {
   background: #eada42;
-  border-radius: 0 0 0.25em 0.25em;
+  border-radius: 0 0 0 0.25em;
 }
 
 .price-option--high .price-option__purchase {
   background: #e54e4b;
-  border-radius: 0 0 0.25em 0;
+  border-radius: 0 0 0.25em 0.25em;
 }
 
 .price-option--four .price-option__purchase {
   background: #5d5bdd;
-  border-radius: 0 0 0.25em 0;
+  border-radius: 0 0 0 0.25em;
 }
 
 .price-option--five .price-option__purchase {
-  background: #693e21;
-  border-radius: 0 0 0.25em 0;
+  background: turquoise;
+  border-radius: 0 0 0 0.25em;
 }
 
 .price-option__purchase:before {
@@ -328,7 +343,7 @@ body {
 }
 
 .price-option--five .price-option__purchase:before {
-  border-color: transparent transparent #693e21;
+  border-color: transparent transparent turquoise;
 }
 
 img {
@@ -359,6 +374,7 @@ article {
   cursor: pointer;
   width: 550px;
 }
+
 article .img-wrapper {
   position: absolute;
   top: -10px;
@@ -430,7 +446,7 @@ article a {
   /* font-family: "Pacifico"; */
   /* text-shadow: 0 1px 1px #AAA; */
 }
-article:hover .img-wrapper {
+/* article:hover .img-wrapper {
   padding: 5px;
   -webkit-transform: rotate(5deg);
   -moz-transform: rotate(5deg);
@@ -440,9 +456,11 @@ article:hover .img-wrapper {
 }
 article:hover .img-wrapper img {
   width: 160px;
-}
+} */
 article:hover a {
   opacity: 1;
+  background-color: #777;
+  font-family: "GongGothicBold";
 }
 
 .bloc article {
@@ -628,13 +646,18 @@ article:hover a {
   margin-left: 30px;
   margin-top: 20px;
   text-shadow: darkgrey;
-  font-family: Roboto;
+  font-family: "GongGothicMedium";
   font-size: 20px;
   font-weight: bold;
   font-stretch: condensed;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+}
+
+.icon-option > div > span {
+  color: black;
+  font-family: "GongGothicLight";
 }
 
 .icon-option {
