@@ -1851,8 +1851,8 @@ hr {
 	}
 }
 .footer-padding {
-	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-top: 50px;
+	padding-bottom: 0px;
 }
 @media only screen and(min-width: 992px) and(max-width: 1199px) {
 	.footer-padding {

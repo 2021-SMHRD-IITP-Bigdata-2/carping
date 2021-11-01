@@ -55,7 +55,7 @@ router.post("/kakaoMap/local", (req, res) => {
 
     case "경상도":
       sqlSelect =
-        "SELECT * FROM SPOTS WHERE S_ADDR LIKE '%경상%' OR S_ADDR LIKE '%대구%' OR S_ADDR LIKE '%부산%' S_ADDR LIKE '%울산%'  ";
+        "SELECT * FROM SPOTS WHERE S_ADDR LIKE '%경상%' OR S_ADDR LIKE '%대구%' OR S_ADDR LIKE '%부산%' OR S_ADDR LIKE '%울산%'  ";
       break;
 
     case "충청도":
@@ -101,7 +101,7 @@ router.post("/kakaoMap/SPOT", (req, res) => {
 
     case "경상도":
       sqlSelect =
-        "SELECT * FROM SPOTS WHERE (S_ADDR LIKE '%경상%' OR S_ADDR LIKE '%대구%' OR S_ADDR LIKE '%부산%' S_ADDR LIKE '%울산%') AND S_CATEGORY= ?  ";
+        "SELECT * FROM SPOTS WHERE (S_ADDR LIKE '%경상%' OR S_ADDR LIKE '%대구%' OR S_ADDR LIKE '%부산%' OR S_ADDR LIKE '%울산%') AND S_CATEGORY= ?  ";
       break;
 
     case "충청도":

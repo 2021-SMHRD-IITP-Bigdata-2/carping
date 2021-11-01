@@ -2,9 +2,6 @@ import { carpingList } from "./carpingList.js";
 // import { filter } from "./filter.js";
 // import { mapInit } from "./mapInit.js";
 //============================================== map에 있던 내용 그대로 옮기기 START ==============================================
-var map;
-var ps; //이건 어디에 사용되는지 잘 모르겠어
-var infowindow;
 
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
   mapOption = {
@@ -39,7 +36,7 @@ var clusterer = new kakao.maps.MarkerClusterer({
   minLevel: 10, // 클러스터 할 최소 지도 레벨
 });
 
-var imageSrc = "./assets/img/carpingMap/MARKER.png", // 마커이미지의 주소입니다
+var imageSrc = "./assets/img/logo/001.png", // 마커이미지의 주소입니다
   imageSize = new kakao.maps.Size(90, 90), // 마커이미지의 크기입니다
   imageOption = { offset: new kakao.maps.Point(50, 90) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
@@ -74,6 +71,19 @@ const putSpots = () => {
   var markers = [];
   for (var i = 0; i < mapLists.length - 1; i++) {
     // 지도에 마커를 생성하고 표시한다
+
+    if (mapLists[i].S_CATEGORY == "노지") {
+      (imageSrc = "./assets/img/logo/001.png"), // 마커이미지의 주소입니다
+        (imageSize = new kakao.maps.Size(90, 90)), // 마커이미지의 크기입니다
+        (imageOption = { offset: new kakao.maps.Point(50, 90) }); // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    } else {
+      (imageSrc = "./assets/img/logo/002.png"), // 마커이미지의 주소입니다
+        (imageSize = new kakao.maps.Size(90, 90)), // 마커이미지의 크기입니다
+        (imageOption = { offset: new kakao.maps.Point(50, 90) }); // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    }
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption);
+
     var marker = new kakao.maps.Marker({
       position: new kakao.maps.LatLng(mapLists[i].S_LAT, mapLists[i].S_LONG), // 마커의 좌표	(0 , 1  -->  위도 경도 컬럼 순서)
       image: markerImage,
