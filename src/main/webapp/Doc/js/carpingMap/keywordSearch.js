@@ -1,6 +1,21 @@
 const search = document.querySelector(".map-search input");
 
-const OnlyNames = [];
+var OnlyNames = [];
+
+axios
+  .get("http://localhost:3001/SPOTS/kakaoMap/search")
+  .then((response) => {
+    console.log("search에서 가져온 데이터");
+    console.log(response.data[3]);
+    response.data.forEach((placeName) => {
+      OnlyNames.push(placeName.S_NAME);
+      // console.log(OnlyNames);
+    });
+  })
+  .then(() => {
+    console.log(OnlyNames);
+  });
+
 search.addEventListener("keyup", (e) => {
   // 검색어 만들 창
   //   var row = document.createElement("div");
@@ -40,6 +55,7 @@ search.addEventListener("keyup", (e) => {
 
   var searchResults = [];
 
+  // console.log(OnlyNames);
   OnlyNames.forEach((oneName) => {
     if (oneName.includes(e.target.value.replace(" ", ""))) {
       //   console.log(oneName);
@@ -48,24 +64,10 @@ search.addEventListener("keyup", (e) => {
       }
     }
   });
+  // console.log("안녕하세요");
   console.log(searchResults);
   searchModal(searchResults);
 });
-
-axios
-  .get("http://localhost:3001/SPOTS/kakaoMap/search")
-  .then((response) => {
-    console.log("search에서 가져온 데이터");
-    console.log(response.data[3]);
-    response.data.forEach((placeName) => {
-      OnlyNames.push(placeName.S_NAME);
-      // console.log(OnlyNames);
-    });
-    //   response.S_NAME;
-  })
-  .then(() => {
-    // console.log(OnlyNames);
-  });
 
 const searchModal = (searchResults) => {
   const mapListWrap = document.getElementsByClassName("map-listwrap")[0];

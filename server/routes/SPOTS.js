@@ -24,7 +24,7 @@ const db = mysql.createPool({
 
 // 맨 처음에 검색을 위해서 이름만 뽑아올 때
 router.get("/kakaoMap/search", (req, res) => {
-  const sqlSelect = "SELECT S_NAME FROM SPOTS";
+  const sqlSelect = "SELECT S_NAME FROM SPOTS WHERE S_NAME IS NOT NULL";
   db.query(sqlSelect, (err, result) => {
     if (err) console.log(err);
     res.json(result);
@@ -37,6 +37,7 @@ router.get("/kakaoMap/search", (req, res) => {
 router.post("/kakaoMap/chosenOne", (req, res) => {
   const sqlSelect = "SELECT * FROM SPOTS WHERE S_NAME = ?";
   db.query(sqlSelect, req.body.chosenOne, (err, result) => {
+    console.log(result);
     res.json(result);
   });
 });
