@@ -1,5 +1,3 @@
-// window.onload = auth()
-// console.log(sessionStorage.getItem("accessToken"));
 const login_btn = document.querySelector(".btn.header-btn");
 if (sessionStorage.getItem("accessToken")) {
   login_btn.innerText = "LOGOUT";
