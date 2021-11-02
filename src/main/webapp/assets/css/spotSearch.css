@@ -1,13 +1,13 @@
 .textArea {
 	width: 100%;
 	height: 100%;
-	margin: 250px 0px 0px -160px;
+	margin: 250px 0px 80px -190px;
 	line-height: 200%;
 	float: none;
 }
 
 .Main_comment {
-	font-family: Roboto;
+	font-family: "GongGothicBold";
 	font-size: 50px;
 	font-weight: bold;
 	font-stretch: normal;
@@ -18,7 +18,7 @@
 }
 
 .Main_comment .text-style-1 {
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: normal;
 	color: #c4c4c4;
 }
@@ -35,7 +35,7 @@
 	width: 600px;
 	height: 100px;
 	float: right;
-	margin: 50px 300px 15px 15px;
+	margin: 100px 300px 15px 15px;
 	background-color: none;
 }
 
@@ -43,8 +43,10 @@
 	width: 600px;
 	height: 580px;
 	float: right;
-	margin: 7px 300px 300px 15px;
+	margin: 0px 300px 0px 0px;
 	background-color: none;
+	font-family: "GongGothicmedium";
+	color: #fcb813;
 }
 
 body {
@@ -57,6 +59,7 @@ body {
 	height: 600px;
 	margin: 0 auto;
 	padding: 20px;
+	border: 10px outset #ffc107;
 }
 .file-upload-btn {
 	width: 100%;
@@ -276,26 +279,36 @@ body {
 .price-option--low .price-option__purchase {
 	background: #a7d155;
 	border-radius: 0 0 0 0.25em;
+	font-family: "GongGothicLight";
+	font-size: 15px;
 }
 
 .price-option--mid .price-option__purchase {
 	background: #eada42;
 	border-radius: 0 0 0.25em 0.25em;
+	font-family: "GongGothicLight";
+	font-size: 15px;
 }
 
 .price-option--high .price-option__purchase {
 	background: #e54e4b;
 	border-radius: 0 0 0.25em 0;
+	font-family: "GongGothicLight";
+	font-size: 15px;
 }
 
 .price-option--four .price-option__purchase {
-	background: #5d5bdd;
+	background: #c33feb;
 	border-radius: 0 0 0.25em 0;
+	font-family: "GongGothicLight";
+	font-size: 15px;
 }
 
 .price-option--five .price-option__purchase {
-	background: #693e21;
+	background: #0ebfcc;
 	border-radius: 0 0 0.25em 0;
+	font-family: "GongGothicLight";
+	font-size: 15px;
 }
 
 .price-option__purchase:before {
@@ -331,7 +344,7 @@ body {
 	border-color: transparent transparent #693e21;
 }
 
-.options {
+.price-option__cost {
 	margin-left: 27px;
 }
 
@@ -388,6 +401,19 @@ article .img-wrapper img {
 	transition: all 0.2s;
 	width: 100px;
 }
+article .img-wrapper::before {
+	position: absolute;
+	content: '';
+	display: inline-block;
+	top: -3px;
+	left: -3px;
+	bottom: -3px;
+	right: -3px;
+	border-radius: 100%;
+	border: 2px solid #f8df00;
+	-webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+	animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
+}
 article h1 {
 	height: 75px;
 	line-height: 75px;
@@ -414,21 +440,18 @@ article a {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.4);
 	font-size: 48px;
-	/* font-style: italic; */
 	opacity: 0;
-	color: #ffffff !important;
+	color: #ffc107 !important;
 	-webkit-transition: all 0.4s;
 	-moz-transition: all 0.4s;
 	-o-transition: all 0.4s;
 	transition: all 0.4s;
-	/* text-decoration: none !important; */
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 	-ms-border-radius: 150px;
 	-o-border-radius: 150px;
 	border-radius: 150px;
-	/* font-family: "Pacifico"; */
-	/* text-shadow: 0 1px 1px #AAA; */
+	border: 6px outset #ffc107;
 }
 article:hover .img-wrapper {
 	padding: 5px;
@@ -439,7 +462,9 @@ article:hover .img-wrapper {
 	transform: rotate(5deg);
 }
 article:hover .img-wrapper img {
-	width: 160px;
+	width: 150px;
+	margin-top: 6px;
+	border: 8px outset #ffc107;
 }
 article:hover a {
 	opacity: 1;
@@ -497,7 +522,7 @@ article:hover a {
 	position: relative;
 	width: 1000px;
 	height: 800px;
-	background: white;
+	background: black;
 	padding: 24px 16px;
 	border-radius: 4px;
 }
@@ -558,6 +583,7 @@ article:hover a {
 	height: 100%;
 	object-fit: cover;
 	margin-left: 0;
+	border: 3px outset #ffc107;
 }
 
 /**/
@@ -569,7 +595,7 @@ article:hover a {
 .ss-result-left {
 	display: flex;
 	flex-direction: column;
-	margin-right: 10px;
+	margin: -35px 35px 0px 0px;
 }
 .ss-result-img-small {
 	display: flex;
@@ -582,7 +608,7 @@ article:hover a {
 .spot-info {
 	height: 200px;
 	border-radius: 10px;
-	padding: 5px;
+	padding: 10px;
 	background-color: whitesmoke;
 }
 .spot-marker {
@@ -597,20 +623,20 @@ article:hover a {
 
 .spot-info-text > h1 {
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 26px;
 	color: black;
 }
 
 .spot-info-text > span {
-	font-weight: bold;
-	font-size: 13px;
+	font-size: 16px;
 	color: #383838;
+	font-family: "GongGothicLight";
 }
 
 .spot-info-text > h3 {
-	font-weight: bol 66d;
-	font-size: 20px;
+	font-size: 16px;
 	color: #383838;
+	font-family: "GongGothicLight";
 }
 
 .spot-option {
@@ -622,15 +648,12 @@ article:hover a {
 
 .spot-option > h1,
 .spot-weather > h1 {
-	color: #3b3b3b;
-	font-weight: bold;
+	color: #ffc107;
 	font-size: 22px;
 	margin-left: 30px;
 	margin-top: 20px;
-	text-shadow: darkgrey;
-	font-family: Roboto;
+	font-family: "GongGothicmedium";
 	font-size: 20px;
-	font-weight: bold;
 	font-stretch: condensed;
 	font-style: normal;
 	line-height: normal;
@@ -639,7 +662,16 @@ article:hover a {
 
 .icon-option {
 	display: flex;
-	padding: 15px;
+	padding: 10px;
+	background-color: whitesmoke;
+	border-radius: 10px;
+	font-family: "GongGothicLight";
+	font-size: 15px;
+	color: #383838;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: stretch;
+	justify-content: center;
 }
 
 .spot-weather {
@@ -647,9 +679,11 @@ article:hover a {
 }
 
 .weather-info {
-	width: 90%;
-	height: 300px;
-	margin: 10px 30px;
+	width: 98%;
+	height: 200px;
+	margin: 10px 6px;
+	background-color: whitesmoke;
+	border-radius: 10px;
 }
 
 .icon-option-toilet,
@@ -660,7 +694,8 @@ article:hover a {
 	flex-direction: column;
 	text-align: center;
 	font-size: 15px;
-	font-weight: bold;
+	margin-top: -10px;
+	border-bottom: 5px solid #ffc107;
 }
 
 .icon-option-toilet > img,
