@@ -153,6 +153,10 @@ const putSpots = () => {
           filteredSpots[indexPutSpots[i]].S_PHONE; // 번호
         document.querySelector(".spot-img").src =
           filteredSpots[indexPutSpots[i]].S_IMG; // 이미지
+        document.querySelectorAll(".spot-img")[1].src =
+          filteredSpots[indexPutSpots[i]].S_IMG_D1; //작은 이미지
+        document.querySelectorAll(".spot-img")[2].src =
+          filteredSpots[indexPutSpots[i]].S_IMG_D2; //작은 이미지
 
         InnerModalImg.forEach((img, j) => {
           // 화장실 편의시설 표시해주는 기능
@@ -264,6 +268,12 @@ const InitPutSpots = () => {
       document.querySelector(".spot-info-text > h3").innerText =
         spots[indexList[i]].S_PHONE; // 번호
       document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
+      document.querySelectorAll(".spot-img")[1].src =
+        spots[indexList[i]].S_IMG_D1; //작은 이미지
+      document.querySelectorAll(".spot-img")[2].src =
+        spots[indexList[i]].S_IMG_D2; //작은 이미지
+      // document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
+      // document.querySelector(".spot-img").src = spots[indexList[i]].S_IMG; // 이미지
 
       InnerModalImg.forEach((img, j) => {
         // 화장실 편의시설 표시해주는 기능
@@ -299,3 +309,15 @@ const InitPutSpots = () => {
   //   })(indexList);
   // }
 };
+
+function removeUpload() {
+  $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+  $(".file-upload-content").hide();
+  $(".image-upload-wrap").show();
+}
+$(".image-upload-wrap").bind("dragover", function () {
+  $(".image-upload-wrap").addClass("image-dropping");
+});
+$(".image-upload-wrap").bind("dragleave", function () {
+  $(".image-upload-wrap").removeClass("image-dropping");
+});
