@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 // const db = require("../index");
 const mysql = require("mysql");
+const { sendToken } = require("../middlewares/AuthMiddleware");
 
 const db = mysql.createPool({
   host: process.env.DATABASE_HOST,
@@ -18,14 +19,10 @@ router.get("/", async (req, res) => {
     res.json(result);
   });
 });
-// db에 정보 넣기
-router.post("/", async (req, res) => {
-  const sqlSelect = "SELECT * FROM posts ";
-  await db.query(sqlSelect, (err, result) => {
-    console.log(result);
-    res.json(result);
-  });
-});
+
+// 세션 스토리지에 저장되어있는 토큰 암호화된거 풀기
+router.post("/ChatInit", sendToken);
+
 // 수정하기
 router.put("/", async (req, res) => {
   const sqlSelect = "SELECT * FROM posts ";

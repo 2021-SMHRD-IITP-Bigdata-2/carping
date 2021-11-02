@@ -844,7 +844,7 @@ h1 {
 .talk-dialog {
   width: 540px;
   height: 800px;
-  background-color: greenyellow;
+  background-color: #000000;
 }
 
 .talk-dialog > iframe {
