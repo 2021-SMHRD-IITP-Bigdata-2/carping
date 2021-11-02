@@ -1,174 +1,180 @@
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 .login {
-	height: 500px;
-	width: 450px;
-	padding: 50px 50px;
-	background-color: darkslategrey;
-	border: #fcb813 solid 4px;
-	margin: 100px auto;
-	box-sizing: content-box;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	border-radius: 20px;
+  height: 500px;
+  width: 450px;
+  padding: 50px 50px;
+  background-color: darkslategrey;
+  border: #fcb813 solid 4px;
+  margin: 100px auto;
+  box-sizing: content-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
 }
 .login a {
-	text-decoration: underline;
-	color: #fcb813;
+  text-decoration: underline;
+  color: #fcb813;
 }
 
 .login p {
-	color: #efefef;
-	font-size: larger;
-	margin-top: 20px;
+  color: #efefef;
+  font-size: larger;
+  margin-top: 20px;
 }
 .join {
-	height: 600px;
-	width: 500px;
-	padding: 30px 40px;
-	background-color: darkslategrey;
-	border: #fcb813 solid 4px;
-	margin: 100px auto;
-	box-sizing: content-box;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	border-radius: 20px;
+  height: 600px;
+  width: 500px;
+  padding: 30px 40px;
+  background-color: darkslategrey;
+  border: #fcb813 solid 4px;
+  margin: 100px auto;
+  box-sizing: content-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
 }
 
 .logo_join {
-	margin-bottom: -30px;
-	margin-top: -55px;
+  margin-bottom: -30px;
+  margin-top: -55px;
 }
 
 input {
-	height: 45px;
-	width: 300px;
-	margin-bottom: 20px;
-	background-color: #fafafa;
-	border: #efefef 1px solid;
-	border-radius: 6px;
-	padding-left: 10px;
-	border: 3px outset #ffc107;
+  height: 45px;
+  width: 300px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  border: #efefef 1px solid;
+  border-radius: 6px;
+  padding-left: 10px;
+  border: 3px outset #ffc107;
 }
 
 input:focus {
-	outline: none;
+  outline: none;
 }
 
 .login_btn {
-	width: 300px;
-	height: 35px;
-	background: #fcb813;
-	font-family: 'GongGothicbold';
-	text-transform: uppercase;
-	padding: 20px 20px;
-	color: rgb(0, 0, 0);
-	cursor: pointer;
-	display: inline-block;
-	font-size: 20px;
-	font-weight: 300px;
-	border-radius: 0;
-	line-height: 1;
-	letter-spacing: 0px;
-	line-height: 0;
-	margin: 3px;
-	cursor: pointer;
-	transition: color 0.4s linear;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+  width: 300px;
+  height: 35px;
+  background: #fcb813;
+  font-family: "GongGothicbold";
+  text-transform: uppercase;
+  padding: 20px 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300px;
+  border-radius: 0;
+  line-height: 1;
+  letter-spacing: 0px;
+  line-height: 0;
+  margin: 3px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 .login_btn::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 101%;
-	height: 101%;
-	background: #c20505;
-	z-index: 1;
-	border-radius: 5px;
-	transition: transform 0.5s;
-	transition-timing-function: ease;
-	transform-origin: 0 0;
-	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-	transform: scaleX(0);
-	border-radius: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 101%;
+  height: 101%;
+  background: #c20505;
+  z-index: 1;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+  border-radius: 0;
 }
 .login_btn:hover::before {
-	transform: scaleX(1);
-	color: #fff !important;
-	z-index: -1;
+  transform: scaleX(1);
+  color: #fff !important;
+  z-index: -1;
 }
 .login_btn:hover {
-	background-position: bottom;
+  background-position: bottom;
 }
 .login_btn.focus,
 .login_btn:focus {
-	outline: 0;
-	box-shadow: none;
+  outline: 0;
+  box-shadow: none;
 }
 
 .join_btn {
-	width: 300px;
-	height: 35px;
-	background: #fcb813;
-	font-family: 'GongGothicbold';
-	text-transform: uppercase;
-	padding: 20px 20px;
-	color: rgb(0, 0, 0);
-	cursor: pointer;
-	display: inline-block;
-	font-size: 20px;
-	font-weight: 300px;
-	border-radius: 0;
-	line-height: 1;
-	letter-spacing: 0px;
-	line-height: 0;
-	margin: 20px;
-	cursor: pointer;
-	transition: color 0.4s linear;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
+  width: 300px;
+  height: 35px;
+  background: #fcb813;
+  font-family: "GongGothicbold";
+  text-transform: uppercase;
+  padding: 20px 20px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 300px;
+  border-radius: 0;
+  line-height: 1;
+  letter-spacing: 0px;
+  line-height: 0;
+  margin: 20px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 .join_btn::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 101%;
-	height: 101%;
-	background: #c20505;
-	z-index: 1;
-	border-radius: 5px;
-	transition: transform 0.5s;
-	transition-timing-function: ease;
-	transform-origin: 0 0;
-	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
-	transform: scaleX(0);
-	border-radius: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 101%;
+  height: 101%;
+  background: #c20505;
+  z-index: 1;
+  border-radius: 5px;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
+  border-radius: 0;
 }
 .join_btn:hover::before {
-	transform: scaleX(1);
-	color: #fff !important;
-	z-index: -1;
+  transform: scaleX(1);
+  color: #fff !important;
+  z-index: -1;
 }
 .join_btn:hover {
-	background-position: bottom;
+  background-position: bottom;
 }
 .join_btn.focus,
 .join_btn:focus {
-	outline: 0;
-	box-shadow: none;
+  outline: 0;
+  box-shadow: none;
 }
 .join_social {
-	padding: 10px;
-	color: #fcfcfc;
-	letter-spacing: 10px;
-	font-size: 20px;
+  padding: 10px;
+  color: #fcfcfc;
+  letter-spacing: 10px;
+  font-size: 20px;
+}
+
+#auth_message {
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: #fcfcfc;
 }
