@@ -108,7 +108,7 @@
   position: relative;
   width: 1000px;
   height: 800px;
-  background: whitesmoke;
+  background: #333;
   padding: 24px 16px;
   border-radius: 4px;
 }
@@ -121,12 +121,12 @@
   position: absolute;
   top: 24px;
   right: 30px;
-  background-color: whitesmoke;
+  background-color: #333;
 }
 .close_wrapper #close {
   cursor: pointer;
   color: black;
-  background-color: whitesmoke;
+  background-color: #333;
 }
 
 .detail-img {
@@ -134,7 +134,7 @@
   position: relative;
   border: 1px solid #777;
   border-radius: 10px;
-  background-color: #c4c4c4;
+  background-color: #555;
   width: 430px;
   height: 648px;
   margin-top: 80px;
@@ -153,7 +153,7 @@
 
 .detail-content {
   float: right;
-  background-color: #c4c4c4;
+  background-color: #555;
   border: 1px solid #777;
   border-radius: 10px;
   width: 430px;
@@ -165,7 +165,7 @@
 .user-info-detail {
   width: 399px;
   height: auto;
-  background-color: #c4c4c4;
+  background-color: #555;
   border-radius: 10px;
   margin: 18px 15px 0 15px;
 }
@@ -181,7 +181,8 @@
 .user-info-detail > h1 {
   float: left;
   margin-right: 10px;
-  font-weight: bold;
+  color: rgb(159, 214, 57);
+  font-family: "GongGothicMedium";
 }
 
 .detail-reply-datetime {
@@ -190,7 +191,7 @@
   width: 200px;
   padding-top: 13px;
   font-family: "GongGothicMedium";
-  color: #777;
+  color: #999;
 }
 
 .detail-like {
@@ -204,7 +205,7 @@
   margin: 60px 22px 0 22px;
   padding-top: 10px;
   padding-left: 10px;
-  background-color: white;
+  background-color: #777;
   border-radius: 8px;
 }
 
@@ -212,13 +213,14 @@
   width: 100%;
   font-size: 15px;
   margin-top: 20px;
-  color: black;
+  color: white;
   font-size: 13px;
+  font-family: "GongGothicLight";
 }
 
 .detail-reply-write {
   float: right;
-  background-color: #c4c4c4;
+  background-color: #555;
   border: 1px solid #777;
   width: 430px;
   height: 50px;
@@ -232,14 +234,19 @@
   width: 321px;
   height: 32px;
   border-radius: 8px;
-  background-color: white;
+  background-color: #888;
   margin: 10px 0 8px 23px;
 }
 
 .reply-content > input {
+  width: 315px;
   font-size: 15px;
   margin-top: 5px;
   margin-left: 5px;
+  background-color: #888;
+  border-radius: 10px;
+  color: white;
+  font-family: "GongGothicLight";
 }
 
 .btn-reply-save {
@@ -261,6 +268,7 @@
   box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px #000;
   cursor: pointer;
+  padding-top: 3px;
 }
 
 .btn-reply-save > p {
@@ -273,7 +281,7 @@
 
 .detail-reply {
   float: right;
-  background-color: #c4c4c4;
+  background-color: #555;
   border: 1px solid #777;
   width: 430px;
   height: 398px;
@@ -292,8 +300,9 @@
 .reply-user-info > h1 {
   float: left;
   margin: 5px 5px 5px 15px;
-  font-weight: bold;
   font-size: 13px;
+  font-family: "GongGothicMedium";
+  color: rgb(184, 216, 142);
 }
 
 .reply-user-info > span {
@@ -301,15 +310,15 @@
   margin-right: 20px;
   margin-top: 3px;
   font-size: 8px;
-  color: #777;
+  color: rgb(194, 192, 192);
   font-family: "GongGothicLight";
 }
 
 .reply-content-history {
   margin-left: 18px;
-  font-size: 10px;
-  color: #000;
-  font-family: "GongGothicMedium";
+  font-size: 14px;
+  color: white;
+  font-family: "GongGothicLight";
 }
 
 /*------------ Modal write --------------*/
@@ -330,14 +339,16 @@
   position: relative;
   width: 1000px;
   height: 800px;
-  background: whitesmoke;
+  background: #333;
   padding: 24px 16px;
   border-radius: 4px;
+  border: 5px solid #ffc107;
 }
 .modal_title {
   display: inline-block;
   font-size: 24px;
   font-weight: bold;
+  background-color: #333;
 }
 .close_wrapper-w {
   position: absolute;
@@ -347,13 +358,15 @@
 }
 .close_wrapper-w #close-w {
   cursor: pointer;
-  color: black;
+  color: white;
+  background-color: #333;
 }
 
 .close-icon {
   width: 60px;
   height: 60px;
   margin-top: 7px;
+  background-color: #333;
 }
 
 .save_wrapper-w {
@@ -364,36 +377,36 @@
 }
 .save_wrapper-w #save-w {
   cursor: pointer;
-  color: black;
 }
 
 .save-icon {
   margin-top: 14px;
   font-size: 28px;
   font-family: "GongGothicBold";
+  color: white;
+  background-color: #333;
 }
 
 .detail-img-w {
   float: left;
   border: 5px dashed #c4c4c4;
   border-radius: 10px;
-  background-color: white;
+  background-color: #555;
   width: 430px;
   height: 660px;
   margin-top: 80px;
   margin-left: 30px;
   text-align: center;
-  color: #696969;
-  font-size: 15px;
+  color: white;
+  font-size: 19px;
   padding-top: 320px;
 }
 
 .detail-write {
   float: right;
-  background-color: #c4c4c4;
+  background-color: #555;
   border: 1px solid #777;
   border-radius: 10px;
-
   width: 430px;
   height: 660px;
   margin-top: 80px;
@@ -403,7 +416,7 @@
 .user-info {
   width: 399px;
   height: 80px;
-  background-color: #c4c4c4;
+  background-color: #555;
   border-radius: 10px;
   margin: 15px 15px 0 15px;
 }
@@ -415,7 +428,7 @@
   margin-left: 10px;
   margin-top: 10px;
   border-radius: 50%;
-  background-color: #c4c4c4;
+  background-color: #555;
 }
 
 .profile-img > img {
@@ -427,26 +440,27 @@
   float: right;
   width: 300px;
   height: 80px;
-  background-color: #c4c4c4;
+  background-color: #555;
   border-radius: 10px;
   padding-top: 20px;
   padding-left: 15px;
 }
 
 .profile-txt > h1 {
-  font-family: "GongGothicBold";
+  font-family: "GongGothicMedium";
   font-size: 22px;
+  color: rgb(159, 214, 57);
 }
 
 .profile-txt > p {
   font-size: 15px;
-  color: #696969;
+  color: #999;
 }
 
 .select-addresstag {
   width: 399px;
   height: 50px;
-  background-color: white;
+  background-color: #888;
   border-radius: 10px;
   margin: 27px 15px 0 15px;
 }
@@ -454,7 +468,7 @@
 .community-contents {
   width: 399px;
   height: 450px;
-  background-color: white;
+  background-color: #888;
   border-radius: 10px;
   margin: 17px 15px 0 15px;
 }
@@ -463,6 +477,11 @@
   width: 390px;
   height: 450px;
   margin-left: 10px;
+  padding: 20px;
   border: 0;
   border-radius: 10px;
+  background-color: #888;
+  color: white;
+  font-family: "GongGothicLight";
+  font-size: 20px;
 }
