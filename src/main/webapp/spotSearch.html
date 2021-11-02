@@ -26,10 +26,11 @@
 
 
 <body>
+    
     <!-- =====================------------ Modal Search Result ------------=================-->
     <div class="modal_wrapper" style="display: none;">
         <div class="modal_main">
-            <div class="close_wrapper">
+            <div class="close_wrapper"> 
                 <button id="close" style="border: none; background-color: white;">
                     <i class="fas fa-times fa-3x"></i>
                 </button>
@@ -57,45 +58,40 @@
                         <div class="spot-info">
                             <div class="spot-marker"><img src="./assets/img/spotsearch/마커.png"></div>
                             <div class="spot-info-text">
-                                <h1>영광 백바위 해수욕장</h1>
-                                <span>전남 영광군 염산면 두우리</span>
-                                <h3>062-123-4567</h3>
+                                <h1></h1>
+                                <span></span>
+                                <h3></h3>
                             </div>
                         </div>
                         <div class="spot-option">
                             <hr style="border: 1px dashed #c4c4c4; margin: 20px 10px;">
                             <h1>편의시설 정보</h1>
                             <div class="icon-option">
-                                <div class="icon-option-toilet" style="display: none">
+                                <div class="icon-option-toilet">
                                     <img src="./assets/img/spotsearch/화장실.png">
                                     <span>화장실</span>
                                 </div>
-                                <div class="icon-option-electric" style="display: none">
+                                <div class="icon-option-electric">
                                     <img src="./assets/img/spotsearch/전기.png">
                                     <span>전기</span>
                                 </div>
-                                <div class="icon-option-wash" style="display: none">
+                                <div class="icon-option-wash">
                                     <img src="./assets/img/spotsearch/개수대.png">
                                     <span>개수대</span>
                                 </div>
-                                <div class="icon-option-wash" style="display: none">
-                                    <img src="./assets/img/spotsearch/cctv.png">
-                                    <span>CCTV</span>
-                                </div>
-                                <div class="icon-option-store" style="display: none">
+                                <div class="icon-option-store">
                                     <img src="./assets/img/spotsearch/편의점.png">
                                     <span>편의점</span>
-                                    <!-- src='assets/img/spotsearch/cctv.png' -->
                                 </div>
-                            </div>
+                                <div class="" style="color: #000000;">#한적한#등산#매점#화장실#와이파이#장작판매#샤워시설#개수대#전기#동계캠핑#온수제공#오토캠핑#캠핑용품대여#찜질방#반려동물동반</div>
+                            </div> 
                         </div>
+                            <!-- 날씨 -->
                         <div class="spot-weather">
                             <hr style="border: 1px dashed #c4c4c4; margin: 20px 10px;">
                             <h1>날씨 정보</h1>
-                            <div class="weather-info">
-                                <iframe width="90%" height="245"
-                                    src="https://forecast.io/embed/#lat=35.24286&lon=126.306267&name=영광&color=&font=arial&units=si"
-                                    frameborder="0"></iframe>
+                            <div class="weather-info" align="middle">
+                                <iframe width="100%" height="245" src="https://forecast.io/embed/#lat=37.5662&lon=126.9785&name=&color=#ffc107&font=GongGothicLightl&units=si" frameborder="0"></iframe>
                             </div>
                         </div>
                     </div>
@@ -107,9 +103,8 @@
     </div>
 
     <!-- ===================------------ (END) Modal Search Result ------===================-->
-
-    <!-- ? Preloader Start -->
-    <div id="preloader-active">
+   <!-- ? Preloader Start -->
+ <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -119,221 +114,216 @@
             </div>
         </div>
     </div>
-    <!-- Preloader Start -->
-    <!-- ============================================================ HEADER START ============================================================ -->
-    <header>
-        <div class="header-area header-transparent">
-            <div class="main-header header-sticky">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <!-- Logo -->
-                        <div class="col-xl-2 col-lg-2 col-md-1">
-                            <div class="logo">
-                                <a href="main.html"><img class="logo" src="assets/img/logo/logo1.png" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-10 col-lg-10 col-md-10">
-                            <div class="menu-main d-flex align-items-center justify-content-end">
-                                <!-- Main-menu -->
 
-                                <div class="main-menu f-right d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="spotSearch.html">SPOT SEARCH</a></li>
-                                            <li><a href="carpingMap.html">CARPING MAP</a></li>
-                                            <li><a href="community.html">COMMUNITY</a></li>
-                                            <li><a href="itemTrade.html">ITEM TRADE</a></li>
-                                            <!-- <li><a href="blog.html">Blog</a> -->
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
-                                            </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                    <a href="login.html" class="btn header-btn">Login</a>
-                                </div>
+   <!-- ============================================================ HEADER START ============================================================ -->
+   <header>
+    <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <!-- Logo -->
+                    <div class="col-xl-2 col-lg-2 col-md-1">
+                        <div class="logo">
+                            <a href="main.html"><img class="logo" src="assets/img/logo/logo1.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-lg-10 col-md-10">
+                        <div class="menu-main d-flex align-items-center justify-content-end">
+                            <!-- Main-menu -->
+
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="spotSearch.html">SPOT SEARCH</a></li>
+                                        <li><a href="carpingMap.html">CARPING MAP</a></li>
+                                        <li><a href="community.html">COMMUNITY</a></li>
+                                        <li><a href="itemTrade.html">ITEM TRADE</a></li>
+                                        <!-- <li><a href="blog.html">Blog</a> -->
+                                        
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                <a href="login.html" class="btn header-btn">Login</a>
                             </div>
                         </div>
-                        <!-- Mobile Menu -->
-                        <div class="col-12">
-                            <div class="mobile_menu d-block d-lg-none"></div>
-                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <div class="slider-meddle">
+    </div>
+</header>
+
+<div class="slider-meddle">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap hero-cap2">
                         <div class="textArea">
-                            <span class="Main_comment">SPOT SEARCH<br>
+                            <span class="Main_comment" style="color: #fcb813;">SPOT SEARCH<br>
                                 <span class="text-style-1">
-                                    사진을 업로드하면 비슷한 분위기의 차박지를 추천합니다</span>
-                            </span>
-
-                        </div>
-
+                                    이미지만 업로드하면 전국에 있는 가장 비슷한 차박지를 추천해드립니다!</span>
+                        </span>
                     </div>
                 </div>
-
             </div>
-
         </div>
+    </div>
 
 
-        <!-- ============================================================ HEADER END ============================================================ -->
+    <!-- ============================================================ HEADER END ============================================================ -->
 
-        <main>
-            <div class="mainback">
-                <div class="slider-active">
-                    <div class="content">
-                        <div class="imgUpload">
-                            <div class="upload">
-                                <!--이미지 업로등 화면 시작-->
-                                <script class="jsbin"
-                                    src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-                                <div class="file-upload">
-                                    <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
+    <main>
+        <div class="slider-area2">
+        <div class="slider-active">
+        <div class="content">
+                    <div class="imgUpload">
+                        <div class="upload">
+                            <!--이미지 업로등 화면 시작-->
+                            <script class="jsbin"
+                                src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                            <div class="file-upload">
+                                <!-- <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Image</button> -->
 
-                                    <div class="image-upload-wrap">
-                                        <input class="file-upload-input" type='file' onchange="readURL(this);"
-                                            accept="image/*" />
-                                        <div class="drag-text">
-                                            <h3>Drag & drop a file or select add Image</h3>
-                                        </div>
-                                    </div>
-
-                                    <div class="file-upload-content">
-                                        <img class="file-upload-image" id="face-image" src="#" alt="your image" />
-                                        <div class="image-title-wrap">
-
-                                        </div>
+                                <div class="image-upload-wrap">
+                                    <input class="file-upload-input" type='file' onchange="readURL(this);"
+                                        accept="image/*" />
+                                    <div class="drag-text">
+                                        <h1>➕</h1>
+                                        <h3>Drag & drop a file or select add Image</h3>
                                     </div>
                                 </div>
 
-                                <div id="label-container"></div>
-                                <!--이미지업로드 화면 끝-->
-                            </div>
-                            <div class="btn_upload"></div>
-                        </div>
-
-                        <!--옵션창 시작-->
-                        <div class="filter">
-
-                            <div class="pricing">
-                                <div class="[ price-option price-option--low ]">
-                                    <div class="price-option__detail">
-                                        <span class="price-option__cost"><img class="options"
-                                                src='assets/img/spotsearch/화장실.png'></span>
-                                        <!-- <span class="price-option__type">Freeuser</span> -->
+                                <div class="file-upload-content">
+                                    <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                                    <div class="image-title-wrap">
+                                     <h1 style="color: #fcb813;"> 두구두구...?!<br> 당신의 이번 차박지 분석결과는 ...▶ </h1>
                                     </div>
-                                    <a class="price-option__purchase">화장실</a>
-                                </div>
-                                <div class="[ price-option price-option--mid ]">
-                                    <div class="price-option__detail">
-                                        <span class="price-option__cost"><img class="options"
-                                                src='assets/img/spotsearch/개수대.png'></span>
-                                        <!-- <span class="price-option__type">Poweruser</span> -->
-                                    </div>
-                                    <a class="price-option__purchase">개수대</a>
-                                </div>
-                                <div class="[ price-option price-option--high ]">
-                                    <div class="price-option__detail">
-                                        <span class="price-option__cost"><img class="options"
-                                                src='assets/img/spotsearch/전기.png'></span>
-                                        <!-- <span class="price-option__type">Superuser</span> -->
-                                    </div>
-                                    <a class="price-option__purchase">전기</a>
-                                </div>
-                                <div class="[ price-option price-option--four ]">
-                                    <div class="price-option__detail">
-                                        <span class="price-option__cost"><img class="options"
-                                                src='assets/img/spotsearch/cctv.png'></span>
-                                        <!-- <span class="price-option__type">Superuser</span> -->
-                                    </div>
-                                    <a class="price-option__purchase">cctv</a>
-                                </div>
-                                <div class="[ price-option price-option--five ]">
-                                    <div class="price-option__detail">
-                                        <span class="price-option__cost"><img class="options"
-                                                src='assets/img/spotsearch/편의점.png'></span>
-                                        <!-- <span class="price-option__type">Superuser</span> -->
-                                    </div>
-                                    <a class="price-option__purchase">편의점</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!--옵션창 끝-->
-
-
-                        <div class="resultPrint">
-                            <div class="container list-article">
-                                <div class="clearfix"></div>
-                                <div class="row">
-                                    <div class="ss-result-init" style="display:contents;">
-                                        <div class="col-xs-12 article-wrapper">
-                                            <article>
-                                                <a href="#" class="more">더보기</a>
-                                                <div class="img-wrapper"><img
-                                                        src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
-                                                        alt="" /></div>
-                                                <h1 id="spotName">영광 백바위 해수욕장</h1>
-                                                <p id="spotAddr"> 전남 영광면 영산면 두우리</p>
-                                            </article>
-                                        </div>
-                                        <div class="col-xs-12 article-wrapper">
-                                            <article>
-                                                <div class="spot-more-detail"><a href="#" class="more">더보기</a></div>
-                                                <div class="img-wrapper"><img
-                                                        src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
-                                                        alt="" /></div>
-                                                <h1>보성 율포 해수욕장</h1>
-                                                <p>주소</p>
-                                            </article>
-                                        </div>
-                                        <div class="col-xs-12 article-wrapper">
-                                            <article>
-                                                <a href="#" class="more">더보기</a>
-                                                <div class="img-wrapper"><img
-                                                        src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
-                                                        alt="" /></div>
-                                                <h1>영광 백바위 해수욕장</h1>
-                                                <p>주소</p>
-                                            </article>
-                                        </div>
-                                    </div>
+                                    <a class="search-button" href="spotSearch.html"><span>다시하기!</span></a>
                                 </div>
                             </div>
 
+                            <div id="label-container"></div>
+                            <!--이미지업로드 화면 끝-->
                         </div>
+                        <div class="btn_upload"></div>
+                    </div>
+
+                    <!--옵션창 시작-->
+                    <div class="filter">
+
+                        <div class="pricing">
+                            <div class="[ price-option price-option--low ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/화장실.png'></span>
+                                    <!-- <span class="price-option__type">Freeuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">화장실</a>
+                            </div>
+                            <div class="[ price-option price-option--mid ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/개수대.png'></span>
+                                    <!-- <span class="price-option__type">Poweruser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">개수대</a>
+                            </div>
+                            <div class="[ price-option price-option--high ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/전기.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">전기</a>
+                            </div>
+                            <div class="[ price-option price-option--four ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/cctv.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">cctv</a>
+                            </div>
+                            <div class="[ price-option price-option--five ]">
+                                <div class="price-option__detail">
+                                    <span class="price-option__cost"><img class="options"
+                                            src='assets/img/spotsearch/편의점.png'></span>
+                                    <!-- <span class="price-option__type">Superuser</span> -->
+                                </div>
+                                <a href="#" class="price-option__purchase">편의점</a>
+                            </div>
+                            <h5 style="color: #fcb813; font-size: 20px;" >원하는 카테고리를 선택하면 더 많은 장소를 제안 받을수 있어요!</h5>
+                        </div>
+                    </div>
+                    <!--옵션창 끝-->
+
+
+                    <div class="resultPrint">
+                        <div class="container list-article">
+                            <div class="clearfix"></div>
+                            <div class="row">
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more" >자세히보기!</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>상호</h1>
+                                        <p>주소</p>
+                                    </article>  
+                                </div>
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more">자세히보기!</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>상호</h1>
+                                        <p>주소</p>
+                                    </article>
+                                </div>
+                                <div class="col-xs-12 article-wrapper">
+                                    <article>
+                                        <a href="#" class="more">자세히보기!</a>
+                                        <div class="img-wrapper"><img
+                                                src="assets/img/spotsearch/520563_location_gps_navigation_pin_icon (1).png"
+                                                alt="" /></div>
+                                        <h1>상호</h1>
+                                        <p>주소</p>
+                                    </article>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
+            </div>
 
 
-    </div>
+                </div>
 
-    </div>
-    </div>
-    <!-- slider Area End-->
+            </div>
+        </div>
+        <!-- slider Area End-->
 
 
     </main>
 
 
-    <!-- ============================================================ FOOTER START============================================================ -->
-    <footer>
-
+     <!-- ============================================================ FOOTER START============================================================ -->
+     <footer>
+        
         <!--? Footer Start-->
-        <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg03.png">
-
+            <div class="footer-area section-bg" data-background="assets/img/gallery/section_bg03.png">
+                
             <div class="container">
                 <div class="footer-top footer-padding">
                     <!-- Footer Menu -->
@@ -364,7 +354,7 @@
                                 </div>
                             </div>
                         </div>
-
+                     
                         <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6">
                             <div class="single-footer-caption mb-50">
                                 <!-- logo -->
@@ -388,9 +378,9 @@
                         </div>
                     </div>
                 </div>
-
-
-
+    
+       
+     
     </footer>
     <!-- ============================================================ FOOTER END ========================================================= -->
 
@@ -441,13 +431,11 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="assets/js/spotSearch.js" defer></script>
+    <script src="assets/js/spotSearch.js"></script>
 
-    <!-- 서버용 (tensorflow/axios) -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
 </body>
 
 </html>

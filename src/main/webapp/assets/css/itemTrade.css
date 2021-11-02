@@ -1,437 +1,853 @@
 .textArea {
-	width: 100%;
-	height: 100%;
-	margin: 300px 0px 100px -160px;
-	line-height: 200%;
-	float: none;
+  width: 100%;
+  height: 100%;
+  margin: 300px 0px 100px -160px;
+  line-height: 200%;
+  float: none;
 }
 
 .Main_comment {
-	font-family: "GongGothicBold";
-	font-size: 50px;
-	font-weight: bold;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: normal;
-	text-align: left;
-	color: #fff;
+  font-family: "GongGothicBold";
+  font-size: 50px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
 }
 
 .Main_comment .text-style-1 {
-	font-family: "GongGothicMedium";
-	font-size: 20px;
-	font-weight: normal;
-	color: #c4c4c4;
+  font-family: "GongGothicMedium";
+  font-size: 20px;
+  font-weight: normal;
+  color: #c4c4c4;
 }
 
 .plus {
-	width: 50px;
-	height: 50px;
-	flex-grow: 0;
-	float: right;
-	margin-top: -5px;
-	margin-right: -304px;
-	font-size: 50px;
-	font-weight: bold;
-	padding-bottom: 6px;
+  width: 50px;
+  height: 50px;
+  flex-grow: 0;
+  float: right;
+  margin-top: -5px;
+  margin-right: -304px;
+  font-size: 50px;
+  font-weight: bold;
+  padding-bottom: 6px;
 }
 
 html {
-	background: #f5f7f8;
-	font-family: "Roboto", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	padding: 20px 0;
+  background: #f5f7f8;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 20px 0;
 }
 
 .band {
-	width: 100%;
-	max-width: 1480px;
-	margin: 13px 55px 0px 200px;
-	padding-bottom: 100px;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-gap: 20px;
+  width: 100%;
+  max-width: 1480px;
+  margin: 13px 55px 0px 200px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
 }
 
 @media only screen and (min-width: 850px) {
-	.band {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-	}
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* card */
 
 .card {
-	min-height: 90%;
-	background: white;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-	display: flex;
-	flex-direction: column;
-	text-decoration: none;
-	color: #444;
-	position: relative;
-	top: 0;
-	transition: all 0.1s ease-in;
+  min-height: 90%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all 0.1s ease-in;
 }
 
 .card:hover {
-	top: -2px;
-	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  top: -2px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 
 .card article {
-	padding: 20px;
-	display: flex;
+  padding: 20px;
+  display: flex;
 
-	flex: 1;
-	justify-content: space-between;
-	flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .card .thumb {
-	padding-bottom: 60%;
-	background-size: cover;
-	background-position: center center;
+  padding-bottom: 60%;
+  background-size: cover;
+  background-position: center center;
 }
 
 .card p {
-	flex: 1; /* make p grow to fill available space*/
-	line-height: 2;
-	font-size: 12px;
-	color: #777;
+  flex: 1; /* make p grow to fill available space*/
+  line-height: 2;
+  font-size: 12px;
+  color: #777;
 }
 
 /* typography */
 h1 {
-	font-size: 21px;
-	font-weight: bold;
-	margin: 0;
-	color: #333;
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
 }
 
 .card span {
-	font-size: 18px;
-	font-weight: bold;
-	color: orange;
-	text-align: right;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	margin: 2em 0 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: orange;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
 }
 .writeTable {
-	width: 1200px;
-	height: 800px;
-	margin: -100px 0px 0px 300px;
-	background-color: #000;
+  width: 1200px;
+  height: 800px;
+  margin: -100px 0px 0px 300px;
+  background-color: #000;
 }
 
 .item_wrap {
-	width: 1000px;
-	margin: 100px auto;
+  width: 1000px;
+  margin: 100px auto;
 }
 
 .item_title {
-	margin-bottom: 30px;
-	font-size: 30px;
-	font-weight: bold;
-	color: aliceblue;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: aliceblue;
 }
 
 .bt_wrap {
-	margin-top: 30px;
-	text-align: center;
-	font-size: 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
 }
 
 .on {
-	display: inline-block;
-	min-width: 80px;
-	margin-left: 10px;
-	padding: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	background: #ffc107;
-	color: #1f2b7b;
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #ffc107;
+  color: #1f2b7b;
 }
 
 .bt_wrap a {
-	display: inline-block;
-	min-width: 80px;
-	margin-left: 10px;
-	padding: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	background: #ffc107;
-	color: #1f2b7b;
+  display: inline-block;
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #ffc107;
+  color: #1f2b7b;
 }
 
 .bt_wrap a:first-child {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .bt_wrap a.on {
-	background: #000;
-	color: #fff;
+  background: #000;
+  color: #fff;
 }
 
 .board_list {
-	width: 100%;
-	border-top: 2px solid #000;
+  width: 100%;
+  border-top: 2px solid #000;
 }
 
 .board_list > div {
-	border-bottom: 1px solid #ddd;
-	font-size: 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
 }
 
 .board_list > div.top {
-	border-bottom: 1px solid #999;
+  border-bottom: 1px solid #999;
 }
 
 .board_list > div:last-child {
-	border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .board_list > div > div {
-	display: inline-block;
-	padding: 15px 0;
-	text-align: center;
-	font-size: 1.6rem;
+  display: inline-block;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.6rem;
 }
 
 .board_list > div.top > div {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .board_list .num {
-	width: 10%;
+  width: 10%;
 }
 
 .board_list .title {
-	width: 55%;
-	text-align: center;
+  width: 55%;
+  text-align: center;
 }
 
 .board_list .top .title {
-	text-align: center;
+  text-align: center;
 }
 
 .board_list .writer {
-	width: 10%;
+  width: 10%;
 }
 
 .board_list .date {
-	width: 10%;
+  width: 10%;
 }
 
 .board_list .count {
-	width: 10%;
+  width: 10%;
 }
 
 .board_page {
-	margin-top: 30px;
-	text-align: center;
-	font-size: 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
 }
 
 .board_page a {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	box-sizing: border-box;
-	vertical-align: middle;
-	border: 1px solid #ddd;
-	border-left: 0;
-	line-height: 100%;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-left: 0;
+  line-height: 100%;
 }
 
 .board_page a.bt {
-	padding-top: 10px;
-	font-size: 1.2rem;
-	letter-spacing: -1px;
+  padding-top: 10px;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
 }
 
 .board_page a.num {
-	padding-top: 9px;
-	font-size: 1.4rem;
+  padding-top: 9px;
+  font-size: 1.4rem;
 }
 
 .board_page a.num.on {
-	border-color: #000;
-	background: #000;
-	color: #fff;
+  border-color: #000;
+  background: #000;
+  color: #fff;
 }
 
 .board_page a:first-child {
-	border-left: 1px solid #ddd;
+  border-left: 1px solid #ddd;
 }
 
 .board_view {
-	width: 100%;
-	border-top: 2px solid #000;
+  width: 100%;
+  border-top: 2px solid #000;
 }
 
 .board_view .title {
-	padding: 20px 15px;
-	border-bottom: 1px dashed #ddd;
-	font-size: 2rem;
+  padding: 20px 15px;
+  border-bottom: 1px dashed #ddd;
+  font-size: 2rem;
 }
 
 .board_view .info {
-	padding: 15px;
-	border-bottom: 1px solid #999;
-	font-size: 0;
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  font-size: 0;
 }
 
 .board_view .info dl {
-	position: relative;
-	display: inline-block;
-	padding: 0 20px;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
 }
 
 .board_view .info dl:first-child {
-	padding-left: 0;
+  padding-left: 0;
 }
 
 .board_view .info dl::before {
-	content: "";
-	position: absolute;
-	top: 1px;
-	left: 0;
-	display: block;
-	width: 1px;
-	height: 13px;
-	background: #ddd;
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 13px;
+  background: #ddd;
 }
 
 .board_view .info dl:first-child::before {
-	display: none;
+  display: none;
 }
 
 .board_view .info dl dt,
 .board_view .info dl dd {
-	display: inline-block;
-	font-size: 1.4rem;
+  display: inline-block;
+  font-size: 1.4rem;
 }
 
 .board_view .info dl dd {
-	margin-left: 10px;
-	color: #777;
+  margin-left: 10px;
+  color: #777;
 }
 
 .board_view .cont {
-	padding: 15px;
-	border-bottom: 1px solid #000;
-	line-height: 160%;
-	font-size: 1.4rem;
+  padding: 15px;
+  border-bottom: 1px solid #000;
+  line-height: 160%;
+  font-size: 1.4rem;
 }
 
 .item_write {
-	border-top: 2px solid #000;
+  border-top: 2px solid #000;
 }
 
 .item_write .title,
 .item_write .info {
-	padding: 15px;
+  padding: 15px;
 }
 
 .item_write .info {
-	border-top: 1px dashed #ddd;
-	border-bottom: 1px solid #000;
-	font-size: 15px;
+  border-top: 1px dashed #ddd;
+  border-bottom: 1px solid #000;
+  font-size: 15px;
 }
 
 .item_write .title dl {
-	font-size: 0;
+  font-size: 0;
 }
 
 .item_write .info dl {
-	display: inline-block;
-	width: 50%;
-	vertical-align: middle;
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
 }
 
 .item_write .title dt,
 .item_write .title dd,
 .item_write .info dt,
 .item_write .info dd {
-	display: inline-block;
-	vertical-align: middle;
-	font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
 }
 
 .item_write .title dt,
 .item_write .info dt {
-	width: 100px;
-	color: #fcb813;
+  width: 100px;
+  color: #fcb813;
 }
 
 .item_write .title dd {
-	width: calc(100% - 100px);
+  width: calc(100% - 100px);
 }
 
 .item_write .title input[type="text"],
 .item_write .info input[type="text"],
 .item_write .info input[type="password"] {
-	padding: 10px;
-	box-sizing: border-box;
-	background-color: #e9ecef;
-	border-radius: 5px;
-	border: solid 2px #ffc107;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px #ffc107;
 }
 
 .item_write .title input[type="text"] {
-	width: 50%;
-	background-color: #e9ecef;
-	border-radius: 5px;
-	border: solid 2px #ffc107;
-	font-size: 15px;
+  width: 50%;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px #ffc107;
+  font-size: 15px;
 }
 .item_write .price input[type="text"] {
-	width: 30%;
+  width: 30%;
 }
 .item_write .cont {
-	border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .item_write .cont textarea {
-	display: block;
-	width: 100%;
-	height: 300px;
-	padding: 15px;
-	box-sizing: border-box;
-	border: 0;
-	resize: vertical;
-	width: 100%;
-	border-top: 10px solid #ffc107;
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 0;
+  resize: vertical;
+  width: 100%;
+  border-top: 10px solid #ffc107;
 }
 .nice-select {
-	-webkit-tap-highlight-color: transparent;
-	background-color: #e9ecef;
-	border-radius: 5px;
-	border: solid 2px#ffc107;
-	box-sizing: border-box;
-	clear: inherit;
-	cursor: pointer;
-	display: block;
-	float: none;
-	font-family: inherit;
-	font-size: 15px;
-	font-weight: bold;
-	height: 30px;
-	line-height: 30px;
-	outline: none;
-	padding-left: 50px;
-	padding-right: 50px;
-	position: relative;
-	text-align: left !important;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	white-space: nowrap;
-	width: auto;
-	margin: 0px;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  border: solid 2px#ffc107;
+  box-sizing: border-box;
+  clear: inherit;
+  cursor: pointer;
+  display: block;
+  float: none;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  outline: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+  text-align: left !important;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto;
+  margin: 0px;
+}
+
+/*-------------------------- 게시글 상세보기 --------------------------*/
+.content {
+  width: 1480px;
+}
+
+.it-content {
+  width: 100%;
+  height: 650px;
+  margin-top: 0;
+  background-color: black;
+}
+
+.it-content-img {
+  position: relative;
+  float: left;
+  width: 675px;
+  height: 500px;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 3px solid #ffc107;
+  background-color: #333;
+}
+
+.it-content-img > img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.it-content-txt {
+  float: left;
+  width: 675px;
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+
+.it-content-title {
+  width: 554px;
+  height: 40px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  font-size: 35px;
+}
+
+.it-content-addr {
+  float: left;
+  width: 260px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #888;
+}
+
+.it-content-cost {
+  float: right;
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+  font-size: 30px;
+  color: #fcb813;
+  font-family: "GongGothicMedium";
+  text-align: right;
+}
+
+.it-content-real {
+  width: 654px;
+  height: 320px;
+  margin: 70px 10px 10px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #777;
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+}
+
+.state-radio {
+  float: left;
+  width: 415px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  margin: 0 10px 0 10px;
+  text-align: right;
+  padding: 15px 30px;
+  font-size: 18px;
+}
+
+.btn-it-talk {
+  float: right;
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  background-color: #ffc107;
+  color: black;
+  font-size: 18px;
+}
+
+.btn-it-talk > a {
+  color: #000;
+}
+
+.btn-it-list {
+  float: right;
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 10px 0 0;
+  background-color: #ffc107;
+  font-size: 18px;
+}
+
+.btn-it-list > a {
+  color: #000;
+}
+
+.it-reply {
+  width: 100%;
+  height: 600px;
+  padding-top: 30px;
+}
+
+.it-reply-add {
+  float: left;
+  width: 1400px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.it-reply-input {
+  width: 1000px;
+}
+
+.it-reply-input {
+  float: left;
+  width: 1260px;
+  height: 40px;
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.it-reply-add > .it-reply-input > input {
+  float: left;
+  width: 1170px;
+  height: 100%;
+  border: none;
+  background-color: #555;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.btn-it-reply-input {
+  float: right;
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: #ffc107;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.it-reply-user {
+  width: 1380px;
+  height: 30px;
+  margin: 80px 0 0 0;
+}
+
+.it-reply-user > h1 {
+  float: left;
+  margin-right: 20px;
+  font-size: 22px;
+  color: whitesmoke;
+}
+
+.it-reply-user > span {
+  float: right;
+  font-size: 15px;
+  color: white;
+}
+
+.it-reply-content {
+  width: 1200px;
+  height: 30px;
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+
+.it-reply > hr {
+  border: 1px solid gray;
+  width: 1380px;
+  margin: 20px 0;
+}
+
+/*----------------------------중고 물품 등록----------------------------*/
+.writeTable {
+  width: 100%;
+  height: 900px;
+  margin: 0;
+}
+
+.item-write-wrap {
+  width: 1480px;
+  height: 480px;
+  margin: 0;
+}
+
+.item-write-img {
+  float: left;
+  width: 675px;
+  height: 400px;
+  margin-top: 50px;
+  border-radius: 10px;
+  border: 3px solid #ffc107;
+  background-color: lightgray;
+  color: #666;
+  text-align: center;
+  font-size: 100px;
+  font-family: "GongGothic";
+  padding-top: 100px;
+}
+
+.item-write {
+  float: right;
+  width: 750px;
+  height: 415px;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin: 50px 30px 0 10px;
+  border-radius: 10px;
+}
+
+.col-menu {
+  width: 100px;
+  font-size: 25px;
+  color: white;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.col-answ {
+  width: 550px;
+}
+
+.col-answ > input {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1;
+  background-color: lightgray;
+  padding: 0 20px;
+}
+
+.col-alert {
+  color: #888;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+.item_trade_select {
+  height: 50px;
+  vertical-align: middle;
+  font-size: 20px;
+  padding-top: 10px;
+  color: #555;
+  background-color: #fff;
+  font-family: "GongGothicLight";
+}
+
+.it-w-real-content {
+  width: 1480px;
+  height: 400px;
+  margin-top: 30px;
+}
+
+.it-w-real-content > p > textarea {
+  width: 100%;
+  height: 390px;
+  border: 0;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background-color: lightgray;
+  padding: 40px;
+  font-size: 20px;
+}
+
+.it-write-btn {
+  width: 1480px;
+  height: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.it-write-btn > button {
+  width: 110px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0;
+  background-color: #ffc107;
+  font-size: 18px;
+  margin: 10px 30px 100px;
+}
+
+.it-write-btn > button > a {
+  color: black;
+}
+
+/*----------------------------문의하기----------------------------*/
+
+.it-talk-content {
+  display: flex;
+  width: 1480px;
+  height: 900px;
+}
+
+.talk-item-card {
+  display: flex;
+  flex-direction: column;
+  width: 840px;
+  height: 800px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 0 50px 100px 0;
+}
+
+.talk-item-info {
+  background-color: #333;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.talk-content-title {
+  width: 554px;
+  height: 40px;
+  margin: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.talk-content-addr {
+  float: left;
+  width: 260px;
+  height: 30px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #888;
+}
+
+.talk-content-cost {
+  float: right;
+  width: 200px;
+  height: 30px;
+  margin-right: 25px;
+  font-size: 20px;
+  color: #fcb813;
+  font-family: "GongGothicMedium";
+  text-align: right;
+}
+
+.talk-content-real {
+  width: 770px;
+  height: 100px;
+  margin: 50px 10px 10px 10px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #777;
+  background-color: #444;
+  color: white;
+  font-size: 18px;
+}
+
+.talk-item-img {
+  position: relative;
+  background-color: #333;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  height: 550px;
+}
+
+.talk-item-img > img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 90%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.talk-dialog {
+  width: 540px;
+  height: 800px;
+  background-color: greenyellow;
+}
+
+.talk-dialog > iframe {
+  width: 100%;
+  height: 100%;
 }
