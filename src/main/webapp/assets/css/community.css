@@ -1,7 +1,7 @@
 .textArea {
 	width: 100%;
 	height: 100%;
-	margin: 300px 0px 100px -160px;
+	margin: 260px 0px 100px -190px;
 	line-height: 200%;
 	float: none;
 }
@@ -528,6 +528,7 @@
 	padding: 0px;
 	position: relative;
 	overflow: hidden;
+	background-size: cover;
 }
 .detail-img li {
 	width: 100%;
