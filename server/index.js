@@ -50,14 +50,7 @@ const db = mysql.createPool({
 // =========================================================== 간단한 테스트 공간 START =============================================================
 // session test===========================================================
 app.get("/hi", async (req, res) => {
-  // res.send("hello world");
-  req.session.nickName = "pete";
-  console.log(req.session);
-  console.log(req.session.nickName);
-  res.send(req.session.nickName);
-  // setTimeout(() => {
-  //   res.redirect("http://127.0.0.1:5500/src/main/webapp/main.html");
-  // }, 4000);
+  console.log(req);
 });
 
 //LoginAuth test in MainPage

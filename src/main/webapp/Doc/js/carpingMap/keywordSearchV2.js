@@ -1,19 +1,12 @@
 const search = document.querySelector(".map-search input");
 
-var OnlyNames = [];
+var NamAddFai;
 
-axios
-  .get("http://localhost:3001/SPOTS/kakaoMap/search")
-  .then((response) => {
-    console.log("search에서 가져온 데이터");
-    console.log(response.data[3]);
-    response.data.forEach((placeName) => {
-      OnlyNames.push(placeName.S_NAME);
-    });
-  })
-  .then(() => {
-    console.log(OnlyNames);
-  });
+axios.get("http://localhost:3001/SPOTS/kakaoMap/search").then((response) => {
+  console.log("search에서 가져온 데이터");
+  console.log(response.data[3].S_NAME);
+  NamAddFai = response.data;
+});
 
 search.addEventListener("keyup", (e) => {
   // 검색어 만들 창
@@ -55,11 +48,15 @@ search.addEventListener("keyup", (e) => {
   var searchResults = [];
 
   // console.log(OnlyNames);
-  OnlyNames.forEach((oneName) => {
-    if (oneName.includes(e.target.value.replace(" ", ""))) {
+  NamAddFai.forEach((onething) => {
+    if (
+      onething.S_NAME.includes(e.target.value.replace(" ", "")) ||
+      onething.S_ADDR.includes(e.target.value.replace(" ", "")) ||
+      onething.S_AMENITY.includes(e.target.value.replace(" ", ""))
+    ) {
       //   console.log(oneName);
       if (searchResults.length < 20) {
-        searchResults.push(oneName);
+        searchResults.push(onething.S_NAME);
       }
     }
   });
@@ -175,19 +172,24 @@ const searchModal = (searchResults) => {
           //     // 마커가 지도 위에 표시되도록 설정합니다
           marker.setMap(map);
 
-          // 이제 모달작업
+          //   이제 모달작업 여긴 우선 해쉬태그 넣을 지 고민
+          //   document.querySelectorAll(".facilities_list")[0].style.display="none"
+          //   document.querySelectorAll(".facilities_list")[1].style.display="none"
+
           const close = document.getElementById("close");
           const modal = document.querySelector(".modal_wrapper");
           const dataname = document.querySelector(".dataname");
           const modalInnerImg = document.querySelector(".modal_img.rounded-0");
           const addr = document.querySelector(".modal_address");
           const phone = document.querySelector(".modal_tell");
-
+          //   const hashTag = document.getElementById("hashTag");
+          //해쉬태그
           modal.style.display = "flex";
           dataname.innerText = response.data[0].S_NAME;
           modalInnerImg.src = response.data[0].S_IMG;
           addr.innerText = response.data[0].S_ADDR;
           phone.innerText = response.data[0].S_PHONE;
+          //   hashTag.innerText = response.data[0].S_AMENITY;
 
           close.addEventListener("click", function () {
             modal.style.display = "none";
@@ -199,6 +201,7 @@ const searchModal = (searchResults) => {
             modalInnerImg.src = response.data[0].S_IMG;
             addr.innerText = response.data[0].S_ADDR;
             phone.innerText = response.data[0].S_PHONE;
+            // hashTag.innerText = response.data[0].S_AMENITY;
           });
 
           //모달 끝
