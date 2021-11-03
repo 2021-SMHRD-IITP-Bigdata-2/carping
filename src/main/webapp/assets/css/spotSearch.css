@@ -438,8 +438,8 @@ article a {
 	line-height: 150px;
 	text-align: center;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-	font-size: 48px;
+	background-color: black;
+	font-size: 40px;
 	opacity: 0;
 	color: #ffc107 !important;
 	-webkit-transition: all 0.4s;
@@ -628,13 +628,13 @@ article:hover a {
 }
 
 .spot-info-text > span {
-	font-size: 16px;
+	font-size: 15px;
 	color: #383838;
 	font-family: "GongGothicLight";
 }
 
 .spot-info-text > h3 {
-	font-size: 16px;
+	font-size: 15px;
 	color: #383838;
 	font-family: "GongGothicLight";
 }

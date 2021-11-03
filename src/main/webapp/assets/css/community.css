@@ -67,7 +67,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(221, 208, 208, 0.87);
+	background-color: darkgreen;
 	overflow: hidden;
 	width: 100%;
 	height: 0;
@@ -108,7 +108,7 @@
 	position: relative;
 	width: 1000px;
 	height: 800px;
-	background: #333;
+	background: black;
 	padding: 24px 16px;
 	border-radius: 4px;
 }
@@ -129,37 +129,16 @@
 	background-color: #333;
 }
 
-.detail-img {
-	float: left;
-	position: relative;
-	border: 1px solid #777;
-	border-radius: 10px;
-	background-color: #555;
-	width: 430px;
-	height: 648px;
-	margin-top: 80px;
-	margin-left: 30px;
-	padding: 10px;
-}
-
-.detail-img > img {
-	position: absolute;
-	transform: translateY(-50%);
-	top: 50%;
-	width: 95%;
-	margin: auto;
-	vertical-align: middle;
-}
-
 .detail-content {
-	float: right;
+	float: left;
 	background-color: #555;
 	border: 1px solid #777;
 	border-radius: 10px;
-	width: 430px;
-	height: 180px;
-	margin-top: 80px;
-	margin-right: 30px;
+	width: 60%;
+	height: 27%;
+	margin-top: -50px;
+	margin-left: 10px;
+	border: 5px solid #ffc107;
 }
 
 .user-info-detail {
@@ -187,33 +166,41 @@
 
 .detail-reply-datetime {
 	float: left;
-	font-size: 10px;
-	width: 200px;
+	font-size: 14px;
+	width: 190px;
 	padding-top: 13px;
 	font-family: "GongGothicMedium";
-	color: #999;
+	color: rgb(216, 209, 209);
 }
 
 .detail-like {
-	float: right;
-	margin: 7px 10px 0 0;
+	display: flex;
+	justify-content: flex-start;
+	padding: 0px 0px -1px 0px;
+}
+.detail-like i {
+	margin: 0 auto;
+	margin: 0px 10px 0px 10px;
 }
 
 .real-content {
-	width: 386px;
-	height: 105px;
-	margin: 60px 22px 0 22px;
-	padding-top: 10px;
+	width: 90%;
+	height: 55%;
+	margin: 10px 22px 0 30px;
+	padding-top: 9px;
 	padding-left: 10px;
-	background-color: #777;
+	background-color: whitesmoke;
 	border-radius: 8px;
+	border: 5px solid #ffc107;
+	font-size: 14px;
+	color: black;
 }
 
 .real-content > span {
 	width: 100%;
 	font-size: 15px;
 	margin-top: 20px;
-	color: white;
+	color: rgb(46, 46, 46);
 	font-size: 13px;
 	font-family: "GongGothicLight";
 }
@@ -221,31 +208,31 @@
 .detail-reply-write {
 	float: right;
 	background-color: #555;
-	border: 1px solid #777;
-	width: 430px;
-	height: 50px;
+	border: 5px solid #ffc107;
+	width: 37%;
+	height: 7%;
 	border-radius: 10px;
-	margin-top: 10px;
-	margin-right: 30px;
+	margin-top: 98px;
+	margin-right: 0px;
 }
 
 .reply-content {
 	float: left;
-	width: 321px;
+	width: 74%;
 	height: 32px;
 	border-radius: 8px;
 	background-color: #888;
-	margin: 10px 0 8px 23px;
+	margin: 5px 0 1px 10px;
 }
 
 .reply-content > input {
-	width: 315px;
+	width: 96%;
 	font-size: 15px;
 	margin-top: 5px;
 	margin-left: 5px;
-	background-color: #888;
+	background-color: whitesmoke;
 	border-radius: 10px;
-	color: white;
+	color: rgb(0, 0, 0);
 	font-family: "GongGothicLight";
 }
 
@@ -253,22 +240,18 @@
 	float: right;
 	width: 50px;
 	height: 32px;
-	border-radius: 8px;
 	margin: 10px 23px 8px 0;
-	background-color: #ffc107;
 	text-align: center;
 }
 
 .btn-reply-save > button {
-	border: none;
 	background-color: #ffc107;
-	width: 100%;
+	width: 120%;
 	height: 100%;
 	border-radius: 8px;
-	box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-	border: solid 1px #000;
 	cursor: pointer;
 	padding-top: 3px;
+	margin: -5px 10px 10px 5px;
 }
 
 .btn-reply-save > p {
@@ -282,19 +265,57 @@
 .detail-reply {
 	float: right;
 	background-color: #555;
-	border: 1px solid #777;
-	width: 430px;
-	height: 398px;
+	border: 5px solid #ffc107;
+	width: 37%;
+	height: 72%;
 	border-radius: 10px;
-	margin-top: 10px;
-	margin-right: 30px;
+	margin-top: -457px;
+	margin-right: -358px;
 	padding-top: 10px;
-	padding-left: 10px;
+	padding: 15px 0px 0px 0px;
+	color: #f8f9fa;
+	display: block;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 15px 0px 0px 0px;
+}
+/* 스크롤바 설정*/
+.detail-reply::-webkit-scrollbar {
+	width: 6px;
 }
 
+/* 스크롤바 막대 설정*/
+.detail-reply::-webkit-scrollbar-thumb {
+	height: 17%;
+	background-color: rgba(255, 255, 255, 1);
+	/* 스크롤바 둥글게 설정    */
+	border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.detail-reply::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+/* 스크롤바 설정*/
+.detail-reply::-webkit-scrollbar {
+	width: 12px;
+}
+
+/* 스크롤바 막대 설정*/
+.detail-reply::-webkit-scrollbar-thumb {
+	height: 17%;
+	background-color: #fcb813;
+	border-radius: 10px;
+}
+
+/* 스크롤바 뒷 배경 설정*/
+.detail-reply::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.33);
+}
 .reply-user-info {
-	width: 430px;
-	height: 25px;
+	width: 70%;
+	height: 6%;
 }
 
 .reply-user-info > h1 {
@@ -339,7 +360,7 @@
 	position: relative;
 	width: 1000px;
 	height: 800px;
-	background: #333;
+	background: rgb(0, 0, 0);
 	padding: 24px 16px;
 	border-radius: 4px;
 	border: 5px solid #ffc107;
@@ -348,13 +369,12 @@
 	display: inline-block;
 	font-size: 24px;
 	font-weight: bold;
-	background-color: #333;
+	background-color: rgb(0, 0, 0);
 }
 .close_wrapper-w {
 	position: absolute;
-	float: left;
 	top: 24px;
-	left: 48px;
+	right: 30px;
 }
 .close_wrapper-w #close-w {
 	cursor: pointer;
@@ -364,8 +384,8 @@
 
 .close-icon {
 	width: 60px;
-	height: 60px;
-	margin-top: 7px;
+	height: 40px;
+	margin-top: 0px;
 	background-color: #333;
 }
 
@@ -380,7 +400,7 @@
 }
 
 .save-icon {
-	margin-top: 14px;
+	margin-top: 4px;
 	font-size: 28px;
 	font-family: "GongGothicBold";
 	color: white;
@@ -389,17 +409,17 @@
 
 .detail-img-w {
 	float: left;
-	border: 5px dashed #c4c4c4;
+	border: 5px dashed #ffc107;
 	border-radius: 10px;
-	background-color: #555;
+	background-color: rgb(83, 83, 83);
 	width: 430px;
-	height: 660px;
+	height: 601px;
 	margin-top: 80px;
 	margin-left: 30px;
 	text-align: center;
-	color: white;
-	font-size: 19px;
-	padding-top: 320px;
+	color: #ffc107;
+	font-size: 35px;
+	padding-top: 250px;
 }
 
 .detail-write {
@@ -408,9 +428,10 @@
 	border: 1px solid #777;
 	border-radius: 10px;
 	width: 430px;
-	height: 660px;
+	height: 600px;
 	margin-top: 80px;
 	margin-right: 30px;
+	border: 5px solid #ffc107;
 }
 
 .user-info {
@@ -458,30 +479,161 @@
 }
 
 .select-addresstag {
-	width: 399px;
+	width: 380px;
 	height: 50px;
-	background-color: #888;
+	background-color: rgb(219, 219, 219);
 	border-radius: 10px;
 	margin: 27px 15px 0 15px;
 }
-
+.select-addresstag > p > textarea {
+	width: 380px;
+	height: 50px;
+	margin-left: 10px;
+	padding: 13px;
+	border: 0;
+	border-radius: 10px;
+	background-color: rgb(219, 219, 219);
+	color: rgb(0, 0, 0);
+	font-family: "GongGothicLight";
+	font-size: 20px;
+}
 .community-contents {
-	width: 399px;
-	height: 450px;
-	background-color: #888;
+	width: 390px;
+	height: 390px;
+	background-color: rgb(219, 219, 219);
 	border-radius: 10px;
 	margin: 17px 15px 0 15px;
 }
 
 .community-contents > p > textarea {
 	width: 390px;
-	height: 450px;
-	margin-left: 10px;
-	padding: 20px;
+	height: 390px;
+	margin-left: 0px;
+	padding: 18px;
 	border: 0;
 	border-radius: 10px;
-	background-color: #888;
+	background-color: rgb(219, 219, 219);
 	color: white;
 	font-family: "GongGothicLight";
 	font-size: 20px;
+}
+.detail-img {
+	position: relative;
+	border: 5px solid #ffc107;
+	border-radius: 10px;
+	width: 60%;
+	height: 52%;
+	margin: 70px auto;
+	margin-left: 10px;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+}
+.detail-img li {
+	width: 100%;
+	height: 100%;
+}
+.detail-img input[type=radio] {
+	display: none;
+}
+.detail-img ul.imgs {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.detail-img ul.imgs li {
+	position: absolute;
+	left: 640px;
+	transition-delay: 1s; /* 새 슬라이드가 이동해 오는 동안 이전 슬라이드 이미지가 배경이 보이도록 지연 */
+	padding: 0;
+	margin: 0;
+}
+.bullets {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+	z-index: 2;
+}
+.bullets label {
+	display: inline-block;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.55);
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+/* 현재 선택된 불릿 배경 흰색으로 구분 표시 */
+.detail-img input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) {
+	background-color: #ffc107;
+}
+.detail-img input[type=radio]:nth-child(2):checked ~ .bullets > label:nth-child(2) {
+	background-color: #ffc107;
+}
+.detail-img input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
+	background-color: #ffc107;
+}
+.detail-img input[type=radio]:nth-child(1):checked ~ ul.imgs > li:nth-child(1) {
+	left: 0;
+	transition: 0.5s;
+	z-index: 1;
+}
+.detail-img input[type=radio]:nth-child(2):checked ~ ul.imgs > li:nth-child(2) {
+	left: 0;
+	transition: 0.5s;
+	z-index: 1;
+}
+.detail-img input[type=radio]:nth-child(3):checked ~ ul.imgs > li:nth-child(3) {
+	left: 0;
+	transition: 0.5s;
+	z-index: 1;
+}
+.register-button {
+	background: #fcb813;
+	font-family: 'GongGothicMedium';
+	text-transform: uppercase;
+	padding: 25px 80px;
+	color: #000000;
+	display: -webkit-inline-box;
+	font-size: 20px;
+	letter-spacing: 0px;
+	line-height: 0;
+	margin: 10px;
+	cursor: pointer;
+	transition: color 0.4s linear;
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	border-radius: 10px;
+	left: 140px;
+}
+.register-button::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 101%;
+	height: 101%;
+	background: #f04e3c;
+	z-index: 1;
+	border-radius: 5px;
+	transition: transform 0.5s;
+	transition-timing-function: ease;
+	transform-origin: 0 0;
+	transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+	transform: scaleX(0);
+	border-radius: 0;
+}
+.register-button:hover::before {
+	transform: scaleX(1);
+	color: #fff !important;
+	z-index: -1;
+}
+.register-button:hover {
+	background-position: right;
+}
+.register-button.focus,
+.register-button:focus {
+	outline: 0;
+	box-shadow: none;
 }
