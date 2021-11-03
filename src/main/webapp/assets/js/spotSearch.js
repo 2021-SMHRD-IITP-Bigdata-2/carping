@@ -1,4 +1,3 @@
-// modal search Result detail
 const open = document.querySelector(".more");
 const close = document.getElementById("close");
 const modal = document.querySelector(".modal_wrapper");

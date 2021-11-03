@@ -1,3 +1,3 @@
-// axios.post("", {}).then((response) => {
-//   console.log(response);
-// });
+axios.post("", {}).then((response) => {
+  console.log(response);
+});
