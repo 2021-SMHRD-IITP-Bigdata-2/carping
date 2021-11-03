@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spot Search</title>
+    <title>itemTrade</title>
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -49,7 +49,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="main.html"><img src="assets/img/logo/logo1.png" alt=""></a>
+                                <a href="main.html"><img class="logo" src="assets/img/logo/logo1.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -87,6 +87,7 @@
             </div>
         </div>
     </header>
+
     <!-- ============================================================ HEADER END ============================================================ -->
 
     <div class="slider-meddle">
@@ -95,7 +96,7 @@
                 <div class="col-xl-12">
                     <div class="hero-cap hero-cap2">
                         <div class="textArea">
-                            <span class="Main_comment">차박캠핑 중고용품 등록하기<br>
+                            <span class="Main_comment" style="color: #fcb813;">차박캠핑 중고용품 등록하기<br>
                                 <span class="text-style-1">
                                     중고거래를 성공할 때마다 포인트가 적립됩니다.
                                     적립된 포인트는 어디에든 쓸 수 있어요</span>
@@ -117,14 +118,7 @@
                             <div class="item-write-wrap">
                                 <div class="item-write-img">+</div>
                                 <table class="item-write">
-                                    <tr>
-                                        <td class="col-menu">제목 </td>
-                                        <td class="col-answ"><input type="text" placeholder="제목을 입력하세요"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-menu">가격 </td>
-                                        <td class="col-answ"><input type="text" placeholder="가격을 입력하세요"></td>
-                                    </tr>
+
                                     <tr>
                                         <td class="col-menu">위치 </td>
                                         <td class="col-answ">
@@ -145,9 +139,15 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td></td>
-                                        <td class="col-alert">거래 위치를 지정하지 않으면 가입시 입력한 주소로 자동 설정됩니다.</td>
+                                        <td class="col-menu">제목 </td>
+                                        <td class="col-answ"><input type="text" placeholder="제목을 입력하세요"></td>
                                     </tr>
+                                    <tr>
+                                        <td class="col-menu">가격 </td>
+                                        <td class="col-answ"><input type="text" placeholder="가격을 입력하세요"></td>
+                                    </tr>
+                                    
+                                    
                                 </table>
                             </div>
                             <div class="it-w-real-content">
