@@ -1,4 +1,3 @@
-// modal search Result detail
 const open = document.querySelector(".more");
 const close = document.getElementById("close");
 const modal = document.querySelector(".modal_wrapper");
@@ -83,10 +82,20 @@ function readURL(input) {
       $(".file-upload-content").show();
       $(".image-title").html(input.files[0].name);
     };
-    init().then(async () => {
-      await predict();
-      InitPutSpots();
-    });
+    document.querySelector(".spotLoading").style.display = "block";
+    setTimeout(
+      () =>
+        init().then(async () => {
+          await setTimeout(1000000);
+          await predict();
+          await InitPutSpots();
+          document.querySelector(".spotLoading").style.display = "none";
+          document.querySelector(".pricing").style.display = "block";
+          document.querySelector(".resultPrint").style.display = "block";
+        }),
+      500
+    );
+
     reader.readAsDataURL(input.files[0]);
   } else {
     removeUpload();
