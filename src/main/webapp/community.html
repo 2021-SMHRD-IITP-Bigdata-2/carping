@@ -39,7 +39,7 @@
                 <input type="radio" name="slide" id="slide3">
                 <ul id="imgholder" class="imgs">
                 <li> <img src="assets/img/gallery/932434.jpg" alt=""></li>
-                <li> <img src="assets/img/gallery/91011.jpg" alt=""></li>
+                <li> <img src="assets/img/gallery/91011.jpg" alt=""></li>   
                 <li> <img src="assets/img/gallery/5055.jpg" alt=""></li>
             </ul>
             <div class="bullets">
@@ -153,23 +153,44 @@
             <div class="detail-img-w">
               
                 <div class="upload">
-                <script class="jsbin"
-                                src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-                            <div class="file-upload">
-                <div class="image-upload-wrap">
+                    <div class="file-upload">
+                        <div class="image-upload-wrap">
+                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" style="display: none;"/>
           
+                            <div class="drag-text">
+                                <h1>➕</h1>
+                                <h3 style="color:#ffc107;">Drop a select add Image</h3>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+
+                <div class="file-upload-content"  style="display: none;">
+                    <img class="file-upload-image" id="face-image" src="#" alt="your image"/>
+                    <div class="image-title-wrap">
+                     <h1 style="color: #fcb813;"> 두구두구...?!<br> 당신의 이번 차박지 분석결과는 ...▶ </h1>
+                    </div>
+                    <a class="search-button" onclick="removeUpload()"><span>다시하기!</span></a>
+                </div>
+
+            </div> 
+                <!-- 이미지 추가하기 js -->
+                <!-- <div class="image-upload-wrap">
+                    <input class="file-upload-input" type='file' onchange="readURL(this);"
+                        accept="image/*" />
                     <div class="drag-text">
                         <h1>➕</h1>
-                        <h3 style="color:#ffc107;">Drop a select add Image</h3>
+                        <h3>Drag & drop a file or select add Image</h3>
                     </div>
-                </div>
-            </div>
-        
-    </div>
-</div> 
-                <!-- 이미지 추가하기 js -->
+                </div> -->
+
+
+
+
+
     
-                 <div class="close_wrapper-w">
+                    <div class="close_wrapper-w">
                         <button id="close-w" style="border: none; background-color: #333; color: white;">
                            <i class="fas fa-times fa-5x"></i>
                         </button>
@@ -582,6 +603,7 @@
     <!-- 추가한 JS 파일-->
     <script src="./assets/js/community.js"></script>
     <script src="./Doc/js/Auth/loginBtnChange.js" defer></script>
+    <script src="./Doc/js/community/uploadImg.js"></script>
 
 
 
