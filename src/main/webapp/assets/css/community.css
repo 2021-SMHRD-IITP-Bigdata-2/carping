@@ -669,7 +669,8 @@
 }
 .drag-text {
 	text-align: center;
-	padding-top: 170px;
+	padding-top: 90px;
+	margin: 10px;
 }
 .file-upload-input {
 	position: absolute;

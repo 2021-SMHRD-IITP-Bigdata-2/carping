@@ -674,7 +674,7 @@ h1 {
 	margin-top: 50px;
 	border-radius: 10px;
 	border: 5px solid #ffc107;
-	background-color: lightgray;
+	background-color: rgb(83, 83, 83);
 	color: #666;
 	text-align: center;
 	font-size: 100px;
@@ -713,13 +713,14 @@ h1 {
 	border-right-width: 0;
 	border-top-width: 0;
 	border-bottom-width: 1;
-	background-color: lightgray;
+	background-color: rgb(83, 83, 83);
 	padding: 0 20px;
 	border: 5px solid #ffc107;
+	color: #ddd;
 }
 
 .col-alert {
-	color: #888;
+	color: rgb(226, 225, 225);
 	font-size: 15px;
 	text-transform: uppercase;
 	padding-left: 10px;
@@ -748,11 +749,12 @@ h1 {
 	border: 0;
 	border-radius: 10px;
 	border: 2px solid #333;
-	background-color: lightgray;
+	background-color: rgb(83, 83, 83);
 	padding: 40px;
 	font-size: 20px;
 	border: 5px solid #ffc107;
 	margin: 0px 10px -30px 200px;
+	color: #ddd;
 }
 
 .it-write-btn {
