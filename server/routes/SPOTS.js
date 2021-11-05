@@ -148,9 +148,34 @@ router.post("/kakaoMap/SPOT", (req, res) => {
 // ======================================== 장소예측한 값 불러오기 START ========================================
 router.post("/predSpot", (req, res) => {
   console.log(req.body);
-  const predSpot = req.body.predSpot;
+  let predSpot = req.body.predSpot;
 
-  const sqlSelect = "SELECT * FROM SPOTS WHERE S_CATEGORY = ?";
+  switch (predSpot) {
+    case "노지":
+      predSpot = predSpot + ",test";
+      break;
+    case "산":
+      predSpot = predSpot + ",test";
+      break;
+
+    case "바다":
+      predSpot = predSpot + ",test";
+      break;
+
+    case "계곡":
+      predSpot = predSpot + ",test";
+      break;
+
+    case "야영장":
+      predSpot = predSpot + ",test";
+      break;
+
+    case "물":
+      predSpot = predSpot + ",test";
+      break;
+  }
+
+  const sqlSelect = "SELECT * FROM SPOTS WHERE S_CATEGORY = ? ";
   db.query(sqlSelect, predSpot, (err, result) => {
     if (err) console.log(err);
     // console.log(result.length);
