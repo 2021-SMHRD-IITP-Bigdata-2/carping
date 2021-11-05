@@ -2329,7 +2329,7 @@ hr {
 }
 .slider-area .video-icon {
 	position: absolute;
-	right: 160px;
+	right: 150px;
 	top: 50%;
 }
 @media only screen and(min-width: 992px) and(max-width: 1199px) {
@@ -6256,24 +6256,24 @@ video {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.custom-shape-divider-bottom-1635212432 {
+.custom-shape-divider-bottom-1636072933 {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	overflow: hidden;
 	line-height: 0;
-	transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1635212432 svg {
+.custom-shape-divider-bottom-1636072933 svg {
 	position: relative;
 	display: block;
-	width: calc(100% + 1.3px);
-	height: 251px;
+	width: calc(200% + 1.3px);
+	height: 220px;
+	transform: rotateY(180deg);
 }
 
-.custom-shape-divider-bottom-1635212432 .shape-fill {
+.custom-shape-divider-bottom-1636072933 .shape-fill {
 	fill: #ffffff;
 }
 .hero__caption span {
@@ -6308,17 +6308,19 @@ video {
 
 .video-icon {
 	position: absolute;
-	left: 50%;
+	left: 5%;
+	top: 920px;
 }
 .video-icon a {
 	background: #ff1313;
 	color: rgb(255, 255, 255);
-	width: 80px;
-	height: 80px;
+	width: 90px;
+	height: 90px;
 	display: inline-block;
 	text-align: center;
 	line-height: 80px;
 	border-radius: 50%;
+	font-size: 30px;
 }
 a.btn-icon ::before {
 	position: absolute;
@@ -6369,6 +6371,7 @@ a.btn-icon ::before {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: auto;
+
 	border: 5px #fcb813;
 }
 .modal_address {
@@ -6426,4 +6429,24 @@ a.btn-icon ::before {
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicLight.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
+}
+.custom-shape-divider-top-1636071882 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1636071882 svg {
+	position: relative;
+	display: block;
+	width: calc(300% + 1.3px);
+	height: 240px;
+}
+
+.custom-shape-divider-top-1636071882 .shape-fill {
+	fill: #000000;
 }
