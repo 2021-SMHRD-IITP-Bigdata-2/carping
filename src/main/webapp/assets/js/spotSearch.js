@@ -248,7 +248,9 @@ const InitPutSpots = () => {
 
 	recomends3.forEach((recomend, i) => {
 		// 무작위 숫자 길이 만큼
-		index = rand(0, spots.length - 1);
+		// index = rand(0, spots.length);
+		index = i;
+
 		indexList.push(index);
 		recomend.querySelector('h1').textContent = spots[index].S_NAME;
 		recomend.querySelector('p').textContent = spots[index].S_ADDR;
