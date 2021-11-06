@@ -12,18 +12,6 @@ dotenv.config({ path: "./.env" });
 
 const app = express();
 
-// app.use(
-//   session({
-//     key: "userId",
-//     secret: "subscribe",
-//     resave: false,
-//     saveUninitialized: false,
-//     cookie: {
-//       expires: 1000 * 60 * 60 * 24,
-//     },
-//   })
-// );
-
 app.use(
   cors({
     origin: ["http://127.0.0.1:5500", "http://127.0.0.1:5501"],
